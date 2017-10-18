@@ -3,6 +3,38 @@
   
     
     <entry>
+      <title><![CDATA[散列表-1]]></title>
+      <url>/2017/10/18/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91-1/</url>
+      <content type="html"><![CDATA[<p><strong>真值</strong>：命题可以取一个值，称为真值。真值只有“真”和“假”两种，分别用“1”(“T”)和“0”(“F”)表示。<br><strong>命题</strong>：具有确切真值的陈述句。</p>
+<hr>
+<p>一切没有判断内容的句子，都不能作为命题。</p>
+<hr>
+<p><strong>原子命题</strong>：不能再分解为更简单的命题。<br><strong>复合命题</strong>：可以分解为成简单的命题，与原子命题相对。<br><strong>联结词</strong>：否定联结词（非），合取联结词（并且），析取联结词（或），蕴涵联结词（推理），等价联结词。</p>
+<hr>
+<p>否定：真值结果取反<br>合取：P，Q同真才真，有假则假<br>析取：P，Q同假才假，有真则真<br>蕴涵：P真Q假时为假，否则为真<br>等价：PQ真值相同为真，否则为假</p>
+<hr>
+<p><strong>常值命题</strong>：真值不是“真”就是“假”，真值是确定的<br><strong>命题变量</strong>：没有具体的真值，与常值命题相对<br><strong>命题公式</strong>：其中的原子命题是命题变元，复合命题即为命题变元的”函数“，且该函数的真值仍为”真“或”假“<br><strong>解释</strong>：设P1,P2,…,Pn时出现在公式G中的所有命题变元，指定P1，P2，…，Pn一组真值，则这组真值称为G的一个解释<br><strong>真值表</strong>：由公式G在其所有可能的解释下所取的真值构成的表<br><strong>永真公式</strong>：在所有的解释下真值都为”真“<br><strong>永假公式（矛盾式）</strong>：在所有的解释下真值都为”假“<br><strong>可满足公式</strong>：非永假公式<br><strong>等价</strong>：设G,H是两个命题公式，P1，P2，…，Pn是出现在G，H中所有的命题变元，如果对于P1,P2，…，Pn的2的n次方个真值组合的每一个解释，G与H的真值结果都相同，则称G，H等价，记作<strong>G=H</strong></p>
+<hr>
+<p>命题公式的基本等价关系：<br>1.<strong>幂等律</strong>：<br>G∨G=G<br>G∧G=G<br>2.<strong>交换律</strong> ：<br>G∨H=H∨G<br>G∧H=H∧G<br>3.<strong>结合律</strong>：<br>G∨(H∨S)=(G∨H)∨S<br>G∧(H∧S)=(G∧H)∧S<br>4.<strong>同一律</strong>：<br>G∨0=G<br>G∧1=G<br>5.<strong>零律</strong>：<br>G∨1=1<br>G∧0=0<br>6.<strong>分配律</strong>：<br>G∨(H∧S)=(G∨H)∧(G∨S)<br>G∧(H∨S)=(G∧H)∨(G∧S)<br>7.<strong>吸收律</strong>：<br>G∨(G∧H)=G<br>G∧(G∨H)=G<br>8.<strong>矛盾律</strong>：<br>G∧¬G=0<br>9.<strong>排中律</strong>：<br>G∨¬G=1<br>10.<strong>双重否定律</strong>：<br>¬（¬G）=G<br>11.<strong>德摩根律</strong>：<br>¬(G∨H)=¬G∧¬H<br>¬(G∧H)=¬G∨¬H<br>12.<strong>蕴含式</strong>：<br>G→H=¬G∨H<br>13.<strong>假言易位</strong>：<br> G→H=¬H→¬G<br> 14.<strong>等价式</strong>：<br> G↔H=(G→H)∧(H→G)=(¬G∨H)∧(¬H∨G)<br> 15.<strong>等价否定等式</strong>：<br> G↔H=¬G↔¬H<br> 16.<strong>归谬论</strong>：</p>
+<h2 id="G→H-∧-G→¬H-¬G"><a href="#G→H-∧-G→¬H-¬G" class="headerlink" title=" (G→H)∧(G→¬H)=¬G"></a> (G→H)∧(G→¬H)=¬G</h2><p> 更多查看我的blog:<a href="https://beatjerome.github.io" target="_blank" rel="external">https://beatjerome.github.io</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[散列表-2]]></title>
       <url>/2017/10/16/%E6%95%A3%E5%88%97%E8%A1%A8-2/</url>
       <content type="html"><![CDATA[<p>-处理冲突的方法<br>-散列表查找及性能分析<br><a id="more"></a><br><strong><font size="6">处理冲突的方法<font></font></font></strong><br>任何设计出来的散列函数都不可能绝对地避免冲突，为此，必须考虑在发生冲突时应该如何进行处理，即为产生冲突的关键字寻找下一个“空”的Hash地址。<br>假设已经选定散列函数H(key)，下面用Hi表示发生冲突后第i次探测的散列地址。<br><strong><font size="4">一.开放定址法<font></font></font></strong><br>所谓开放定址法，指的是可存放新表项的空闲地址既指向它的同义词表项开放，又向它的非同义词表项开放。其数学递推公式<strong>Hi=（H（key）+di）%m</strong>，其中，i=1,2,…,k（k&lt;=m-1）；m表示散列表表长；di为增量序列。<br>当增量序列即di确定后，则对应的处理方法是确定的。通常有以下四种取法：<br><strong>1）线性探测法</strong><br>当di=1，2，…，m-1，称为线性探测法。这种方法的特点是：冲突发生时，顺序查看表中的下一个单元（当探测到表尾地址m-1时，下一个探测地址是表首地址0），直到找出下一个空闲单元（当表未填满时一定能找到一个空闲单元）或查遍全表。<br><strong>2）平方探测法</strong><br>当di=1²，-1²，2²，-2²，…，k²，-k²，其中k≤m/2，m必须是一个可以表示成4k+3的质数，又称二次探测法。<br>平方探测法是一种较好的处理冲突的方法，可以避免出现“堆积”问题，它的缺点是不能探测到散列表上的所有单元，但至少能探测到一般单元。<br><strong>3）再散列法</strong><br>当di=Hash2（Key），又称为双散列法。需要使用两个散列函数，当通过第一个散列函数H（Key）得到的地址发生冲突时，则利用第二个散列函数Hash2（Key）计算该关键字的地址增量。再散列法中，最多经过m-1次探测会遍历表中所有位置，回到H0位置。<br><strong>4）伪随机序列法</strong><br>当di=伪随机数序列，称为伪随机序列法。</p>
