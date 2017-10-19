@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[命题逻辑-2]]></title>
+      <url>/2017/10/19/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91-2/</url>
+      <content type="html"><![CDATA[<p>-主析取范式与主合取范式<br>-逻辑推理<br><a id="more"></a><br><strong>文字</strong>：命题变元或命题变元的否定<br><strong>析取式</strong>：有限个文字的析取称为析取式，也称子句<br><strong>合取式</strong>：有限个文字的合取称为合取式，也称短语<br><strong>互补对</strong>：P与¬P称为互补对<br><strong>析取范式</strong>：有限个短语的析取式为析取范式<br><strong>合取范式</strong>：有限个子句的合取式为合取范式<br><strong>极小项与极大项</strong>：在含有n个命题变元P1,P2,…,Pn的短语或子句中，若每个命题变元与其否定不同时存在，但二者之一恰好出现一次且仅出现一次，并且出现的次序与P1,P2,…,Pn一致，则称此短语或子句为关于P1,P2,…,Pn的一个极小项或极大项<br><strong>主析取范式</strong>：在给定的析取范式中，若每一个短语都是极小项，则称该范式为主析取范式<br><strong>主合取范式</strong>：在给定的合取范式中，若每一个子句都是极大项，则称该范式为主合取范式</p>
+<hr>
+<p>推理定律：<br>基于真值表技术，由如下关系：<br><strong>简化规则</strong>：<br>G∧H=&gt;G<br>G∧H=&gt;H<br><strong>添加规则</strong>：<br>G=&gt;G∨H<br>H=&gt;G∨H<br>¬G=&gt;G→H<br>H=&gt;H→G<br>G,H=&gt;G∧H<br><strong>选言三段论</strong>：<br>¬G,G→H=&gt;H<br>¬G,G⊕（异或）H=&gt;H<br><strong>肯定前件式</strong>：<br>G,G→H=&gt;H<br><strong>否定后件式</strong>：<br>¬H,G→H=&gt;¬G<br><strong>假言三段论</strong>:<br>G→H,H→I=&gt;G→I<br><strong>二难推论</strong>：<br>G∨H,G→I,H→I=&gt;I</p>
+<hr>
+<p><strong>规则P</strong>：前提引用规则。在推导的过程中，可随时引入前提集合中的任意一个前提<br><strong>规则T</strong>：逻辑结果引用规则。在推导的过程中，可随时引入公式S，该公式S是由其前的一个或多个公式推导出来的逻辑结果<br><strong>规则CP</strong>：附加前提规则。如果能从给定的前提的集合T与公式P推导出S，则能从此前提集合T推导出P→S</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[九度OJ-1001题解]]></title>
       <url>/2017/10/19/%E4%B9%9D%E5%BA%A6OJ-1001/</url>
       <content type="html"><![CDATA[<p>好久没写过Online judge了<br>结果三次才AC<br><a id="more"></a><br>题目描述：<br>    This time, you are supposed to find A+B where A and B are two matrices, and then count the number of zero rows and columns.<br>输入：<br>    The input consists of several test cases, each starts with a pair of positive integers M and N (≤10) which are the number of rows and columns of the matrices, respectively. Then 2*M lines follow, each contains N integers in [-100, 100], separated by a space. The first M lines correspond to the elements of A and the second M lines to that of B.<br>    The input is terminated by a zero M and that case must NOT be processed.<br>输出：<br>    For each test case you should output in one line the total number of zero rows and columns of A+B.<br>样例输入：<br>2 2<br>1 1<br>1 1<br>-1 -1<br>10 9<br>2 3<br>1 2 3<br>4 5 6<br>-1 -2 -3<br>-4 -5 -6<br>0<br>样例输出：<br>1<br>5<br>来源：<br>2011年浙江大学计算机及软件工程研究生机试真题</p>
