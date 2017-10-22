@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title><![CDATA[谓词逻辑]]></title>
+      <url>/2017/10/22/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</url>
+      <content type="html"><![CDATA[<p>-基本概念<br>-推理规则</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>个体词</strong>：在原子命题中，可以存在的客体（句子中的主语、宾语等）<br><strong>谓词</strong>：用以刻画客体性质或客体之间的关系的词<br><strong>个体常量</strong>：表示具体或特定的个体词<br><strong>个体变量</strong>：表示抽象或泛指的个体词<br><strong>个体域</strong>：个体词的取值范围<br><strong>全总个体域</strong>：宇宙间所有的个体域聚集在一起所构成的个体域<br><strong>存在量词</strong>：∃x（其中x称为作用变量）<br><strong>全称量词</strong>：∀x（其中x称为作用变量）<br><strong>辖域</strong>：一般将其量词加在其谓词之前，记为（∀x）F（x）， （∃x）F（x），此时，F（x）称为全称量词和存在量词的辖域<br><strong>约束出现</strong>：给定一个合适的公式G，若变元x出现在使用变元的量词的辖域之内，则称x的出现为约束出现，此时的变元x称为<strong>约束变元</strong><br><strong>自由出现</strong>：若x的出现不是约束出现，则为自由出现，此时的x称为<strong>自由变元</strong><br><strong>Skolem标准型</strong>：如果消去G中所有的存在量词和全称量词，所得到的公式称为Skolem标准型</p>
+<hr>
+<p><strong>谓词合式公式基本等价关系</strong><br>定义：如果公式G↔H是有效公式，则公式G，H称为<strong>等价</strong>的，记为G=H<br><strong>改名规则</strong>：<br>·（∃x）G（x）=（∃y）G（y）<br>·（∀x）G（x）=（∀y）G（y）<br><strong>量词转换律</strong><br>·¬（∃x）G（x）=（∀x）¬G（x）<br>·¬（∀x）G（x）=（∃x）¬G（x）<br><strong>量词辖域的扩张与收律</strong><br>·（∀x）G（x∨s）=（∀x）G（x）∨s<br>·（∀x）G（x∧s）=（∀x）G（x）∧s<br>·（∃x）G（x∨s）=（∃x）G（x）∨s<br>·（∃x）G（x∧s）=（∃x）G（x）∧s<br><strong>量词分配律</strong><br>·（∀x）（G（x）∧H（x））=（∀x）G（x）∧（∀x）H（x）<br>·（∃x）（G（x）∨H（x））=（∃x）G（x）∨（∃x）H（x）<br>·（∀x）G（x）∨（∀x）H（x）=（∀x）（∀y）（G（x）∨H（y））<br>·（∃x）G（x）∧（∃x）H（x）=（∃x）（∃y）（G（x）∨H（y））</p>
+<hr>
+<p><strong>推理规则</strong>：<br>1.<strong>US（全称特指规则）</strong>：（∀x）G（x）=&gt;G（y），其中y关于G（x）是自由的变元，不是约束的变元<br>2.<strong>ES（存在特指规则）</strong>：（∃x）G（x）=&gt;G（c），其中c为使G（c）为真的个体变量<br>3.<strong>UG（全程推广规则）</strong>：G（y）=&gt;（∀x）G（x），其中G（y）中无自由变元x<br>4.<strong>EG（存在推广原则）</strong>：G（c）=&gt;（∃x）G（x），其中c为特定个体变量</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[命题逻辑-2]]></title>
       <url>/2017/10/19/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91-2/</url>
       <content type="html"><![CDATA[<p>-主析取范式与主合取范式<br>-逻辑推理</p>

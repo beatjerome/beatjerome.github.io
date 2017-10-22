@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Computer Basics," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-处理冲突的方法-散列表查找及性能分析">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="-基本概念-推理规则">
+<meta name="keywords" content="Computer Basics">
 <meta property="og:type" content="article">
-<meta property="og:title" content="散列表-2">
-<meta property="og:url" content="http://yoursite.com/2017/10/16/散列表-2/index.html">
+<meta property="og:title" content="谓词逻辑">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/谓词逻辑/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-处理冲突的方法-散列表查找及性能分析">
+<meta property="og:description" content="-基本概念-推理规则">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-19T15:12:19.111Z">
+<meta property="og:updated_time" content="2017-10-22T14:57:47.852Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="散列表-2">
-<meta name="twitter:description" content="-处理冲突的方法-散列表查找及性能分析">
+<meta name="twitter:title" content="谓词逻辑">
+<meta name="twitter:description" content="-基本概念-推理规则">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/16/散列表-2/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/22/谓词逻辑/"/>
 
 
 
 
 
-  <title>散列表-2 | Grocery</title>
+  <title>谓词逻辑 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/16/散列表-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/22/谓词逻辑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">散列表-2</h1>
+          <h1 class="post-title" itemprop="name headline">谓词逻辑</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-16T22:51:45+08:00">
-                2017-10-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T23:00:45+08:00">
+                2017-10-22
               </time>
             
 
@@ -349,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
-                    <span itemprop="name">Data structure</span>
+                  <a href="/categories/Discrete-mathematics/" itemprop="url" rel="index">
+                    <span itemprop="name">Discrete mathematics</span>
                   </a>
                 </span>
 
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,232
+                  584
                 </span>
               
 
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  2
                 </span>
               
             </div>
@@ -417,16 +417,13 @@
       
 
       
-        <p>-处理冲突的方法<br>-散列表查找及性能分析</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong><font size="6">处理冲突的方法<font></font></font></strong><br>任何设计出来的散列函数都不可能绝对地避免冲突，为此，必须考虑在发生冲突时应该如何进行处理，即为产生冲突的关键字寻找下一个“空”的Hash地址。<br>假设已经选定散列函数H(key)，下面用Hi表示发生冲突后第i次探测的散列地址。<br><strong><font size="4">一.开放定址法<font></font></font></strong><br>所谓开放定址法，指的是可存放新表项的空闲地址既指向它的同义词表项开放，又向它的非同义词表项开放。其数学递推公式<strong>Hi=（H（key）+di）%m</strong>，其中，i=1,2,…,k（k&lt;=m-1）；m表示散列表表长；di为增量序列。<br>当增量序列即di确定后，则对应的处理方法是确定的。通常有以下四种取法：<br><strong>1）线性探测法</strong><br>当di=1，2，…，m-1，称为线性探测法。这种方法的特点是：冲突发生时，顺序查看表中的下一个单元（当探测到表尾地址m-1时，下一个探测地址是表首地址0），直到找出下一个空闲单元（当表未填满时一定能找到一个空闲单元）或查遍全表。<br><strong>2）平方探测法</strong><br>当di=1²，-1²，2²，-2²，…，k²，-k²，其中k≤m/2，m必须是一个可以表示成4k+3的质数，又称二次探测法。<br>平方探测法是一种较好的处理冲突的方法，可以避免出现“堆积”问题，它的缺点是不能探测到散列表上的所有单元，但至少能探测到一般单元。<br><strong>3）再散列法</strong><br>当di=Hash2（Key），又称为双散列法。需要使用两个散列函数，当通过第一个散列函数H（Key）得到的地址发生冲突时，则利用第二个散列函数Hash2（Key）计算该关键字的地址增量。再散列法中，最多经过m-1次探测会遍历表中所有位置，回到H0位置。<br><strong>4）伪随机序列法</strong><br>当di=伪随机数序列，称为伪随机序列法。</p>
-<p><strong>注意：在开放地址的情形下，不能随便物理删除表中已有元素，因为若删除元素将会截断其他<br>具有相同散列地址的元素的查找地址。所以，若想删除一个元素时，给它做一个删除标记，进<br>行逻辑删除。但这样做的副作用是：在执行多次删除后，表面看上去散列表是满的，实际上有<br>许多位置没有利用，因此需要定期维护散列表，要把删除标记的元素物理删除。</strong></p>
-<p><strong><font size="4">二.拉链法</font></strong><br>对于不同的关键字可能会通过散列函数映射到同一地址，为了避免同义词发生冲突，可以把所有的同义词存储在一个线性链表中，这个线性链表由其散列地址唯一标识。假设散列地址为i的同义词链表的头指针存放在散列表中的第i个单元中，因而查找，插入，删除操作主要在同义词链中进行。拉链法适合于经常进行插入删除操作的情况。</p>
+        <p>-基本概念<br>-推理规则</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>个体词</strong>：在原子命题中，可以存在的客体（句子中的主语、宾语等）<br><strong>谓词</strong>：用以刻画客体性质或客体之间的关系的词<br><strong>个体常量</strong>：表示具体或特定的个体词<br><strong>个体变量</strong>：表示抽象或泛指的个体词<br><strong>个体域</strong>：个体词的取值范围<br><strong>全总个体域</strong>：宇宙间所有的个体域聚集在一起所构成的个体域<br><strong>存在量词</strong>：∃x（其中x称为作用变量）<br><strong>全称量词</strong>：∀x（其中x称为作用变量）<br><strong>辖域</strong>：一般将其量词加在其谓词之前，记为（∀x）F（x）， （∃x）F（x），此时，F（x）称为全称量词和存在量词的辖域<br><strong>约束出现</strong>：给定一个合适的公式G，若变元x出现在使用变元的量词的辖域之内，则称x的出现为约束出现，此时的变元x称为<strong>约束变元</strong><br><strong>自由出现</strong>：若x的出现不是约束出现，则为自由出现，此时的x称为<strong>自由变元</strong><br><strong>Skolem标准型</strong>：如果消去G中所有的存在量词和全称量词，所得到的公式称为Skolem标准型</p>
 <hr>
-<p><strong><font size="6">散列表查找及性能分析</font></strong><br>散列表的查找过程与构造散列表的过程基本一致。对于一个给定的关键字key，根据散列函数可以计算出其散列地址，执行步骤如下：<br><strong>初始化：Addr=Hash（key）；</strong><br>①检测查找表中地址为Addr的位置上是否有记录，若没有记录，返回查找失败；若有记录，比较它与key值，若相等，返回查找成功标志，否则执行下一步。<br>②用给定的处理冲突方法计算“下一个散列地址”，并把Addr置wei此地址，转入步骤①</p>
-<pre><code>散列表的查找效率取决与三个因素：散列函数，处理冲突的方法和装填因子
-</code></pre><p><strong>装填因子</strong>：散列表的装填因子一般记为α，定义为一个表的装满程度，即<strong>α=表中记录数n/散列表长度m</strong><br>散列表的平均查找长度依赖于散列表的装填因子α，而不直接依赖于n或m。直观上看，α越大，装填程度越满，发生冲突的可能性就越大，反之发生冲突的可能性越小。</p>
+<p><strong>谓词合式公式基本等价关系</strong><br>定义：如果公式G↔H是有效公式，则公式G，H称为<strong>等价</strong>的，记为G=H<br><strong>改名规则</strong>：<br>·（∃x）G（x）=（∃y）G（y）<br>·（∀x）G（x）=（∀y）G（y）<br><strong>量词转换律</strong><br>·¬（∃x）G（x）=（∀x）¬G（x）<br>·¬（∀x）G（x）=（∃x）¬G（x）<br><strong>量词辖域的扩张与收律</strong><br>·（∀x）G（x∨s）=（∀x）G（x）∨s<br>·（∀x）G（x∧s）=（∀x）G（x）∧s<br>·（∃x）G（x∨s）=（∃x）G（x）∨s<br>·（∃x）G（x∧s）=（∃x）G（x）∧s<br><strong>量词分配律</strong><br>·（∀x）（G（x）∧H（x））=（∀x）G（x）∧（∀x）H（x）<br>·（∃x）（G（x）∨H（x））=（∃x）G（x）∨（∃x）H（x）<br>·（∀x）G（x）∨（∀x）H（x）=（∀x）（∀y）（G（x）∨H（y））<br>·（∃x）G（x）∧（∃x）H（x）=（∃x）（∃y）（G（x）∨H（y））</p>
 <hr>
-<p>虽然散列表在关键字与记录的存储位置之间建立了直接映像，但由于冲突的发生，使得散列表的查找过程仍然是一个给定值和关键字进行比较的过程。因此，仍需以平均查找长度作为衡量散列表的查找效率的度量。</p>
+<p><strong>推理规则</strong>：<br>1.<strong>US（全称特指规则）</strong>：（∀x）G（x）=&gt;G（y），其中y关于G（x）是自由的变元，不是约束的变元<br>2.<strong>ES（存在特指规则）</strong>：（∃x）G（x）=&gt;G（c），其中c为使G（c）为真的个体变量<br>3.<strong>UG（全程推广规则）</strong>：G（y）=&gt;（∀x）G（x），其中G（y）中无自由变元x<br>4.<strong>EG（存在推广原则）</strong>：G（c）=&gt;（∃x）G（x），其中c为特定个体变量</p>
+<hr>
 
       
     </div>
@@ -473,7 +470,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/Tags/Computer-Basics/" rel="tag"># Computer Basics</a>
           
         </div>
       
@@ -486,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/16/散列表-1/" rel="next" title="散列表-1">
-                <i class="fa fa-chevron-left"></i> 散列表-1
+              <a href="/2017/10/19/命题逻辑-2/" rel="next" title="命题逻辑-2">
+                <i class="fa fa-chevron-left"></i> 命题逻辑-2
               </a>
             
           </div>
@@ -495,10 +492,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/18/命题逻辑-1/" rel="prev" title="命题逻辑-1">
-                命题逻辑-1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
