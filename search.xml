@@ -87,8 +87,9 @@
     <entry>
       <title><![CDATA[九度OJ-1001题解]]></title>
       <url>/2017/10/19/%E4%B9%9D%E5%BA%A6OJ-1001/</url>
-      <content type="html"><![CDATA[<p>好久没写过Online judge了<br>结果三次才AC</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>题目描述：<br>    This time, you are supposed to find A+B where A and B are two matrices, and then count the number of zero rows and columns.<br>输入：<br>    The input consists of several test cases, each starts with a pair of positive integers M and N (≤10) which are the number of rows and columns of the matrices, respectively. Then 2*M lines follow, each contains N integers in [-100, 100], separated by a space. The first M lines correspond to the elements of A and the second M lines to that of B.<br>    The input is terminated by a zero M and that case must NOT be processed.<br>输出：<br>    For each test case you should output in one line the total number of zero rows and columns of A+B.<br>样例输入：<br>2 2<br>1 1<br>1 1<br>-1 -1<br>10 9<br>2 3<br>1 2 3<br>4 5 6<br>-1 -2 -3<br>-4 -5 -6<br>0<br>样例输出：<br>1<br>5<br>来源：<br>2011年浙江大学计算机及软件工程研究生机试真题</p>
+      <content type="html"><![CDATA[<p>-好久没写过Online judge了<br>-结果三次才AC<br><a id="more"></a></p>
+<hr>
+<p>题目描述：<br>    This time, you are supposed to find A+B where A and B are two matrices, and then count the number of zero rows and columns.<br>输入：<br>    The input consists of several test cases, each starts with a pair of positive integers M and N (≤10) which are the number of rows and columns of the matrices, respectively. Then 2*M lines follow, each contains N integers in [-100, 100], separated by a space. The first M lines correspond to the elements of A and the second M lines to that of B.<br>    The input is terminated by a zero M and that case must NOT be processed.<br>输出：<br>    For each test case you should output in one line the total number of zero rows and columns of A+B.<br>样例输入：<br>2 2<br>1 1<br>1 1<br>-1 -1<br>10 9<br>2 3<br>1 2 3<br>4 5 6<br>-1 -2 -3<br>-4 -5 -6<br>0<br>样例输出：<br>1<br>5<br>来源：<br>2011年浙江大学计算机及软件工程研究生机试真题</p>
 <hr>
 <p>题目的意思大概是输入两个数作为数组的行数和列数，然后读入两个这样的数组，执行加法操作，算出元素均为0的行数列数的和。</p>
 <hr>
