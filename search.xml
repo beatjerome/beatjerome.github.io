@@ -3,6 +3,35 @@
   
     
     <entry>
+      <title><![CDATA[证明技术]]></title>
+      <url>/2017/10/23/%E8%AF%81%E6%98%8E%E6%8A%80%E6%9C%AF/</url>
+      <content type="html"><![CDATA[<p>-基本证明技术<br>-典型证明技术</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong><font size="5">基本证明技术</font></strong><br>1.<strong>直接证明</strong><br>通过直接证明：若前提P为真，则结论Q也必然为真来证明蕴涵式P→Q成立，这样就证明了P真Q假的组合不可能存在，这种证明称为直接证明<br>2.<strong>间接证明</strong><br>因为蕴涵式P→Q等价于它的逆否命题¬Q→¬P，所以可以通过证明它的逆否命题¬Q→¬P为真来证明蕴涵式P→Q成立，这种类型的论证为间接证明</p>
+<hr>
+<p><strong><font size="5">典型证明技术</font></strong><br>1.<strong>空证明</strong><br>在蕴涵式P→Q中，当前件P为假时，无论其后件Q为真与否，蕴涵式P→Q都为真。<br>因此，可通过证明P为假，来证明P→Q，这称为空证明<br>2.<strong>平凡证明</strong><br>在蕴涵式P→Q中，当后件为真时，无论其前件Q为真与否，蕴涵式P→Q都为真。<br>因此，可通过证明Q为真，来证明P→Q，这称为平凡证明<br>3.<strong>归谬证明</strong><br>在蕴涵式P→Q中，当后件Q为假时，只有前件P也为假，蕴涵式P→Q才为真。因此，针对蕴涵式¬P→Q，假定可以找到矛盾式Q使得¬P→Q成立，即¬P为假，P为真。这种类型的论证称为归谬证明</p>
+<hr>
+<p><strong><font size="5">抽屉原理（鸽巢原理）</font></strong><br>桌上有十个苹果，要把这十个苹果放到九个抽屉里，无论怎样放，我们会发现至少会有一个抽屉里面至少放两个苹果。这一现象就是我们所说的“抽屉原理”。 抽屉原理的一般含义为：“如果每个抽屉代表一个集合，每一个苹果就可以代表一个元素，假如有n+1个元素放到n个集合中去，其中必定有一个集合里至少有两个元素。” </p>
+<hr>
+<p><strong><font size="5">数学归纳法</font></strong><br>最简单和常见的数学归纳法是证明当n等于任意一个自然数时某命题成立。证明分下面两步：<br>证明当n= 1时命题成立。<br>假设n=m时命题成立，那么可以推导出在n=m+1时命题也成立。（m代表任意自然数）</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[谓词逻辑]]></title>
       <url>/2017/10/22/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</url>
       <content type="html"><![CDATA[<p>-基本概念<br>-推理规则</p>
