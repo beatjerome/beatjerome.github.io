@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-好久没写过Online judge了-结果三次才AC">
+<meta name="description" content="Jerome">
 <meta name="keywords" content="Online judge">
 <meta property="og:type" content="article">
-<meta property="og:title" content="九度OJ-1001题解">
-<meta property="og:url" content="http://yoursite.com/2017/10/23/九度OJ-1001/index.html">
+<meta property="og:title" content="123">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/111/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-好久没写过Online judge了-结果三次才AC">
+<meta property="og:description" content="Jerome">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-23T09:30:31.330Z">
+<meta property="og:updated_time" content="2017-10-23T11:30:28.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="九度OJ-1001题解">
-<meta name="twitter:description" content="-好久没写过Online judge了-结果三次才AC">
+<meta name="twitter:title" content="123">
+<meta name="twitter:description" content="Jerome">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/23/九度OJ-1001/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/23/111/"/>
 
 
 
 
 
-  <title>九度OJ-1001题解 | Grocery</title>
+  <title>123 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/23/九度OJ-1001/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/23/111/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">九度OJ-1001题解</h1>
+          <h1 class="post-title" itemprop="name headline">123</h1>
         
 
         <div class="post-meta">
@@ -349,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Categories/九度OJ题解目录/" itemprop="url" rel="index">
-                    <span itemprop="name">九度OJ题解目录</span>
+                  <a href="/Categories/123/" itemprop="url" rel="index">
+                    <span itemprop="name">123</span>
                   </a>
                 </span>
 
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  457
+                  0
                 </span>
               
 
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  1
                 </span>
               
             </div>
@@ -417,53 +417,7 @@
       
 
       
-        <p>-好久没写过Online judge了<br>-结果三次才AC<br><a id="more"></a></p>
-<hr>
-<p>题目描述：<br>    This time, you are supposed to find A+B where A and B are two matrices, and then count the number of zero rows and columns.<br>输入：<br>    The input consists of several test cases, each starts with a pair of positive integers M and N (≤10) which are the number of rows and columns of the matrices, respectively. Then 2*M lines follow, each contains N integers in [-100, 100], separated by a space. The first M lines correspond to the elements of A and the second M lines to that of B.<br>    The input is terminated by a zero M and that case must NOT be processed.<br>输出：<br>    For each test case you should output in one line the total number of zero rows and columns of A+B.<br>样例输入：<br>2 2<br>1 1<br>1 1<br>-1 -1<br>10 9<br>2 3<br>1 2 3<br>4 5 6<br>-1 -2 -3<br>-4 -5 -6<br>0<br>样例输出：<br>1<br>5<br>来源：<br>2011年浙江大学计算机及软件工程研究生机试真题</p>
-<hr>
-<p>题目的意思大概是输入两个数作为数组的行数和列数，然后读入两个这样的数组，执行加法操作，算出元素均为0的行数列数的和。</p>
-<hr>
-<p><strong>AC代码：</strong></p>
-<p>#include<iostream><br>using namespace std;<br>int main(){<br>    int m,n; //读入数组的行列数<br>    int i,j;<br>    int count1,count2=0; //计数器 </iostream></p>
-<pre><code>while(cin&gt;&gt;m&gt;&gt;n&amp;&amp;m){
-    int a[m][n];
-    int b[m][n];
-    count2=0; //归零操作 
-
-    for(i=0;i&lt;m;i++)  //读入第一个数组
-        for(j=0;j&lt;n;j++)
-            cin&gt;&gt;a[i][j];
-
-
-    for(i=0;i&lt;m;i++)  //读入第二个数组 
-        for(j=0;j&lt;n;j++){ 
-            cin&gt;&gt;b[i][j];
-            a[i][j]+=b[i][j]; //执行数组的加法
-        } 
-
-    for(i=0;i&lt;m;i++){  //算出有多少行是元素均为0的 
-        for(j=0;j&lt;n;j++)        
-            if(a[i][j]==0)
-                count1++;
-            if(count1==n)
-                count2++;
-            count1=0;  //归零操作 
-        }
-
-    for(j=0;j&lt;n;j++){ //算出有多少列是元素均为0的 
-        for(i=0;i&lt;m;i++)
-            if(a[i][j]==0)
-                count1++;
-            if(count1==m)
-                count2++;
-            count1=0; //归零操作 
-        }
-
-    cout&lt;&lt;count2&lt;&lt;endl;    
-}
-return 0;             
-</code></pre><p>} </p>
-
+        
       
     </div>
     
@@ -522,8 +476,8 @@ return 0;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/23/证明技术/" rel="next" title="证明技术">
-                <i class="fa fa-chevron-left"></i> 证明技术
+              <a href="/2017/10/23/九度OJ-1001/" rel="next" title="九度OJ-1001题解">
+                <i class="fa fa-chevron-left"></i> 九度OJ-1001题解
               </a>
             
           </div>
@@ -531,10 +485,6 @@ return 0;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/23/111/" rel="prev" title="123">
-                123 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

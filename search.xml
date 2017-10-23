@@ -3,6 +3,26 @@
   
     
     <entry>
+      <title><![CDATA[123]]></title>
+      <url>/2017/10/23/111/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> 123 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[九度OJ-1001题解]]></title>
       <url>/2017/10/23/%E4%B9%9D%E5%BA%A6OJ-1001/</url>
       <content type="html"><![CDATA[<p>-好久没写过Online judge了<br>-结果三次才AC<br><a id="more"></a></p>
