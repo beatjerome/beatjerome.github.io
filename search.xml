@@ -69,12 +69,6 @@
 <p><strong>规则P</strong>：前提引用规则。在推导的过程中，可随时引入前提集合中的任意一个前提<br><strong>规则T</strong>：逻辑结果引用规则。在推导的过程中，可随时引入公式S，该公式S是由其前的一个或多个公式推导出来的逻辑结果<br><strong>规则CP</strong>：附加前提规则。如果能从给定的前提的集合T与公式P推导出S，则能从此前提集合T推导出P→S</p>
 ]]></content>
       
-        <categories>
-            
-            <category> Discrete mathematics </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -96,12 +90,6 @@
 <p><strong>AC代码：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line">int main()&#123;</div><div class="line">	int m,n; //读入数组的行列数 </div><div class="line">	int i,j;</div><div class="line">	int count1,count2=0; //计数器 </div><div class="line">	</div><div class="line">	while(cin&gt;&gt;m&gt;&gt;n&amp;&amp;m)&#123;</div><div class="line">		int a[m][n];</div><div class="line">		int b[m][n];</div><div class="line">		count2=0; //归零操作 </div><div class="line">		</div><div class="line">		for(i=0;i&lt;m;i++)  //读入第一个数组</div><div class="line">			for(j=0;j&lt;n;j++)</div><div class="line">				cin&gt;&gt;a[i][j];</div><div class="line">				</div><div class="line"></div><div class="line">		for(i=0;i&lt;m;i++)  //读入第二个数组 </div><div class="line">			for(j=0;j&lt;n;j++)&#123; </div><div class="line">				cin&gt;&gt;b[i][j];</div><div class="line">				a[i][j]+=b[i][j]; //执行数组的加法</div><div class="line">			&#125; </div><div class="line">					</div><div class="line">		for(i=0;i&lt;m;i++)&#123;  //算出有多少行是元素均为0的 </div><div class="line">			for(j=0;j&lt;n;j++)		</div><div class="line">				if(a[i][j]==0)</div><div class="line">					count1++;</div><div class="line">				if(count1==n)</div><div class="line">					count2++;</div><div class="line">				count1=0;  //归零操作 </div><div class="line">			&#125;</div><div class="line">			</div><div class="line">		for(j=0;j&lt;n;j++)&#123; //算出有多少列是元素均为0的 </div><div class="line">			for(i=0;i&lt;m;i++)</div><div class="line">				if(a[i][j]==0)</div><div class="line">					count1++;</div><div class="line">				if(count1==m)</div><div class="line">					count2++;</div><div class="line">				count1=0; //归零操作 </div><div class="line">			&#125;</div><div class="line">		</div><div class="line">		cout&lt;&lt;count2&lt;&lt;endl;	</div><div class="line">	&#125;</div><div class="line">	return 0;			 </div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
       
-        <categories>
-            
-            <category> 九度OJ题解目录 </category>
-            
-        </categories>
-        
         
         <tags>
             
