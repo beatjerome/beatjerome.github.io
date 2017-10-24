@@ -3,6 +3,38 @@
   
     
     <entry>
+      <title><![CDATA[代数系统]]></title>
+      <url>/2017/10/24/%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/</url>
+      <content type="html"><![CDATA[<p>-代数系统概念与性质</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>如果“*”是AXA到A的二元运算，则称运算“*”对集合A是<strong>封闭</strong>的，或者称“*”是A上的二元运算</p>
+<hr>
+<p>设A是非空集合,<em>1,</em>2,…,<em>m分别是定义在A上的k1,k2,…,km元封闭运算，ki是正整数，i=1,2,…,m。集合A和</em>1,<em>2,…,</em>m所组成的系统称为<strong>代数系统</strong>，简称<strong>代数</strong></p>
+<hr>
+<p><strong>代数系统的基本运算规律</strong><br>1.结合律<br>2.交换律<br>3.消去律<br>4.幂等律<br>5.分配律<br>6.吸收律</p>
+<hr>
+<p><strong>代数系统的性质</strong><br><strong>幺元</strong>：单位元(英文常写作Identity Element，即IE)是集合里的一种特别的元，与该集合里的运算（可理解为实数里的*，但并不局限于）有关。当它和其他元素结合时，并不会改变那些元素。也叫幺元（么元）。若a<em>e=a，e称为右单位元；若e</em>a=a，e称为左单位元，若a<em>e=e</em>a=a，则e称为单位元。若该演算左右的元素能互换，左、右单位元相同，可称为双边单位元。<br><strong>零元</strong><br>设*是定义在集合A上的一个二元运算，如果有一个元素a1属于A，对于任意的元素x属于A，都有a1<em>x=a1，则称a为A中关于运算</em>的左零元；如果有一个元素a2属于A,a1不等于a2，对于任意的元素x属于A都有x<em>a2=a2，则称a2为A中关于运算</em>的右零元；如果A中的一个元素a，它既是左零元又是右零元，则称a为A中关于运算<em>的零元。<br><strong>逆元</strong><br>设S为一有二元运算 </em> 的集合。若e为(S,<em>)的单位元且a</em>b=e，则a称为b的左逆元素且b称为a的右逆元素。若一元素x同时是y的左逆元素和右逆元素时，x称为y的两面逆元素或简称为逆元素。S内的一有两面逆元素的元素被称为在S内为可逆的。</p>
+<hr>
+<p><strong>单射</strong>：设f是由集合A到集合B的映射，如果所有x,y∈A,且x≠y，都有f(x)≠f(y),则称f为由A到B的单射。</p>
+<p><strong>同态</strong>：假设M，M′是两个乘集，也就是说M和M′是两个各具有一个封闭的具有结合律的运算<em>与</em>‘的代数系统。σ是M射到M′的映射，并且任意两个元的乘积的像是这两个元的像的乘积，即对于M中任意两个元a,b,满足<br>σ(a<em>b)=σ(a)</em>’σ(b)；<br>也就是说，当a→σ(a)，b→σ(b)时，a<em>b→σ(a)</em>’σ(b)，<br>那么这映射σ就叫做M到M′上的同态。<br>如果 σ 是单射， 则称为单同态；如果 σ 是满射，则称为满同态。如果σ是双射， 则称为同构。<br>如果M, M’都是群， 那么同态也叫做群同态。</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[九度OJ-1001]]></title>
       <url>/2017/10/23/%E4%B9%9D%E5%BA%A6OJ-1001/</url>
       <content type="html"><![CDATA[<p>-好久没有刷过OJ<br>-三次才AC<br><a id="more"></a></p>
