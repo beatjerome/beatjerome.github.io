@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[Anyview数据结构-4]]></title>
+      <url>/2017/10/27/AnyView%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-4/</url>
+      <content type="html"><![CDATA[<p>-广工Anyview题解<br>-数据结构部分-4<br><a id="more"></a></p>
+<p>/<strong><strong>**</strong></strong><br>【题目】已知某哈希表的装载因子小于1，哈希函数H(key)<br>为关键字(标识符)的第一个字母在字母表中的序号，处理<br>冲突的方法为线性探测开放定址法。试编写一个按第一个<br>字母的顺序输出哈希表中所有关键字的算法。<br>哈希表的类型HashTable定义如下：</p>
+<p>#define SUCCESS    1</p>
+<p>#define UNSUCCESS  0</p>
+<p>#define DUPLICATE -1<br>typedef char StrKeyType[4];<br>typedef struct {<br>   StrKeyType key; // 关键字项<br>   int    tag;     // 标记 0:空；1:有效; -1:已删除<br>   void  <em>any;     // 其他信息<br>} RcdType;<br>typedef struct {<br>  RcdType </em>rcd;    // 存储空间基址<br>  int      size;   // 哈希表容量<br>  int      count;  // 表中当前记录个数<br>} HashTable;<br><strong><strong>**</strong></strong>/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">void PrintKeys(HashTable ht, void(*print)(StrKeyType))</div><div class="line">/* 依题意用print输出关键字 */</div><div class="line">&#123;</div><div class="line">    int n,i,size;</div><div class="line">    char c;</div><div class="line">    for(c=&apos;A&apos;;c&lt;=&apos;Z&apos;;c++)&#123;</div><div class="line">        for(i=0;i&lt;ht.size;i++)&#123;</div><div class="line">            if(ht.rcd[i].tag==-1) </div><div class="line">                continue;</div><div class="line">            if(ht.rcd[i].key[0]==c)</div><div class="line">                print(ht.rcd[i].key);</div><div class="line">            &#125;</div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>/<strong><strong>**</strong></strong><br>【题目】假设哈希表长为m，哈希函数为H(x)，用链地址法<br>处理冲突。试编写输入一组关键字并建造哈希表的算法。<br>哈希表的类型ChainHashTab定义如下：</p>
+<p>#define NUM         7</p>
+<p>#define NULLKEY    -1</p>
+<p>#define SUCCESS     1</p>
+<p>#define UNSUCCESS   0</p>
+<p>#define DUPLICATE  -1<br>typedef char HKeyType;<br>typedef struct HNode {<br>   HKeyType  data;<br>   struct HNode<em>  next;<br>}</em>HLink;<br>typedef struct {<br>   HLink  <em>rcd;   // 指针存储基址，动态分配数组<br>   int    count;  // 当前表中含有的记录个数<br>   int    size;  // 哈希表的当前容量<br>}ChainHashTab;    // 链地址哈希表<br>int Hash(ChainHashTab H, HKeyType k) { // 哈希函数<br>  return k % H.size;<br>}<br>Status Collision(ChainHashTab H, HLink &amp;p) {<br>  // 求得下一个探查地址p<br>  if (p &amp;&amp; p-&gt;next) {<br>    p = p-&gt;next;<br>    return SUCCESS;<br>  } else return UNSUCCESS;<br>}<br><strong><strong>*</strong></strong></em>/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">int BuildHashTab(ChainHashTab &amp;H, int n, HKeyType es[]) </div><div class="line">/* 直接调用下列函数                             */</div><div class="line">/* 哈希函数：                                   */</div><div class="line">/*    int Hash(ChainHashTab H, HKeyType k);     */</div><div class="line">/* 冲突处理函数：                               */</div><div class="line">/*    int Collision(ChainHashTab H, HLink &amp;p);  */</div><div class="line">&#123;</div><div class="line">    int i,k,j;</div><div class="line">    HLink p,q,p1;</div><div class="line">    H.rcd = (HLink*)malloc(7*sizeof(HLink));</div><div class="line">    H.size = 7;</div><div class="line">    H.count = 0;</div><div class="line">    for(i = 0;es[i] &gt;= &apos;A&apos;;i++)&#123;</div><div class="line">        p = (HNode*)malloc(sizeof(HNode));</div><div class="line">        p-&gt;next = NULL;</div><div class="line">        p-&gt;data = es[i];</div><div class="line">        k = Hash( H, p-&gt;data) ;</div><div class="line">        if(NULL !=H.rcd[k])&#123;  // 判断其中是否有相同的HKeyType</div><div class="line">            p1 =  H.rcd[k];</div><div class="line">            while(NULL != p1)&#123;  //用j作为标记，如果j = 0表示没有相同的，插入p</div><div class="line">                if(p1-&gt;data == p-&gt;data)</div><div class="line">                    j = 1;</div><div class="line">                p1 = p1-&gt;next;</div><div class="line">            &#125;</div><div class="line">            if(j == 0)&#123;</div><div class="line">                q =  H.rcd[k];</div><div class="line">                p-&gt;next = q;</div><div class="line">                H.rcd[k] = p;</div><div class="line">            &#125;</div><div class="line">           j = 0;</div><div class="line">        &#125;         </div><div class="line">        else   </div><div class="line">            H.rcd[k] = p; //为什么H.rcd[k]-&gt;next = p;不会报错</div><div class="line">    H.count++;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> GDUT-Anyview </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AnyView </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Anyview数据结构-3]]></title>
       <url>/2017/10/27/AnyView%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-3/</url>
       <content type="html"><![CDATA[<p>-广工Anyview题解<br>-数据结构部分-3<br><a id="more"></a><br>/<strong><strong>**</strong></strong><br>【题目】试以顺序表L的L.rcd[L.length+1]作为监视哨，<br>改写教材3.2节中给出的升序直接插入排序算法。<br>顺序表的类型RcdSqList定义如下：<br>typedef struct {<br>   KeyType key;<br>   …<br>} RcdType;<br>typedef struct {<br>   RcdType rcd[MAXSIZE+1]; // rcd[0]闲置<br>   int length;<br>} RcdSqList;<br><strong><strong>**</strong></strong>/</p>
