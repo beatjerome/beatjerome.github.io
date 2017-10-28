@@ -468,6 +468,34 @@
     </entry>
     
     <entry>
+      <title><![CDATA[ZOJ-1001题解]]></title>
+      <url>/2017/10/16/ZOJ-1001/</url>
+      <content type="html"><![CDATA[<hr>
+<p>A + B Problem<br>Time Limit: 2 Seconds      Memory Limit: 65536 KB</p>
+<p>Calculate a + b<br>Input<br>The input will consist of a series of pairs of integers a and b,separated by a space, one pair of integers per line.<br>Output<br>For each pair of input integers a and b you should output the sum of a and b in one line,and with one line of output for each line in input.<br>Sample Input<br>1 5<br>Sample Output<br>6<br>Hint<br>Use + operator</p>
+<hr>
+<p>解题思路：没有什么思路，直接加输出就是了</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;  </div><div class="line">using namespace std;  </div><div class="line">int main()&#123;  </div><div class="line">  </div><div class="line">   int a,b;  </div><div class="line">   while(cin&gt;&gt;a&gt;&gt;b)&#123;  </div><div class="line">     cout&lt;&lt;a+b&lt;&lt;endl;  </div><div class="line">   &#125;  </div><div class="line">  </div><div class="line">   return 0;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> ZOJ题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[散列表-1]]></title>
       <url>/2017/10/16/%E6%95%A3%E5%88%97%E8%A1%A8-1/</url>
       <content type="html"><![CDATA[<p>-散列表的基本内容<br>-散列函数的构造方法</p>
