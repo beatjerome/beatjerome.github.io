@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[树]]></title>
+      <url>/2017/10/28/%E6%A0%91/</url>
+      <content type="html"><![CDATA[<p>-树的定义与基本性质<br><a id="more"></a><br><strong>树</strong>：树是N（N≥0）个结点的有限集合，N=0时，称为空树。<br>在任意一棵非空树中应满足：<br>1.有且仅有一个特定的称为<strong>根</strong>的结点<br>2.当N&gt;1时，其余结点可分为m（m&gt;0）个互不相交的有限集合T1，T2，…，Tm，其中每一个集合本身又是一棵树，称为根结点的<strong>子树</strong></p>
+<p>显然树的定义是递归的，是一种递归的数据结构。树作为一种逻辑结构，同时也使一种分层结构，具有以下两个特点：<br>1.树的根结点没有前驱结点之外，所有结点有且仅有一个前驱结点<br>2.树的所有节点可以有零个或多个后继结点</p>
+<p><strong>由特点2可以推出，在n个结点的树中有n-1条边</strong></p>
+<hr>
+<p><strong><font size="5">基本术语</font></strong><br><strong>度</strong>：树中一个结点的子结点个数称为该结点的度，树中结点的最大度数称为树的度<br><strong>分支结点</strong>：度大于0的结点称为分支结点（又称非终端结点）<br><strong>叶子结点</strong>：度为0（没有子女结点）的结点称为叶子结点（又称终端结点）<br><strong>树的高度（深度）</strong>：树中结点的最大层数<br><strong>有序树与无序树</strong>：树中结点的子树从左到右是有次序的，不能交换，这样的树叫做有序树，有序树中，一个结点其子结点按从左到右顺序出现时有关联的。反之称为无序树<br><strong>路径与路径长度</strong>：树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数<br><strong>森林</strong>：森林是m(m≥0)棵互不相交的树的集合</p>
+<hr>
+<p><strong><font size="5">树的基本性质</font></strong><br>1.树中结点数等于所有结点的度数加一<br>2.度为m的树中第i层上至多有m^i-1个结点<br>3.高度为h的m叉树至多有(m^h-1)/(m-1)个结点<br>4.具有n个结点的m叉树的最小高度为[logm(n(m-1)+1)]</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Some casual words]]></title>
       <url>/2017/10/28/Some%20casual%20words/</url>
       <content type="html"><![CDATA[<p>-深夜发个牢骚？</p>
@@ -16,9 +44,7 @@
 <hr>
 <p>以上<br>虽然我也不知道我自己写的什么瓜皮东西<br>但就这样吧<br>睡醒又是新的一天</p>
 <hr>
-<p><img src="5.png" alt=""></p>
-<hr>
-]]></content>
+<h2 id="！"><a href="#！" class="headerlink" title="！"></a>！<a href="5.png"></a></h2>]]></content>
       
         <categories>
             
