@@ -3,6 +3,49 @@
   
     
     <entry>
+      <title><![CDATA[ZOJ-1037题解]]></title>
+      <url>/2017/10/28/ZOJ-1037/</url>
+      <content type="html"><![CDATA[<p>-注意提交格式！</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>Gridland<br>Time Limit: 2 Seconds      Memory Limit: 65536 KB<br>Background</p>
+<p>For years, computer scientists have been trying to find efficient solutions to different computing problems. For some of them efficient algorithms are already available, these are the “easy” problems like sorting, evaluating a polynomial or finding the shortest path in a graph. For the “hard” ones only exponential-time algorithms are known. The traveling-salesman problem belongs to this latter group. Given a set of N towns and roads between these towns, the problem is to compute the shortest path allowing a salesman to visit each of the towns once and only once and return to the starting point.</p>
+<p>Problem</p>
+<p>The president of Gridland has hired you to design a program that calculates the length of the shortest traveling-salesman tour for the towns in the country. In Gridland, there is one town at each of the points of a rectangular grid. Roads run from every town in the directions North, Northwest, West, Southwest, South, Southeast, East, and Northeast, provided that there is a neighbouring town in that direction. The distance between neighbouring towns in directions North-South or East-West is 1 unit. The length of the roads is measured by the Euclidean distance. For example, Figure 7 shows 2 <em> 3-Gridland, i.e., a rectangular grid of dimensions 2 by 3. In 2 </em> 3-Gridland, the shortest tour has length 6.</p>
+<p>Figure 7: A traveling-salesman tour in 2 * 3-Gridland.</p>
+<p>Input</p>
+<p>The first line contains the number of scenarios.</p>
+<p>For each scenario, the grid dimensions m and n will be given as two integer numbers in a single line, separated by a single blank, satisfying 1 &lt; m &lt; 50 and 1 &lt; n &lt; 50.</p>
+<p>Output</p>
+<p>The output for each scenario begins with a line containing “Scenario #i:”, where i is the number of the scenario starting at 1. In the next line, print the length of the shortest traveling-salesman tour rounded to two decimal digits. The output for every scenario ends with a blank line.</p>
+<p>Sample Input</p>
+<p>2<br>2 2<br>2 3</p>
+<p>Sample Output</p>
+<p>Scenario #1:<br>4.00</p>
+<p>Scenario #2:<br>6.00 </p>
+<hr>
+<p>题目大意：先给案例个数，每个案例有两个数，作为长宽，然后以此来走，求走完所有点的最短长度</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include &lt;iomanip&gt;</div><div class="line">using namespace std;</div><div class="line">int main()&#123;</div><div class="line">	int n;</div><div class="line">	int x,y;</div><div class="line">	int count=1;</div><div class="line">	cin&gt;&gt;n;</div><div class="line">	cout &lt;&lt;fixed&lt;&lt;setprecision(2);</div><div class="line">	while(n--)&#123;</div><div class="line">		cin&gt;&gt;x&gt;&gt;y;</div><div class="line">		cout&lt;&lt;&quot;Scenario #&quot;&lt;&lt;count&lt;&lt;&quot;:&quot;&lt;&lt;endl;</div><div class="line">		if(x%2==1&amp;&amp;y%2==1)  //都是奇数 </div><div class="line">			cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;(double)(x*y+0.41)&lt;&lt;endl&lt;&lt;endl;</div><div class="line">		else</div><div class="line">			cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;(double)(x*y)&lt;&lt;endl&lt;&lt;endl; </div><div class="line">		count++;</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>submit了几次才成功，也是很久没有做OJ题了。<br>主要的问题都不大，就是要注意下格式，不然就会Presentation Error</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> ZOJ题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[ZOJ-1001题解]]></title>
       <url>/2017/10/28/ZOJ-1001/</url>
       <content type="html"><![CDATA[<p>……</p>
