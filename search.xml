@@ -3,6 +3,43 @@
   
     
     <entry>
+      <title><![CDATA[ZOJ-1048题解]]></title>
+      <url>/2017/10/28/ZOJ-1048/</url>
+      <content type="html"><![CDATA[<p>-简单的求均值题</p>
+<a id="more"></a>
+<p>Financial Management<br>Time Limit: 2 Seconds      Memory Limit: 65536 KB</p>
+<p>Larry graduated this year and finally has a job. He’s making a lot of money, but somehow never seems to have enough. Larry has decided that he needs to grab hold of his financial portfolio and solve his financing problems. The first step is to figure out what’s been going on with his money. Larry has his bank account statements and wants to see how much money he has. Help Larry by writing a program to take his closing balance from each of the past twelve months and calculate his average account balance.</p>
+<p>Input Format: </p>
+<p>The input will be twelve lines. Each line will contain the closing balance of his bank account for a particular month. Each number will be positive and displayed to the penny. No dollar sign will be included.</p>
+<p>Output Format: </p>
+<p>The output will be a single number, the average (mean) of the closing balances for the twelve months. It will be rounded to the nearest penny, preceded immediately by a dollar sign, and followed by the end-of-line. There will be no other spaces or characters in the output. </p>
+<p>Sample Input: </p>
+<p>100.00<br>489.12<br>12454.12<br>1234.10<br>823.05<br>109.20<br>5.27<br>1542.25<br>839.18<br>83.99<br>1295.01<br>1.75</p>
+<p>Sample Output: </p>
+<p>$1581.42</p>
+<hr>
+<p>简单的入门题，输入求均值输出就行</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;iomanip&gt; </div><div class="line">using namespace std;</div><div class="line">int main()&#123;</div><div class="line">	float a[12];</div><div class="line">	int i=0;</div><div class="line">	float sum=0;</div><div class="line">	for(i=0;i&lt;12;i++)&#123;</div><div class="line">		cin&gt;&gt;a[i];</div><div class="line">		sum+=a[i];</div><div class="line">	&#125;</div><div class="line">	cout&lt;&lt;&quot;$&quot;&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;sum/12&lt;&lt;endl;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> ZOJ题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[ZOJ-1037题解]]></title>
       <url>/2017/10/28/ZOJ-1037/</url>
       <content type="html"><![CDATA[<p>-注意提交格式！</p>
