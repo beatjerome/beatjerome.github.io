@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="AnyView," />
+  <meta name="keywords" content="programming language learning," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-广工Anyview题解-数据结构部分-3">
-<meta name="keywords" content="AnyView">
+<meta name="description" content="-C++基础介绍">
+<meta name="keywords" content="programming language learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Anyview数据结构-3">
-<meta property="og:url" content="http://yoursite.com/2017/10/27/AnyView数据结构-3/index.html">
+<meta property="og:title" content="开始学习C++">
+<meta property="og:url" content="http://yoursite.com/2017/10/30/开始学习C++/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-广工Anyview题解-数据结构部分-3">
+<meta property="og:description" content="-C++基础介绍">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-27T13:39:58.225Z">
+<meta property="og:updated_time" content="2017-10-30T02:41:48.530Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Anyview数据结构-3">
-<meta name="twitter:description" content="-广工Anyview题解-数据结构部分-3">
+<meta name="twitter:title" content="开始学习C++">
+<meta name="twitter:description" content="-C++基础介绍">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/27/AnyView数据结构-3/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/30/开始学习C++/"/>
 
 
 
 
 
-  <title>Anyview数据结构-3 | Grocery</title>
+  <title>开始学习C++ | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/27/AnyView数据结构-3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/30/开始学习C++/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Anyview数据结构-3</h1>
+          <h1 class="post-title" itemprop="name headline">开始学习C++</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T21:40:45+08:00">
-                2017-10-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T10:42:45+08:00">
+                2017-10-30
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-10-27T21:39:58+08:00">
-                2017-10-27
+              <time title="Post modified" itemprop="dateModified" datetime="2017-10-30T10:41:48+08:00">
+                2017-10-30
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/GDUT-Anyview/" itemprop="url" rel="index">
-                    <span itemprop="name">GDUT-Anyview</span>
+                  <a href="/categories/C-programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">C++ programming language</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  655
+                  291
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  1
                 </span>
               
             </div>
@@ -429,14 +429,18 @@
       
 
       
-        <p>-广工Anyview题解<br>-数据结构部分-3<br><a id="more"></a><br>/<strong><strong>**</strong></strong><br>【题目】试以顺序表L的L.rcd[L.length+1]作为监视哨，<br>改写教材3.2节中给出的升序直接插入排序算法。<br>顺序表的类型RcdSqList定义如下：<br>typedef struct {<br>   KeyType key;<br>   …<br>} RcdType;<br>typedef struct {<br>   RcdType rcd[MAXSIZE+1]; // rcd[0]闲置<br>   int length;<br>} RcdSqList;<br><strong><strong>**</strong></strong>/</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">void InsertSort(RcdSqList &amp;L)</div><div class="line">&#123;</div><div class="line">   int i,j;</div><div class="line">   for(i=1;i&lt;L.length;i++)&#123;</div><div class="line">     if(L.rcd[i+1].key&lt;L.rcd[i].key)&#123;</div><div class="line">        L.rcd[0]=L.rcd[i+1];</div><div class="line">        j=i+1;</div><div class="line">        do&#123;</div><div class="line">           j--;</div><div class="line">           L.rcd[j+1] = L.rcd[j];</div><div class="line">        &#125;while(L.rcd[0].key&lt;L.rcd[j-1].key);</div><div class="line">        L.rcd[j] = L.rcd[0];</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>-C++基础介绍</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>Hello world</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;  //预处理器编译指令</div><div class="line">using namespace std;  //编译指令</div><div class="line">int main()&#123;   //函数头</div><div class="line">	cout&lt;&lt;&quot;HelloWorld&quot;&lt;&lt;endl;  //cout语句输出，endl换行</div><div class="line">	return 0;</div><div class="line">&#125;   //C++注释用“//......”或者“/* ...... */”来进行注释</div></pre></td></tr></table></figure></p>
+<p>如C一般，这种程序在运行完之后立即关闭，需要加一句<code>cin.get();</code>语句来保持打开状态，直到按任何键才关闭。</p>
+<p>using编译指令使得std名称空间中的所有名称都可用，例如：可以直接使用cout和cin，而不用加std：：前缀。</p>
 <hr>
-<p>/<strong><strong>**</strong></strong><br>【题目】如下所述，改写教材1.3.2节例1-10的冒泡排序算法：<br>将算法中用以起控制作用的布尔变量change改为一个整型<br>变量，指示每一趟排序中进行交换的最后一个记录的位置，<br>并以它作为下一趟起泡排序循环终止的控制值。<br>顺序表的类型RcdSqList定义如下：<br>typedef struct {<br>   KeyType key;<br>   …<br>} RcdType;<br>typedef struct {<br>   RcdType rcd[MAXSIZE+1]; // rcd[0]闲置<br>   int length;<br>} RcdSqList;<br><strong><strong>**</strong></strong>/</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">void BubbleSort(RcdSqList &amp;L)</div><div class="line">/* 元素比较和交换必须调用如下定义的比较函数和交换函数：*/</div><div class="line">/* Status LT(RedType a, RedType b);   比较：&quot;&lt;&quot;        */</div><div class="line">/* Status GT(RedType a, RedType b);   比较：&quot;&gt;&quot;        */</div><div class="line">/* void Swap(RedType &amp;a, RedType &amp;b); 交换             */</div><div class="line">&#123;</div><div class="line">   int i,change,j,k;                                                  </div><div class="line">   for(i=L.length,change = 0;i&gt;1;i--)&#123;</div><div class="line">       change = i;</div><div class="line">      for(j=1;j&lt;i;++j)&#123;</div><div class="line">         if(GT(L.rcd[j],L.rcd[j+1]))&#123;</div><div class="line">            Swap(L.rcd[j],L.rcd[j+1]);</div><div class="line">            k++;</div><div class="line">            change = j+1;</div><div class="line">         &#125;            </div><div class="line">      &#125;</div><div class="line">      while(L.rcd[change].key == L.rcd[change-1].key) //用while来跳过那些相同关键字</div><div class="line">             change=change - 1;</div><div class="line">      i=change;</div><div class="line">      if(k==0)    //当有一次比较没有交换时使i= 1结束操作</div><div class="line">         i=1;</div><div class="line">     k=0;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>C++语句</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int i; //声明语句</div><div class="line">i=1;  //赋值语句</div></pre></td></tr></table></figure></p>
+<p>除此之外，C++还有许多的其他语句，循环等。</p>
 <hr>
-<p>/<strong><strong>**</strong></strong><br>【题目】已知记录序列L.rcd[1..L.length]中的关键<br>字各不相同，可按如下所述实现计数排序：另设数组<br>c[1..n]，对每个记录a[i]， 统计序列中关键字比它<br>小的记录个数存于c[i]，则c[i]=0的记录必为关键字<br>最小的记录，然后依c[i]值的大小对序列中记录进行<br>重新排列。试编写算法实现上述排序方法。<br>顺序表的类型RcdSqList定义如下：<br>typedef struct {<br>   KeyType key;<br>   …<br>} RcdType;<br>typedef struct {<br>   RcdType rcd[MAXSIZE+1]; // rcd[0]闲置<br>   int     length;<br>} RcdSqList;<br><strong><strong>**</strong></strong>/</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">void CountSort(RcdSqList &amp;L)</div><div class="line">/* 采用顺序表存储结构，在函数内自行定义计数数组c */</div><div class="line">&#123;</div><div class="line">   int k=L.length ;</div><div class="line">   RcdSqList L1;</div><div class="line">   int c[27];</div><div class="line">   int i,j;</div><div class="line">   for(i=1;i&lt;=L.length ;i++)</div><div class="line">      for(j=1;j&lt;=L.length;j++)&#123;</div><div class="line">         if(L.rcd[i].key&lt;L.rcd[j].key)</div><div class="line">            c[i]++;</div><div class="line">      &#125;</div><div class="line">        </div><div class="line">    for(i=1;i&lt;=L.length;i++)</div><div class="line">         L1.rcd[c[i]+1].key=L.rcd[i].key;</div><div class="line">        </div><div class="line">    for(i=1;i&lt;=L.length;i++)       </div><div class="line">         L.rcd[L.length-i+1].key = L1.rcd[i].key;</div><div class="line">      </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>类简介</strong><br>类是面向对象编程的核心概念之一，也是JAVA语言的核心，C++的优势在于既可以面向过程，也可以面向对象，是一种综合编程语言。类定义描述的是数据格式及其用法，而对象是根据数据格式规范创建的实体</p>
+<hr>
+<p><strong>关键字</strong><br>C++中有int,double,new等关键字，这些关键字都是C++专用的，不能用于自定义变量名，函数名……</p>
+<hr>
 
       
     </div>
@@ -483,7 +487,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/AnyView/" rel="tag"># AnyView</a>
+            <a href="/Tags/programming-language-learning/" rel="tag"># programming language learning</a>
           
         </div>
       
@@ -496,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/27/AnyView数据结构-2/" rel="next" title="Anyview数据结构-2">
-                <i class="fa fa-chevron-left"></i> Anyview数据结构-2
+              <a href="/2017/10/29/静电场-1/" rel="next" title="静电场-1">
+                <i class="fa fa-chevron-left"></i> 静电场-1
               </a>
             
           </div>
@@ -505,10 +509,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/27/AnyView数据结构-4/" rel="prev" title="Anyview数据结构-4">
-                Anyview数据结构-4 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -560,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -647,6 +656,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
