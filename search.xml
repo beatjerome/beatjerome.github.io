@@ -3,6 +3,38 @@
   
     
     <entry>
+      <title><![CDATA[静电场-2]]></title>
+      <url>/2017/10/30/%E9%9D%99%E7%94%B5%E5%9C%BA-2/</url>
+      <content type="html"><![CDATA[<p>-电通量<br>-静电场中的高斯定理</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>电场线</strong>：用于形象描述电场在空间的分布情况</p>
+<p>电场线有如下性质：<br>1.电场线起自正电荷（或来自无穷远），终止于负电荷（或伸向无限远），在无电荷的地方不会中断<br>2.任意两条电场线不相交，即静电场中每一点的场强只有一个方向<br>3.电场线不形成闭合回线<br>4.电场强处电场线密集，电场弱处电场线稀疏</p>
+<hr>
+<p><strong>电通量</strong>：穿过电场中任意给定面的电场线条数称为通过该面的电场强度通量</p>
+<p>均匀电场中，穿过垂直于电场方向的任意平面S的电通量为<strong>φ=ES</strong>，若与场强成θ角，则<strong>φ=EScosθ</strong></p>
+<p>如果是曲面，则通过dS的电通量为：<strong>dφ=EdScosθ=E·dS</strong><br>通过整个曲面S的电通量为<strong>φ=∫s（dφ）=∫s（E·dS）</strong></p>
+<p><strong>如果是闭合曲面，则规定由内向外的方向为个面积元法矢en的正方向</strong></p>
+<hr>
+<p><strong>高斯定理</strong>：静电场的高斯定理表述为：真空中任何静电场中，穿过任一闭合曲面的电通量等于该闭合曲面包围电荷代数和的ε0分之一，即<br><strong>φ=∫s（E·dS）=（1/ε0）∑qi</strong></p>
+<p>对高斯定理的理解应注意：<br>1.高斯定理表达式作坊的场强E是闭合面上dS处的场强，它是由闭合面内外全部电荷共同产生的，即闭合面外的电荷对空间各点的E有贡献，要影响闭合面上各面元的通量dφ<br>2.通过闭合曲面的总电通量只决定于闭合面内所包围的电荷，闭合曲面外部的电荷对闭合面的总电通量∫E·dS无贡献.</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> 大学物理 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> basic courses </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[开始学习C++]]></title>
       <url>/2017/10/30/%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0C++/</url>
       <content type="html"><![CDATA[<p>-C++基础介绍</p>
