@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="……">
+<meta name="description" content="-simple-A+B problem">
 <meta name="keywords" content="Online judge">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ZOJ-1001题解">
-<meta property="og:url" content="http://yoursite.com/2017/10/28/ZOJ-1001/index.html">
+<meta property="og:title" content="HDOJ-1000">
+<meta property="og:url" content="http://yoursite.com/2017/10/30/HDOJ-1001题解/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="……">
+<meta property="og:description" content="-simple-A+B problem">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-28T05:17:29.117Z">
+<meta property="og:updated_time" content="2017-10-30T04:35:11.073Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZOJ-1001题解">
-<meta name="twitter:description" content="……">
+<meta name="twitter:title" content="HDOJ-1000">
+<meta name="twitter:description" content="-simple-A+B problem">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/28/ZOJ-1001/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/30/HDOJ-1001题解/"/>
 
 
 
 
 
-  <title>ZOJ-1001题解 | Grocery</title>
+  <title>HDOJ-1000 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/28/ZOJ-1001/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/30/HDOJ-1001题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ZOJ-1001题解</h1>
+          <h1 class="post-title" itemprop="name headline">HDOJ-1000</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-28T13:20:45+08:00">
-                2017-10-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T12:35:45+08:00">
+                2017-10-30
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-10-28T13:17:29+08:00">
-                2017-10-28
+              <time title="Post modified" itemprop="dateModified" datetime="2017-10-30T12:35:11+08:00">
+                2017-10-30
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ZOJ题解目录/" itemprop="url" rel="index">
-                    <span itemprop="name">ZOJ题解目录</span>
+                  <a href="/categories/HDOJ题解目录/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ题解目录</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  121
+                  95
                 </span>
               
 
@@ -429,14 +429,19 @@
       
 
       
-        <p>……</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>A + B Problem<br>Time Limit: 2 Seconds      Memory Limit: 65536 KB</p>
-<p>Calculate a + b<br>Input<br>The input will consist of a series of pairs of integers a and b,separated by a space, one pair of integers per line.<br>Output<br>For each pair of input integers a and b you should output the sum of a and b in one line,and with one line of output for each line in input.<br>Sample Input<br>1 5<br>Sample Output<br>6<br>Hint<br>Use + operator</p>
+        <p>-simple<br>-A+B problem<br><a id="more"></a></p>
+<p>A + B Problem</p>
+<p>Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)<br>Total Submission(s): 701093    Accepted Submission(s): 216996</p>
+<p>Problem Description<br>Calculate A + B.</p>
+<p>Input<br>Each line will contain two integers A and B. Process to end of file.</p>
+<p>Output<br>For each case, output A + B in one line.</p>
+<p>Sample Input<br>1 1</p>
+<p>Sample Output<br>2</p>
 <hr>
-<p>解题思路：没有什么思路，直接加输出就是了</p>
+<p>简单A+B题</p>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;  </div><div class="line">using namespace std;  </div><div class="line">int main()&#123;  </div><div class="line">  </div><div class="line">   int a,b;  </div><div class="line">   while(cin&gt;&gt;a&gt;&gt;b)&#123;  </div><div class="line">     cout&lt;&lt;a+b&lt;&lt;endl;  </div><div class="line">   &#125;  </div><div class="line">  </div><div class="line">   return 0;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
+<p>AC代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line">int main()&#123;</div><div class="line">  int x,y;</div><div class="line">  while (cin&gt;&gt;x&gt;&gt;y)</div><div class="line">	     cout&lt;&lt;x+y&lt;&lt;endl;</div><div class="line">  return 0;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -496,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/28/树/" rel="next" title="树">
-                <i class="fa fa-chevron-left"></i> 树
+              <a href="/2017/10/30/静电场-2/" rel="next" title="静电场-2">
+                <i class="fa fa-chevron-left"></i> 静电场-2
               </a>
             
           </div>
@@ -505,10 +510,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/28/ZOJ-1037/" rel="prev" title="ZOJ-1037题解">
-                ZOJ-1037题解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -560,17 +561,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -656,22 +648,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
