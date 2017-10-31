@@ -3,10 +3,89 @@
   
     
     <entry>
+      <title><![CDATA[数理逻辑复习笔记-2]]></title>
+      <url>/2017/10/31/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</url>
+      <content type="html"><![CDATA[<p>-必考题解法</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>利用真值表技术求某公式的主析取范式和主合取范式（一般是大题）</strong><br>1.先列出真值表（真值表中不需要列出极大项和极小项）<br>2.根据真值表中的公式等于1对应的情况写出极小项，构造主析取范式<br>3.根据剩余极小项，进行取反获得主合取范式<br><img src="http://img.blog.csdn.net/20171031090255154?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20171031090053020?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>先列真值表<br>再求主析取范式<br>再根据主析取范式求主合取范式</p>
+<hr>
+<p><strong>求某公式的主析取范式和主合取范式（选择填空题）</strong><br>如果是要同时求主析取范式和主合取范式，先看公式容不容易化简，否则用真值表技术</p>
+<p>如果只是求主析取范式和主合取范式中的一个，可以尝试用<strong>分析法</strong>，直接去分析什么情况下公式等于0或什么情况下公式等于1，一般取范式不会太长，所以只用做一个极大项或极小项的<strong>排除</strong>，即简化真值表操作</p>
+<hr>
+<p><strong>几大元的定义</strong><br><strong>消去元</strong>：存在一个元素a∈A对于任意的x,y∈A，都有a<em>x=a</em>y，即可以消去a，a称为消去元<br><strong>幂等元</strong>：若元素a∈A，且满足a<em>a=a，则a称为A关于“</em>”的幂等元<br><strong>幺元（单位元）</strong>：对于任意a∈A，存在e∈A，使得a<em>e=e</em>a=a，则称e为幺元（单位元）<br><strong>零元</strong>：对于任意a∈A，存在b∈A，使得a<em>b=b</em>a=b,则称b为零元<br><strong>逆元</strong>：e是幺元，a∈A，存在b∈A，使得a<em>b=b</em>a=e，则称a是b的逆元（可倒置）</p>
+<p>幺元对应1<br>零元对应0<br>逆元对应倒数</p>
+<hr>
+<p><strong>代数系统定义</strong><br><strong>代数系统</strong>：集合和定义在集合上的n元封闭运算称为代数系统<br><strong>广群</strong>：二元运算不加限制的一般代数系统<br><strong>半群</strong>：若代数系统中的二元运算满足结合律，则称为半群<br><strong>循环半群</strong>：存在a∈A，对任意x∈S，有x=a^n,则称此代数系统为循环半群<br><strong>生成元</strong>：循环半群中的a，称为循环半群的一个生成元<br><strong>群</strong>：二元运算满足结合律，存在幺元，每个元素都有逆元，这样的二元代数系统称为群</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[数理逻辑复习笔记-1]]></title>
+      <url>/2017/10/31/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</url>
+      <content type="html"><![CDATA[<p>-模糊概念<br><a id="more"></a></p>
+<hr>
+<p><strong>量词辖域的确定方法</strong>：<br>1.若量词后有括号，则括号内的子公式就是量词的辖域<br>2.若量词后没有括号，则与量词邻接的子公式就是该量词的辖域</p>
+<hr>
+<p><strong>约束变元的改名规则</strong>：<br>1.将量词中出现的变元以及该量词辖域中此变量所有约束出现都用新的个体变元替换<br>2.新的变元一定要有别于改名辖域中的所有其他变量</p>
+<p><strong>自由变元的代入规则</strong>：<br>1.将公式中出现该自由变元的每一处都用新的个体变元替换<br>2.新变元不允许在原公式中以任何约束形式出现</p>
+<hr>
+<p><strong>前束范式的转换方法</strong>：<br>设G施任一公式，通过下述步骤可将其转换为与之等价的前束范式<br>1.消去公式中包含的联结词“-&gt;””&lt;-&gt;”<br>2.反复运用德摩根定律，直接将“¬”內移到原子谓词公式的前端<br>3.使用谓词的等价公式将所有量词提到公式的最前端</p>
+<hr>
+<p><strong>求Skolem标准型的方法</strong>：<br>将原公式中的前置量词逐一消去，存在量词替换成一些特定的字母，全称量词可以不变，但是，如果存在量词在全称量词后方，应转换成用全称量词表示的函数</p>
+<hr>
+<p><strong>使用推理规则注意</strong>：<br><strong>使用US规则来消去量词时，所选用取代x的变量y在公式中必须是自由的</strong></p>
+<p><strong>使用ES规则来消去量词时，若还有其他自由变元时，必须用关于自由变元的函数符号来取代常数符号</strong></p>
+<p><strong>使用UG规则来添加量词时，所使用的的变元符号不能与辖域内的变元符号相同</strong></p>
+<p><strong>使用EG规则来添加量词时，所使用的的变元符号不能与辖域内的变元符号相同</strong></p>
+<hr>
+<p><strong>谓词演算综合推理方法</strong>：<br>1.推导过程中可以引用命题演算中的规则P和规则T<br>2.如果结论是以条件形式给出，可以使用规则CP<br>3.若需消去量词，可以引用规则US和ES<br>4.当所需要的结论可能被定量时，此时可引用规则UG和EG将量词加入</p>
+<hr>
+<p><strong>代数系统判断方法</strong>：<br>判断集合A和其上代数运算是否为代数系统，关键是判断两点：<br>1.集合A非空<br>2.这些运算在A上是否满足封闭性</p>
+<hr>
+<p><strong>特殊元计算方法</strong>：<br>计算幺元，零元，幂等元等特殊元时，首先可以假设这些元存在，然后根据定义直接得到方程，解这个方程计算这些元，如果无解则不存在，如果有解还要进一步验证是否是对应的特殊元</p>
+<hr>
+<p><strong>证明同态与同构</strong>：<br>首先可以假设f就是同态或同构映射，然后利用同态，同构的定义，导出f的一些性质，并利用这些性质来构造同态与同构映射，从而证明代数系统的同态与同构</p>
+<hr>
+<p><strong>群的性质</strong>：<br>满足结合律<br>有幺元<br>每个元有逆元</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[HDOJ-1001]]></title>
       <url>/2017/10/30/HDOJ-1001/</url>
-      <content type="html"><![CDATA[<p>-simple<br>-sum problem</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>Sum Problem</p>
+      <content type="html"><![CDATA[<p>-simple<br>-sum problem<br><a id="more"></a></p>
+<hr>
+<p>Sum Problem</p>
 <p>Time Limit: 1000/500 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)<br>Total Submission(s): 500758    Accepted Submission(s): 127099</p>
 <p>Problem Description<br>Hey, welcome to HDOJ(Hangzhou Dianzi University Online Judge).</p>
 <p>In this problem, your task is to calculate SUM(n) = 1 + 2 + 3 + … + n.</p>
@@ -40,8 +119,9 @@
     <entry>
       <title><![CDATA[HDOJ-1000]]></title>
       <url>/2017/10/30/HDOJ-1000/</url>
-      <content type="html"><![CDATA[<p>-simple<br>-A+B problem</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>A + B Problem</p>
+      <content type="html"><![CDATA[<p>-simple<br>-A+B problem<br><a id="more"></a></p>
+<hr>
+<p>A + B Problem</p>
 <p>Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)<br>Total Submission(s): 701093    Accepted Submission(s): 216996</p>
 <p>Problem Description<br>Calculate A + B.</p>
 <p>Input<br>Each line will contain two integers A and B. Process to end of file.</p>
