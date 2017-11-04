@@ -3,6 +3,38 @@
   
     
     <entry>
+      <title><![CDATA[数理逻辑模拟-1]]></title>
+      <url>/2017/11/04/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91%E6%A8%A1%E6%8B%9F-1/</url>
+      <content type="html"><![CDATA[<p>-2015题型<br><a id="more"></a><br><strong>求公式的主合取范式</strong><br>先消去公式中的<strong>→</strong>与<strong>↔</strong><br>如果需要补基础元(P)，可以使用<strong>∧(P∨¬P）</strong>或者<strong>∨（P∧¬P）</strong><br>接着进行结合的调换，调成主合取范式<br>（主析取范式也是如此）</p>
+<hr>
+<p><strong>已知主析取范式求主合取范式</strong><br>将所有的主析取范式剩下的极小项转换成极大项<br>再用合取连接起来<br>这样就得到了主合取范式<br>（已知主合取范式求主析取范式的过程类似）</p>
+<hr>
+<p><strong>证明过程题</strong><br>US：全称特指<br>ES：存在特指<br>UG：全称推广<br>EG：存在推广<br>P：引用<br>T：推理</p>
+<hr>
+<p><strong>代数系统题</strong><br>结合律，交换律，幂等律（a<em>a=a），消去律（a</em>x=a<em>y），分配律，吸收律（x-(x</em>y)=x）<br>幺元（单位元）<br>零元（a<em>b=b</em>a=b）<br>逆元（a*b=e）</p>
+<hr>
+<p><strong>群与陪集</strong><br>求陪集的方法：<br>以右陪集为例；<br>用子群与群中每一元素进行二元运算，删除重复部分，即为陪集</p>
+<hr>
+<p><strong>拉格朗日定理</strong><br>子群的阶记为m，有限群的阶记为n，子群的陪集个数为k<br>首先n一定是m的倍数，即n能被m整除<br>k=n/m<br>由此可计算陪集的个数</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[数理逻辑复习笔记-2]]></title>
       <url>/2017/10/31/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</url>
       <content type="html"><![CDATA[<p>-必考题解法</p>
