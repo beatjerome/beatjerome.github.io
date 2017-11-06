@@ -3,6 +3,45 @@
   
     
     <entry>
+      <title><![CDATA[数理逻辑模拟-2]]></title>
+      <url>/2017/11/06/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91%E6%A8%A1%E6%8B%9F-2/</url>
+      <content type="html"><![CDATA[<h2 id="2013题型"><a href="#2013题型" class="headerlink" title="-2013题型"></a>-2013题型</h2><p><strong>推理题之CP规则</strong><br>一般用于S-&gt;T的类型<br>将S作为附加前提<br>推导出T<br>这就是CP规则的用法</p>
+<hr>
+<p><strong>证明代数系统</strong><br>先确定集合为非空集合<br>再保证运算在该集合上是封闭运算</p>
+<hr>
+<p><strong>主析取范式与主合取范式的转换</strong><br>若有主析取范式<br>G=m1+m2+m3+m5+m7<br>则¬G=m0+m4+m6<br>主合取范式为G=¬m0+¬m4+¬m6</p>
+<hr>
+<p><strong>单射双射满射</strong><br>单射就是只能一对一，不能多对一，满射就是不论一对一，还是多对一，在映射f:X→Y中，Y中任一元素y都是X中某元素的像，也就是Y中所有元素在X中都能找到原像，至于找到的只有一个原像,那就是双射，但有的可以找到一个以上的那就不是双射，即双射就是既是单射又是满射。<br>单射：一对一<br>满射：不管映射方式，保证每个元素都有对应的<br>双射：一一对应<br><img src="http://img.blog.csdn.net/20171106205147588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<hr>
+<p><strong>同态同构</strong><br>C是从A-B的映射<br>A中封闭运算为a，B中封闭运算为b<br>C（x a y）=C（x） b  C（y）<br>称为<strong>同态</strong><br>C为单射，满射，双射时<br>分别称C是<strong>单一同态，满同态，同构</strong></p>
+<hr>
+<p><strong>证明一个代数系统为半群</strong><br>半群性质：满足结合律</p>
+<hr>
+<p><strong>证明一个代数系统是群</strong><br>运算满足结合律<br>有幺元<br>每个元素都有逆元</p>
+<hr>
+<p><strong>求元素的周期</strong><br>求幺元e<br>求使元素a的n次方等于e的最小正整数</p>
+<hr>
+<p><strong>循环群与生成元</strong><br>每个元素都能用一个元素g的n次方表示，称为循环群<br>g为一个生成元</p>
+<hr>
+<p><strong>拉格朗日定理结论</strong><br>1.阶为n的有限群中，对任意a∈ G，有a的n次方等于e（e为幺元）<br>2.素数阶有限群G都是循环群，除了幺元外的所有元素都是它的生成元</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Discrete mathematics </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Computer Basics </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[数理逻辑模拟-1]]></title>
       <url>/2017/11/04/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91%E6%A8%A1%E6%8B%9F-1/</url>
       <content type="html"><![CDATA[<p>-2015题型<br><a id="more"></a><br><strong>求公式的主合取范式</strong><br>先消去公式中的<strong>→</strong>与<strong>↔</strong><br>如果需要补基础元(P)，可以使用<strong>∧(P∨¬P）</strong>或者<strong>∨（P∧¬P）</strong><br>接着进行结合的调换，调成主合取范式<br>（主析取范式也是如此）</p>
