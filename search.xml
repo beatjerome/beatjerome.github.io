@@ -5,7 +5,9 @@
     <entry>
       <title><![CDATA[数理逻辑模拟-2]]></title>
       <url>/2017/11/06/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91%E6%A8%A1%E6%8B%9F-2/</url>
-      <content type="html"><![CDATA[<h2 id="2013题型"><a href="#2013题型" class="headerlink" title="-2013题型"></a>-2013题型</h2><p><strong>推理题之CP规则</strong><br>一般用于S-&gt;T的类型<br>将S作为附加前提<br>推导出T<br>这就是CP规则的用法</p>
+      <content type="html"><![CDATA[<p>-2013题型<br><a id="more"></a></p>
+<hr>
+<p><strong>推理题之CP规则</strong><br>一般用于S-&gt;T的类型<br>将S作为附加前提<br>推导出T<br>这就是CP规则的用法</p>
 <hr>
 <p><strong>证明代数系统</strong><br>先确定集合为非空集合<br>再保证运算在该集合上是封闭运算</p>
 <hr>
