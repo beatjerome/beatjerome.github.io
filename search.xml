@@ -3,6 +3,49 @@
   
     
     <entry>
+      <title><![CDATA[二叉树-3]]></title>
+      <url>/2017/11/13/%E4%BA%8C%E5%8F%89%E6%A0%91-3/</url>
+      <content type="html"><![CDATA[<p>-遍历二叉树</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>二叉树的遍历</strong><br>所谓二叉树的遍历，是指按某条搜索路径访问树中的每个结点，使得每个结点均被访问一次，而且只被访问一次。<br>由二叉树的递归定义可知，遍历一颗二叉树便要决定对根结点N，左子树L和右子树R的访问顺序。按照先遍历左子树再遍历右子树的原则，常见的遍历次序有先序（NLR）、中序（LNR）、后序（LRN）三种遍历算法。</p>
+<hr>
+<p><strong>先序遍历</strong><br>先序遍历的操作过程为：<br>如果二叉树为空，什么也不做。否则：<br>1.访问根结点<br>2.先序遍历左子树<br>3.先序遍历右子树</p>
+<p>对应的递归算法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">void PreOrder(BiTree T)&#123;</div><div class="line">	if(T!=NULL)&#123;               </div><div class="line">		visit(T);              //访问根结点 </div><div class="line">		PreOrder(T-&gt;lchild);   //递归遍历左子树</div><div class="line">		PreOrder(T-&gt;rchild);   //递归遍历右子树</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>中序遍历</strong><br>中序遍历的操作过程为：<br>如果二叉树为空，什么也不做。否则：<br>1.中序遍历左子树<br>2.访问根结点<br>3.中序遍历右子树</p>
+<p>对应的递归算法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">void Inorder(BiTree T)&#123;</div><div class="line">	if(T!=NULL）</div><div class="line">		Inorder(T-&gt;lchild);   //递归遍历左子树</div><div class="line">		visit(T);             //访问根结点  </div><div class="line">		Inorder(T-&gt;rchild);   //递归遍历右子树</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>后序遍历</strong><br>后序遍历操作过程为：<br>如果二叉树为空，什么也不做。否则：<br>1.后序遍历左子树<br>2.后序遍历右子树<br>3.访问根结点</p>
+<p>对应的递归算法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">void PostOrder(BiTree T)&#123;</div><div class="line">	if(T!=NULL)&#123;</div><div class="line">		PostOrder(T-&gt;lchild);</div><div class="line">		PostOrder(T-&gt;rchild);</div><div class="line">		visit(T);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>不管是哪种便利算法，每个结点都只访问一次，时间复杂度都是O（n）</strong></p>
+<hr>
+<p><strong>递归算法与非递归算法的转换</strong><br>可以借助栈，将二叉树的递归算法转换成非递归算法</p>
+<p>以中序遍历为例，给出非递归算法的实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">void InOrder2(BiTree T)&#123;</div><div class="line">	//二叉树中序遍历的非递归算法，算法需要借助一个栈</div><div class="line">	InitStack(S);                 //初始化栈</div><div class="line">	BiTree p=T;                   //p是遍历指针</div><div class="line">	while(p||!IsEmpty(s))&#123;        //栈不空或p不空时循环</div><div class="line">		if(p)&#123;                    //根指针进栈，遍历左子树</div><div class="line">			Push(S,p);            //没遇到非空二叉树先向左走</div><div class="line">			p=p-&gt;lchild;</div><div class="line">		&#125;</div><div class="line">		else&#123;                     //根指针退栈，访问根结点，遍历右子树  </div><div class="line">			Pop(S,p);             //退栈，访问根结点 </div><div class="line">			visit(p);              </div><div class="line">			p=p-&gt;rchild;          //再向右子树走</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>先扫描（并非访问）根结点的所有左结点并将它们一一进栈。然后出战一个结点<em>p（显然结点</em>p没有左孩子结点或者左孩子结点均已访问过），则访问它。然后扫描该结点的右孩子结点，将其进栈，再扫描该右孩子结点的所有左结点并一一进栈，如此继续，直到栈空为止。<br>显然，非递归算法的执行效率要高于递归算法。</p>
+<hr>
+<p><strong>层次遍历</strong><br>二叉树的层次遍历，即按照箭头所指方向，按照1,2,3,4的层次顺序，对二叉树中各个结点进行访问。<br>要进行层次遍历，需要借助一个队列。先将二叉树的结点入队，然后出队，访问该结点，如果它有左子树，则将左子树根结点入队；如果它有右子树，则将右子树根结点入队。然后出队，对出队结点进行访问，如此反复，直到队列为空。</p>
+<p>二叉树的层次遍历算法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">void LevelOrder(BiTree T)&#123;</div><div class="line">	InitQueue(Q);                    //初始化辅助队列</div><div class="line">	BiTree p;                        </div><div class="line">	EnQueue(Q,T);                    //将根结点入队</div><div class="line">	while(!IsEmpty(Q))&#123;              //队列不空循环</div><div class="line">		DeQueue(Q,p);                //队头元素出队  </div><div class="line">		visit(p);                    //访问当前结点</div><div class="line">		if(p-&gt;lchild!=NULL)          //左子树不空，左子树入队列</div><div class="line">			EnQueue(Q,p-&gt;lchild);</div><div class="line">		if(p-&gt;rchild!=NULL)          //右子树不空，右子树入队列</div><div class="line">			EnQueue(Q,p-&gt;rchild);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>由遍历序列构造二叉树</strong><br>由二叉树的先序序列和中序序列可以唯一地确定一颗二叉树，在先序遍历序列中，第一个结点一定是二叉树的根结点，而在中序遍历中，根结点必然将中序序列分割成两个子序列，前一个子序列就是根结点的左子树的中序序列，后一个子序列是根结点的右子树的中序序列。根据这两个子序列，在先序序列中找到对应的左子序列和右子序列。在先序序列中，左子序列的第一个结点是左子树的根结点，右子序列的第一个结点是右子树的根结点。如此递归地进行下去，便能唯一地确定这颗二叉树。<br>同理，由二叉树的后序序列和中序序列也可以唯一地确定一颗二叉树，因为后序序列的最后一个结点就如同先序序列的第一个结点，可以将中序序列分割成两个子序列，然后采用类似的方法递归地进行划分，就可以得到一颗二叉树。</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[二叉树-2]]></title>
       <url>/2017/11/12/%E4%BA%8C%E5%8F%89%E6%A0%91-2/</url>
       <content type="html"><![CDATA[<p>-二叉树存储结构</p>
