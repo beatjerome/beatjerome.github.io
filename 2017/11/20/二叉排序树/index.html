@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Computer Basics," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="-2013题型">
-<meta name="keywords" content="Computer Basics">
+<meta name="description" content="-二叉排序树的基本操作">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数理逻辑模拟-2">
-<meta property="og:url" content="http://yoursite.com/2017/11/06/数理逻辑模拟-2/index.html">
+<meta property="og:title" content="二叉排序树">
+<meta property="og:url" content="http://yoursite.com/2017/11/20/二叉排序树/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-2013题型">
+<meta property="og:description" content="-二叉排序树的基本操作">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://img.blog.csdn.net/20171106205147588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-11-06T13:55:17.759Z">
+<meta property="og:updated_time" content="2017-11-20T14:19:47.558Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数理逻辑模拟-2">
-<meta name="twitter:description" content="-2013题型">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20171106205147588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="二叉排序树">
+<meta name="twitter:description" content="-二叉排序树的基本操作">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/06/数理逻辑模拟-2/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/20/二叉排序树/"/>
 
 
 
 
 
-  <title>数理逻辑模拟-2 | Grocery</title>
+  <title>二叉排序树 | Grocery</title>
   
 
 
@@ -299,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/数理逻辑模拟-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/20/二叉排序树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -316,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数理逻辑模拟-2</h1>
+          <h1 class="post-title" itemprop="name headline">二叉排序树</h1>
         
 
         <div class="post-meta">
@@ -328,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T21:50:45+08:00">
-                2017-11-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-20T22:20:45+08:00">
+                2017-11-20
               </time>
             
 
@@ -344,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-06T21:55:17+08:00">
-                2017-11-06
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-20T22:19:47+08:00">
+                2017-11-20
               </time>
             
           </span>
@@ -363,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Discrete-mathematics/" itemprop="url" rel="index">
-                    <span itemprop="name">Discrete mathematics</span>
+                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
+                    <span itemprop="name">Data structure</span>
                   </a>
                 </span>
 
@@ -394,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  496
+                  1,084
                 </span>
               
 
@@ -410,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  4
                 </span>
               
             </div>
@@ -431,27 +429,24 @@
       
 
       
-        <p>-2013题型<br><a id="more"></a></p>
+        <p>-二叉排序树的基本操作</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>二叉排序树的定义</strong><br>二叉排序树，也称为二叉查找树。<br>二叉排序树要么是空树，要么是具有以下特征的非空二叉树：<br>·若左子树非空，则左子树上所有结点关键字值均小于根结点的关键字值<br>·若右子树非空，则右子树上所有结点关键字值均大于根结点的关键字值<br>·左右子树本身也是一颗二叉排序树</p>
+<p>根据二叉排序树的定义，有左子树结点值&lt;根结点值&lt;右子树结点值<br>因此，如果对二叉排序树进行中序遍历，可以得到一个递增的序列</p>
 <hr>
-<p><strong>推理题之CP规则</strong><br>一般用于S-&gt;T的类型<br>将S作为附加前提<br>推导出T<br>这就是CP规则的用法</p>
+<p><strong>二叉排序树的查找</strong><br>二叉排序树的查找是从根结点开始，沿某一个分支逐层向下进行比较的过程。若二叉排序树非空，将给定值与根结点的关键字比较，若相等，则查找成功；若不等，则当根结点的关键字大于给定关键字时，在根结点的左子树中查找，否则在根结点的右子树中查找。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//二叉排序树的非递归查找算法</div><div class="line">BSTNode *BST_Search(BiTree T,ElemType key,BSTNode *&amp;p)&#123;</div><div class="line">	//查找函数返回指向关键字为key的节点指针，若不存在，则返回NULL</div><div class="line">	p=NULL;</div><div class="line">while(T!=NULL&amp;&amp;key!=T-&gt;data)&#123;</div><div class="line">		p=T;</div><div class="line">		if(key&lt;T-&gt;data)</div><div class="line">			T=T-&gt;lchild;</div><div class="line">		else</div><div class="line">			T=T-&gt;rchild;</div><div class="line">	&#125;</div><div class="line">	return T;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>证明代数系统</strong><br>先确定集合为非空集合<br>再保证运算在该集合上是封闭运算</p>
+<p><strong>二叉排序树的插入</strong><br>二叉树作为一种动态集合，其特点是树的结构不是一次生成的，而是在查找过程中，当树中不存在关键字等于给定值的结点时再进行插入<br>由于二叉排序树是递归定义，插入结点的过程是，若原二叉排序树为空，则直接插入结点。若关键字k小于根结点关键字，则插入到左子树中，若关键字k大于根结点关键字，则插入到右结点中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">int BST_Insert(BiTree &amp;T,KeyType k)&#123;</div><div class="line">	if(T==NULL)&#123;</div><div class="line">		T=(BiTree)malloc(sizeof(BSTNode));</div><div class="line">		T-&gt;data=k;</div><div class="line">		T-&gt;lchild=T-&gt;rchild=NULL;</div><div class="line">		return 1;</div><div class="line">		&#125;</div><div class="line">	else	if(T-&gt;data=k)</div><div class="line">		return 0;</div><div class="line">	else if(T-&gt;data&gt;k)    //左子树中插入</div><div class="line">		return BST_Insert(T-&gt;lchild,k);</div><div class="line">	else if(T-&gt;data&lt;k)   //右子树中插入</div><div class="line">		return BST_Insert(T-&gt;rchild,k);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>主析取范式与主合取范式的转换</strong><br>若有主析取范式<br>G=m1+m2+m3+m5+m7<br>则¬G=m0+m4+m6<br>主合取范式为G=¬m0+¬m4+¬m6</p>
+<p><strong>二叉排序树的构造</strong><br>构造一颗二叉排序树就是依次输入数据元素，并将它们插入到二叉排序树中的适当位置上的过程。具体过程是，每读入一个元素，就建立一个结点，若二叉排序树非空，则将新节点的值与根结点的比较，如果小于根结点，插入到左子树中，否则插入到右子树中；<br>若二叉排序树为空，则新节点作为二叉排序树的根结点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">void Create_BST(BiTree &amp;T,KeyTypestr [],int n)&#123;</div><div class="line">	//用关键字数组str [] 建立一个二叉排序树</div><div class="line">	T=NULL;</div><div class="line">	int i=0;</div><div class="line">	while(i&lt;n)&#123;   //依次读入元素</div><div class="line">		BST_Insert(T,str[i]);</div><div class="line">		i++;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>单射双射满射</strong><br>单射就是只能一对一，不能多对一，满射就是不论一对一，还是多对一，在映射f:X→Y中，Y中任一元素y都是X中某元素的像，也就是Y中所有元素在X中都能找到原像，至于找到的只有一个原像,那就是双射，但有的可以找到一个以上的那就不是双射，即双射就是既是单射又是满射。<br>单射：一对一<br>满射：不管映射方式，保证每个元素都有对应的<br>双射：一一对应<br><img src="http://img.blog.csdn.net/20171106205147588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p><strong>二叉排序树的删除</strong><br>删除操作有三种情况：<br>1.如果被删除结点z是叶结点，直接进行删除操作即可<br>2.如果结点z只有一颗左子树或右子树，则让z的子树成为z父结点的子树<br>3.如果结点z有左右两颗子树，则令z的直接后继（或直接前驱）替代z，然后从二叉排序树中删除这个直接后继（或直接前驱），转换成第一或第二种情况。（中序遍历的下一个）（不断取左子树的最大或者右子树的最小递归删除）</p>
 <hr>
-<p><strong>同态同构</strong><br>C是从A-B的映射<br>A中封闭运算为a，B中封闭运算为b<br>C（x a y）=C（x） b  C（y）<br>称为<strong>同态</strong><br>C为单射，满射，双射时<br>分别称C是<strong>单一同态，满同态，同构</strong></p>
+<p><strong>二叉排序树的查找效率分析</strong><br>对于高度为H的二叉排序树，其插入和删除操作的运行时间都是O(H).<br>但在最坏的情况下，即构造二叉排序树的输入序列是有序的，则会形成一个倾斜的二叉树，高度也增加为元素个数N</p>
+<p>二叉排序树查找算法的平均查找长度，主要取决于树的高度，即与二叉树的形态有关。<br>如果二叉排序树是只有左（右）孩子的二叉树，算法复杂度为O(n).如果是平衡二叉树，算法复杂度为O（log2n）</p>
 <hr>
-<p><strong>证明一个代数系统为半群</strong><br>半群性质：满足结合律</p>
-<hr>
-<p><strong>证明一个代数系统是群</strong><br>运算满足结合律<br>有幺元<br>每个元素都有逆元</p>
-<hr>
-<p><strong>求元素的周期</strong><br>求幺元e<br>求使元素a的n次方等于e的最小正整数</p>
-<hr>
-<p><strong>循环群与生成元</strong><br>每个元素都能用一个元素g的n次方表示，称为循环群<br>g为一个生成元</p>
-<hr>
-<p><strong>拉格朗日定理结论</strong><br>1.阶为n的有限群中，对任意a∈ G，有a的n次方等于e（e为幺元）<br>2.素数阶有限群G都是循环群，除了幺元外的所有元素都是它的生成元</p>
 
       
     </div>
@@ -498,7 +493,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Computer-Basics/" rel="tag"># Computer Basics</a>
+            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -511,8 +506,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/04/数理逻辑模拟-1/" rel="next" title="数理逻辑模拟-1">
-                <i class="fa fa-chevron-left"></i> 数理逻辑模拟-1
+              <a href="/2017/11/13/线索二叉树/" rel="next" title="线索二叉树">
+                <i class="fa fa-chevron-left"></i> 线索二叉树
               </a>
             
           </div>
@@ -521,8 +516,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/10/Anyview数据结构-5/" rel="prev" title="Anyview数据结构-5">
-                Anyview数据结构-5 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/20/C++数据类型/" rel="prev" title="C++数据类型">
+                C++数据类型 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -575,8 +570,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -662,6 +666,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

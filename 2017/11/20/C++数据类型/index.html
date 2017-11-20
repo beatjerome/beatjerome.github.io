@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Computer Basics," />
+  <meta name="keywords" content="programming language learning," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="-2013题型">
-<meta name="keywords" content="Computer Basics">
+<meta name="description" content="-接近拖了一个月了才继续…">
+<meta name="keywords" content="programming language learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数理逻辑模拟-2">
-<meta property="og:url" content="http://yoursite.com/2017/11/06/数理逻辑模拟-2/index.html">
+<meta property="og:title" content="C++数据类型">
+<meta property="og:url" content="http://yoursite.com/2017/11/20/C++数据类型/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-2013题型">
+<meta property="og:description" content="-接近拖了一个月了才继续…">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://img.blog.csdn.net/20171106205147588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-11-06T13:55:17.759Z">
+<meta property="og:updated_time" content="2017-11-20T14:57:30.914Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数理逻辑模拟-2">
-<meta name="twitter:description" content="-2013题型">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20171106205147588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="C++数据类型">
+<meta name="twitter:description" content="-接近拖了一个月了才继续…">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/06/数理逻辑模拟-2/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/20/C++数据类型/"/>
 
 
 
 
 
-  <title>数理逻辑模拟-2 | Grocery</title>
+  <title>C++数据类型 | Grocery</title>
   
 
 
@@ -299,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/数理逻辑模拟-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/20/C++数据类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -316,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数理逻辑模拟-2</h1>
+          <h1 class="post-title" itemprop="name headline">C++数据类型</h1>
         
 
         <div class="post-meta">
@@ -328,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T21:50:45+08:00">
-                2017-11-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-20T23:00:45+08:00">
+                2017-11-20
               </time>
             
 
@@ -344,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-06T21:55:17+08:00">
-                2017-11-06
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-20T22:57:30+08:00">
+                2017-11-20
               </time>
             
           </span>
@@ -363,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Discrete-mathematics/" itemprop="url" rel="index">
-                    <span itemprop="name">Discrete mathematics</span>
+                  <a href="/categories/C-programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">C++ programming language</span>
                   </a>
                 </span>
 
@@ -394,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  496
+                  570
                 </span>
               
 
@@ -431,27 +429,32 @@
       
 
       
-        <p>-2013题型<br><a id="more"></a></p>
+        <p>-接近拖了一个月了才继续…</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p><strong>变量名命名规则</strong><br>·在名称中只能使用字母字符、数字和下划线（_）<br>·名称的第一个字符不能是数字<br>·区分大写字符与小写字符<br>·不能将C++关键字用作名称<br>·以两个下划线或下划线和大写字母打头的名称全部被保留给实现<br>·C++对于名称的长度没有限制</p>
 <hr>
-<p><strong>推理题之CP规则</strong><br>一般用于S-&gt;T的类型<br>将S作为附加前提<br>推导出T<br>这就是CP规则的用法</p>
+<p><strong>整型</strong><br>C++的基本整型有char，short，int，long和long long</p>
+<p>C++提供了一种灵活的标准，它确保了最小长度：<br>·short至少16位<br>·int至少与short一样长<br>·long至少32位，且至少与int一样长<br>·long long至少64位，且至少与long一样长</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//声明变量</div><div class="line">short score;</div><div class="line">int temperature;</div><div class="line">long position;</div></pre></td></tr></table></figure>
+<p>sizeof运算符可以用来返回类型或变量的长度</p>
 <hr>
-<p><strong>证明代数系统</strong><br>先确定集合为非空集合<br>再保证运算在该集合上是封闭运算</p>
+<p><strong>变量初始化</strong><br>初始化将赋值与声明合并在一起<br>可以将变量初始化成字面值，可以将变量初始化为另一个变量，条件是后者已经被定义过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">int uncles=5;</div><div class="line">int aunts=uncles;</div><div class="line">int chairs=aunts+uncles+4;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//C++初始化方式</div><div class="line">int hamburgers=&#123;24&#125;;</div><div class="line">int wren(432);</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>主析取范式与主合取范式的转换</strong><br>若有主析取范式<br>G=m1+m2+m3+m5+m7<br>则¬G=m0+m4+m6<br>主合取范式为G=¬m0+¬m4+¬m6</p>
+<p><strong>无符号类型</strong><br>要创建无符号版本的基本整型，只需在关键词unsigned来修改声明即可</p>
 <hr>
-<p><strong>单射双射满射</strong><br>单射就是只能一对一，不能多对一，满射就是不论一对一，还是多对一，在映射f:X→Y中，Y中任一元素y都是X中某元素的像，也就是Y中所有元素在X中都能找到原像，至于找到的只有一个原像,那就是双射，但有的可以找到一个以上的那就不是双射，即双射就是既是单射又是满射。<br>单射：一对一<br>满射：不管映射方式，保证每个元素都有对应的<br>双射：一一对应<br><img src="http://img.blog.csdn.net/20171106205147588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p><strong>char类型</strong><br>char类型是专为存储字符而设计的<br>char最常被用来处理字符，但也可以用做比short更小的整型</p>
+<p>cout.put()函数可以用来输出单个字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cout&lt;&lt;&apos;s&apos;;     //输出s字符对应的整数值</div><div class="line">cout.put(&apos;s&apos;);    //输出s字符</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>同态同构</strong><br>C是从A-B的映射<br>A中封闭运算为a，B中封闭运算为b<br>C（x a y）=C（x） b  C（y）<br>称为<strong>同态</strong><br>C为单射，满射，双射时<br>分别称C是<strong>单一同态，满同态，同构</strong></p>
+<p><strong>bool类型</strong><br>bool类型用来表示真和假<br>字面值true和false可以通过提升转换为int类型，true被转换为1，而false被转换为0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">int ans=true;        //1</div><div class="line">int promise=false;   //0</div><div class="line">bool start=-100;     //true</div><div class="line">bool stop=0;         //false</div></pre></td></tr></table></figure></p>
 <hr>
-<p><strong>证明一个代数系统为半群</strong><br>半群性质：满足结合律</p>
+<p><strong>const限定符</strong><br>与#define类似，const也是用来处理符号常量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const int months=12;</div><div class="line">//months是int类型常量12</div><div class="line">//无法修改</div></pre></td></tr></table></figure></p>
 <hr>
-<p><strong>证明一个代数系统是群</strong><br>运算满足结合律<br>有幺元<br>每个元素都有逆元</p>
+<p><strong>浮点数</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//书写浮点数的方式</div><div class="line">double a=12.34;</div><div class="line">dounle b=2.52e+8;</div></pre></td></tr></table></figure></p>
+<p>C++有三种浮点类型：float,duble,long double.<br>通常float为32位，double为64位</p>
+<p>在默认情况下，浮点常量属于double类型。希望常量为float类型，则使用f或F后缀。对于long double类型，使用l或L后缀</p>
 <hr>
-<p><strong>求元素的周期</strong><br>求幺元e<br>求使元素a的n次方等于e的最小正整数</p>
-<hr>
-<p><strong>循环群与生成元</strong><br>每个元素都能用一个元素g的n次方表示，称为循环群<br>g为一个生成元</p>
-<hr>
-<p><strong>拉格朗日定理结论</strong><br>1.阶为n的有限群中，对任意a∈ G，有a的n次方等于e（e为幺元）<br>2.素数阶有限群G都是循环群，除了幺元外的所有元素都是它的生成元</p>
 
       
     </div>
@@ -498,7 +501,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Computer-Basics/" rel="tag"># Computer Basics</a>
+            <a href="/Tags/programming-language-learning/" rel="tag"># programming language learning</a>
           
         </div>
       
@@ -511,8 +514,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/04/数理逻辑模拟-1/" rel="next" title="数理逻辑模拟-1">
-                <i class="fa fa-chevron-left"></i> 数理逻辑模拟-1
+              <a href="/2017/11/20/二叉排序树/" rel="next" title="二叉排序树">
+                <i class="fa fa-chevron-left"></i> 二叉排序树
               </a>
             
           </div>
@@ -520,10 +523,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/10/Anyview数据结构-5/" rel="prev" title="Anyview数据结构-5">
-                Anyview数据结构-5 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -575,8 +574,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -662,6 +670,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
