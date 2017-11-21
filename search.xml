@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[树与森林]]></title>
+      <url>/2017/11/21/%E6%A0%91%E4%B8%8E%E6%A3%AE%E6%9E%97/</url>
+      <content type="html"><![CDATA[<p>-树的存储结构</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p><strong>树的存储结构</strong><br>树的存储方式有多种，可以采用顺序存储结构，也可以采用链式存储结构。</p>
+<hr>
+<p><strong>双亲表示法</strong><br>这种存储方式采用一组连续空间来存储每个结点，同时在每个结点中增设一个伪指针，指示其双亲结点在数组中的位置。<br><img src="http://img.blog.csdn.net/20171121224128464?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//双亲表示法的存储结构</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_TREE_SIZE 100            <span class="comment">//树中最多结点数</span></span></div><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span>                      <span class="comment">//树中结点定义</span></div><div class="line">	ElemType data;                   <span class="comment">//数据元素</span></div><div class="line">	<span class="keyword">int</span> parent;                      <span class="comment">//双亲位置域</span></div><div class="line">&#125;PTNode;</div><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span>                     <span class="comment">//树类型的定义</span></div><div class="line">	PTNode nodes[MAX_TREE_SIZE];    <span class="comment">//双亲表示</span></div><div class="line">	<span class="keyword">int</span> n;                          <span class="comment">//结点数</span></div><div class="line">&#125;PTree;</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>孩子表示法</strong><br>孩子表示法是将每个结点的孩子结点都用单链表链接起来形成一个线性结构，则N个结点就有N个孩子结点（叶子结点的孩子链表为空表）<br>对于这种存储方式寻找子女的操作非常直接，但是寻找双亲的操作需要遍历N个结点中孩子链表指针域所指向的N个孩子链表。</p>
+<hr>
+<p><strong>孩子兄弟表示法</strong><br>孩子兄弟表示法又称为二叉树表示法，即以二叉链表作为树的存储结构。孩子兄弟表示法使每个结点包括三部分内容：结点值、指向结点第一个孩子结点的指针和指向结点下一个兄弟结点的指针。<img src="http://img.blog.csdn.net/20171121231935558?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//孩子兄弟表示法的存储结构描述如下：</span></div><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">CSNode</span>&#123;</span></div><div class="line">	ElemType data;                           <span class="comment">//数据域</span></div><div class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">CSNode</span> *<span class="title">firstchild</span>,*<span class="title">nextsibling</span>;</span>  <span class="comment">//第一个孩子和右兄弟指针</span></div><div class="line">&#125;CSNode,*CSTree;</div></pre></td></tr></table></figure>
+<p>这种存储表示法灵活，最大优点是可以方便的将树转换为二叉树，易于查找结点的孩子等，但缺点是从当前结点寻找其双亲结点比较麻烦。</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[平衡二叉树]]></title>
       <url>/2017/11/21/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
       <content type="html"><![CDATA[<p>-平衡二叉树及调整规律</p>
