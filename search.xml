@@ -41,6 +41,7 @@
       <url>/2017/11/20/C++%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
       <content type="html"><![CDATA[<p>-接近拖了一个月了才继续…</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<div class="note 123"><p>Content (城南小青龙) </p></div>
 <p><strong>变量名命名规则</strong><br>·在名称中只能使用字母字符、数字和下划线（_）<br>·名称的第一个字符不能是数字<br>·区分大写字符与小写字符<br>·不能将C++关键字用作名称<br>·以两个下划线或下划线和大写字母打头的名称全部被保留给实现<br>·C++对于名称的长度没有限制</p>
 <hr>
 <p><strong>整型</strong><br>C++的基本整型有char，short，int，long和long long</p>
