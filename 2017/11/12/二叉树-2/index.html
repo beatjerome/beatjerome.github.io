@@ -434,7 +434,7 @@
 <p>对于完全二叉树和满二叉树采用顺序存储比较合适<br>但对于一般的二叉树，为了让数组下标能反映二叉树中结点之间的逻辑关系，只能添加一些并不存在的空结点让其每个结点与完全二叉树上的结点相对照。用0表示其中并不存在的结点。</p>
 <hr>
 <p><strong>2.链式存储结构</strong><br>顺序存储对空间利用率是非常低的，因此，一般二叉树都采用链式存储结构。<br>链式结构使用一个链表来存储一颗二叉树，二叉树中每一个结点用链表的一个链结点来存储。<br>二叉链表至少包含三个域：<strong>数据域data、左指针域lchild、右指针域rchild</strong></p>
-<p>二叉树的链式存储结构描述如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">typedef struct BiTNode&#123;</div><div class="line">	ElemType data;     //数据域</div><div class="line">	struct BiTNode *lchild,*rchild;    //左、右孩子指针</div><div class="line">&#125;BiTNode,*BiTree;</div></pre></td></tr></table></figure></p>
+<p>二叉树的链式存储结构描述如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></div><div class="line">	ElemType data;     <span class="comment">//数据域</span></div><div class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span>    <span class="comment">//左、右孩子指针</span></div><div class="line">&#125;BiTNode,*BiTree;</div></pre></td></tr></table></figure></p>
 <p>使用不同的存储结构，实现二叉树操作的算法也会完全不同。因此要选择合适的存储结构。<br><strong>容易验证，在含有n个结点的二叉链表中含有n+1个空链域</strong></p>
 <hr>
 
