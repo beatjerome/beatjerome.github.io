@@ -3,7 +3,37 @@
   
     
     <entry>
-      <title><![CDATA[排序-1]]></title>
+      <title><![CDATA[插入排序-1]]></title>
+      <url>/2017/11/23/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F-1/</url>
+      <content type="html"><![CDATA[<p>-插入排序算法简介<br>-插入排序算法分析</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>插入排序</p></div>
+<p>插入排序是一种简单直观的排序方法，其基本思想在于每次将一个待排序的记录，按其关键字大小插入到前面已经排序的子序列中，知道全部记录插入完成。</p>
+<hr>
+<p><strong>直接插入排序</strong><br>为了实现将元素L(i)插入到已有序的子序列L[1…i-1]，需要执行以下操作：<br>1.查找出L(i)在L[1…i-1]中的插入位置k<br>2.将L[k…i-1]中所有元素全部后移一个位置<br>3.将L[i]复制到L[k]</p>
+<p>为了实现排序，将L(2)~L(n)依次插入到前面已排好序的子序列中，初始假定L[1]是一个已排好序的子序列。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">void InsertSort(ElemType A[],int n)&#123;</div><div class="line"><span class="comment">//直接插入排序算法</span></div><div class="line">	int i,j;</div><div class="line">	for(i=<span class="number">2</span>;i&lt;=n;i++)             <span class="comment">//依次将A[2]~A[n]插入到前面已排序序列</span></div><div class="line">		if(A[i].<span class="type">key</span>&lt;A[i<span class="number">-1</span>].<span class="type">key</span>)&#123;  <span class="comment">//若A[i]的关键码小于其前驱，需将A[i]插入到有序表</span></div><div class="line">			A[<span class="number">0</span>]=A[i];            <span class="comment">//复制为哨兵</span></div><div class="line">			for(j=i<span class="number">-1</span>;A[<span class="number">0</span>].<span class="type">key</span>&lt;A[j].<span class="type">key</span>;--j)  <span class="comment">//从后往前查找待插入位置</span></div><div class="line">				A[j+<span class="number">1</span>]=A[j];      <span class="comment">//复制到插入位置</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>性能分析</strong><br>空间效率：使用了常数个辅助单元，空间复杂度为O（1）<br>时间效率：在排序过程中，向有序子表中逐个地插入元素的操作进行了n-1趟，每趟操作都分为比较关键字和移动元素，而比较次数和移动次数取决于待排序表的初始状态。<br>在最好的情况下，表中元素已经有序，每插入一个元素，都只需比较一次而不用移动元素，因而时间复杂度为O（n）<br>在最坏的情况下，表中顺序刚好与排序结果中元素顺序相反时，总的比较次数达到最大，为2+3+…+n，总的移动次数也达到最大，3+4+…+n+1.<br>平均情况下，考虑待排序表中的元素是随机的，此时可以取上述最好与最坏情况的平均值作为平均情况下的时间复杂度，总的比较次数与移动次数约为n2/4.</p>
+<p>由此，直接插入排序算法的时间复杂度为O（n2）</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[排序]]></title>
       <url>/2017/11/22/%E6%8E%92%E5%BA%8F-1/</url>
       <content type="html"><![CDATA[<p>-排序简介</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>排序</p></div>

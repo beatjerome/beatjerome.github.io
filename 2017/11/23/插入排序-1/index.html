@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Computer Basics," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-2015题型">
-<meta name="keywords" content="Computer Basics">
+<meta name="description" content="-插入排序算法简介-插入排序算法分析">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数理逻辑模拟-1">
-<meta property="og:url" content="http://yoursite.com/2017/11/04/数理逻辑模拟-1/index.html">
+<meta property="og:title" content="插入排序-1">
+<meta property="og:url" content="http://yoursite.com/2017/11/23/插入排序-1/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-2015题型">
+<meta property="og:description" content="-插入排序算法简介-插入排序算法分析">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-04T06:40:55.850Z">
+<meta property="og:updated_time" content="2017-11-22T16:03:23.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数理逻辑模拟-1">
-<meta name="twitter:description" content="-2015题型">
+<meta name="twitter:title" content="插入排序-1">
+<meta name="twitter:description" content="-插入排序算法简介-插入排序算法分析">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/04/数理逻辑模拟-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/23/插入排序-1/"/>
 
 
 
 
 
-  <title>数理逻辑模拟-1 | Grocery</title>
+  <title>插入排序-1 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/04/数理逻辑模拟-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/23/插入排序-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数理逻辑模拟-1</h1>
+          <h1 class="post-title" itemprop="name headline">插入排序-1</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T14:40:45+08:00">
-                2017-11-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-23T00:05:45+08:00">
+                2017-11-23
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-04T14:40:55+08:00">
-                2017-11-04
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-23T00:03:23+08:00">
+                2017-11-23
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Discrete-mathematics/" itemprop="url" rel="index">
-                    <span itemprop="name">Discrete mathematics</span>
+                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
+                    <span itemprop="name">Data structure</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  311
+                  608
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -429,17 +429,15 @@
       
 
       
-        <p>-2015题型<br><a id="more"></a><br><strong>求公式的主合取范式</strong><br>先消去公式中的<strong>→</strong>与<strong>↔</strong><br>如果需要补基础元(P)，可以使用<strong>∧(P∨¬P）</strong>或者<strong>∨（P∧¬P）</strong><br>接着进行结合的调换，调成主合取范式<br>（主析取范式也是如此）</p>
+        <p>-插入排序算法简介<br>-插入排序算法分析</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>插入排序</p></div>
+<p>插入排序是一种简单直观的排序方法，其基本思想在于每次将一个待排序的记录，按其关键字大小插入到前面已经排序的子序列中，知道全部记录插入完成。</p>
 <hr>
-<p><strong>已知主析取范式求主合取范式</strong><br>将所有的主析取范式剩下的极小项转换成极大项<br>再用合取连接起来<br>这样就得到了主合取范式<br>（已知主合取范式求主析取范式的过程类似）</p>
+<p><strong>直接插入排序</strong><br>为了实现将元素L(i)插入到已有序的子序列L[1…i-1]，需要执行以下操作：<br>1.查找出L(i)在L[1…i-1]中的插入位置k<br>2.将L[k…i-1]中所有元素全部后移一个位置<br>3.将L[i]复制到L[k]</p>
+<p>为了实现排序，将L(2)~L(n)依次插入到前面已排好序的子序列中，初始假定L[1]是一个已排好序的子序列。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">void InsertSort(ElemType A[],int n)&#123;</div><div class="line"><span class="comment">//直接插入排序算法</span></div><div class="line">	int i,j;</div><div class="line">	for(i=<span class="number">2</span>;i&lt;=n;i++)             <span class="comment">//依次将A[2]~A[n]插入到前面已排序序列</span></div><div class="line">		if(A[i].<span class="type">key</span>&lt;A[i<span class="number">-1</span>].<span class="type">key</span>)&#123;  <span class="comment">//若A[i]的关键码小于其前驱，需将A[i]插入到有序表</span></div><div class="line">			A[<span class="number">0</span>]=A[i];            <span class="comment">//复制为哨兵</span></div><div class="line">			for(j=i<span class="number">-1</span>;A[<span class="number">0</span>].<span class="type">key</span>&lt;A[j].<span class="type">key</span>;--j)  <span class="comment">//从后往前查找待插入位置</span></div><div class="line">				A[j+<span class="number">1</span>]=A[j];      <span class="comment">//复制到插入位置</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
-<p><strong>证明过程题</strong><br>US：全称特指<br>ES：存在特指<br>UG：全称推广<br>EG：存在推广<br>P：引用<br>T：推理</p>
-<hr>
-<p><strong>代数系统题</strong><br>结合律，交换律，幂等律（a<em>a=a），消去律（a</em>x=a<em>y），分配律，吸收律（x-(x</em>y)=x）<br>幺元（单位元）<br>零元（a<em>b=b</em>a=b）<br>逆元（a*b=e）</p>
-<hr>
-<p><strong>群与陪集</strong><br>求陪集的方法：<br>以右陪集为例；<br>用子群与群中每一元素进行二元运算，删除重复部分，即为陪集</p>
-<hr>
-<p><strong>拉格朗日定理</strong><br>子群的阶记为m，有限群的阶记为n，子群的陪集个数为k<br>首先n一定是m的倍数，即n能被m整除<br>k=n/m<br>由此可计算陪集的个数</p>
+<p><strong>性能分析</strong><br>空间效率：使用了常数个辅助单元，空间复杂度为O（1）<br>时间效率：在排序过程中，向有序子表中逐个地插入元素的操作进行了n-1趟，每趟操作都分为比较关键字和移动元素，而比较次数和移动次数取决于待排序表的初始状态。<br>在最好的情况下，表中元素已经有序，每插入一个元素，都只需比较一次而不用移动元素，因而时间复杂度为O（n）<br>在最坏的情况下，表中顺序刚好与排序结果中元素顺序相反时，总的比较次数达到最大，为2+3+…+n，总的移动次数也达到最大，3+4+…+n+1.<br>平均情况下，考虑待排序表中的元素是随机的，此时可以取上述最好与最坏情况的平均值作为平均情况下的时间复杂度，总的比较次数与移动次数约为n2/4.</p>
+<p>由此，直接插入排序算法的时间复杂度为O（n2）</p>
 <hr>
 
       
@@ -487,7 +485,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Computer-Basics/" rel="tag"># Computer Basics</a>
+            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -500,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/31/离散数学复习笔记-2/" rel="next" title="数理逻辑复习笔记-2">
-                <i class="fa fa-chevron-left"></i> 数理逻辑复习笔记-2
+              <a href="/2017/11/22/排序-1/" rel="next" title="排序">
+                <i class="fa fa-chevron-left"></i> 排序
               </a>
             
           </div>
@@ -509,10 +507,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/06/数理逻辑模拟-2/" rel="prev" title="数理逻辑模拟-2">
-                数理逻辑模拟-2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -564,8 +558,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -651,6 +654,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
