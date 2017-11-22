@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[排序-1]]></title>
+      <url>/2017/11/22/%E6%8E%92%E5%BA%8F-1/</url>
+      <content type="html"><![CDATA[<p>-排序简介</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>排序</p></div>
+<p>排序就是重新排列表中的元素，使表中的元素满足按关键字递增或递减的过程</p>
+<hr>
+<div class="note danger"><p>算法稳定性</p></div>
+<p>如果待排序表中有两个元素Ri、Rj，其对应关键字keyi=keyj，且在排序前Ri在Rj的前面，如果使用某一排序算法后，Ri仍然在Rj的前面，则称这个排序算法是稳定的，否则称排序算法是不稳定的<br>算法是否具有稳定性并不能衡量一个算法的优劣，它主要是对算法的性质进行描述</p>
+<hr>
+<div class="note info"><p>内部排序</p></div>
+<p>指在排序期间元素全部存放在内存中的排序</p>
+<hr>
+<div class="note primary"><p>外部排序</p></div>
+<p>指在排序期间元素无法全部同时存放在内存中，必须在排序的过程中根据要求不断地在内、外存之间移动的排序</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[并查集]]></title>
       <url>/2017/11/22/%E6%A0%91%E7%9A%84%E5%BA%94%E7%94%A8--%E5%B9%B6%E6%9F%A5%E9%9B%86/</url>
       <content type="html"><![CDATA[<p>-并查集的基本操作</p>
@@ -35,7 +68,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[树、森林与二叉树的咋U你还]]></title>
+      <title><![CDATA[树、森林与二叉树的转换]]></title>
       <url>/2017/11/22/%E6%A0%91%E3%80%81%E6%A3%AE%E6%9E%97%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BD%AC%E6%8D%A2/</url>
       <content type="html"><![CDATA[<p>-树型结构的相互转换</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
