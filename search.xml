@@ -3,6 +3,73 @@
   
     
     <entry>
+      <title><![CDATA[并查集]]></title>
+      <url>/2017/11/22/%E6%A0%91%E7%9A%84%E5%BA%94%E7%94%A8--%E5%B9%B6%E6%9F%A5%E9%9B%86/</url>
+      <content type="html"><![CDATA[<p>-并查集的基本操作</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p><strong>并查集的操作</strong><br>并查集是一种简单的集合表示，它支持一下三种操作：<br>1.Union(S,Root1,Root2)：把集合S中的子集合Root2并入子集合Root1中。要求Root1和Root2互不相交，否则不执行合并。<br>2.Find(S,x)：查找集合S中单元素x所在的子集合，并返回该子集合的名字。<br>3.Initial(S)：将集合S中每一个元素都初始化为只有一个单元素的子集合。</p>
+<p>通常用树（森林）的双亲表示作为并查集的存储结构，每个子集合以一棵树表示。所有表示子集合的树，构成表示全集合的树，存放在双亲表示数组内。通常用数组元素的下标代表元素名，根结点的下标代表子集合名，根结点的双亲结点为负数。</p>
+<hr>
+<p>为了得到两个子集合的并，只要将其中一个子集合根结点的双亲之争指向另一个集合的根结点即可。<br>在采用树的双亲指针表示作为并查集的存储表示时，集合元素编号从0到size-1，其中size是最大元素的个数</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//并查集的结构定义</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> SIZE 100</span></div><div class="line"><span class="keyword">int</span> UFSets[SIZE];            <span class="comment">//集合元素数组（双亲指针数组）</span></div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//并查集的初始化操作</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Initial</span><span class="params">(<span class="keyword">int</span> S[])</span></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)        <span class="comment">//每个自成单元素集合</span></div><div class="line">		S[i]=<span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Find操作（函数在并查集S中查找并返回包含元素x的树的根）</span></div><div class="line"><span class="keyword">Int</span> <span class="keyword">Find</span>(<span class="keyword">int</span> S[],<span class="keyword">int</span> x)&#123;</div><div class="line">	<span class="keyword">while</span>(S[x]&gt;=<span class="number">0</span>)         <span class="comment">//循环查找x的根</span></div><div class="line">		x=S[x];</div><div class="line">	<span class="keyword">return</span> x;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Union操作(函数求两个不相交子集合的并集)</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> S[],<span class="keyword">int</span> Root1,<span class="keyword">int</span> Root2)</span></span>&#123;</div><div class="line">	<span class="comment">//要求Root1与Root2是不同的，且表示子集合的名字</span></div><div class="line">	S[Root2]=Root1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[树、森林与二叉树的咋U你还]]></title>
+      <url>/2017/11/22/%E6%A0%91%E3%80%81%E6%A3%AE%E6%9E%97%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BD%AC%E6%8D%A2/</url>
+      <content type="html"><![CDATA[<p>-树型结构的相互转换</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p>由于二叉树和树都可以用二叉链表作为存储结构，则以二叉链表作为媒介可以导出树与二叉树的一个对应关系，即给定一棵树，可以找到唯一的一颗二叉树与之对应。从物理结构上看，树的孩子兄弟表示法语二叉树的二叉链表表示法相同，即每个结点共有两个指针，分别指向结点第一个孩子和结点的下一兄弟结点，而二叉链表使用双指针。因此，就可以用同一存储结构的不同解释将一棵树转换为二叉树。</p>
+<hr>
+<p><strong>树转换成二叉树</strong><br>每个结点左指针指向它的第一个孩子结点，右指针指向它在树中的相邻兄弟结点，可表示为“左孩子右兄弟”。由于根结点没有兄弟，所以，由树转换而得的二叉树没有右子树。</p>
+<p><img src="http://img.blog.csdn.net/20171122094256947?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<hr>
+<p><strong>森林转换成二叉树</strong><br>将森林转换成二叉树的规则与树类似。先将森林中的每一棵树转换成二叉树，再将第一棵树的根作为转换后的二叉树的根，第一棵树的左子树作为转换后二叉树根的左子树，第二棵树作为转换后二叉树根的右子树，第三棵树作为转换后二叉树根的右子树的右子树，以此类推。</p>
+<hr>
+<p><strong>二叉树转换成森林</strong><br>若二叉树非空，则二叉树根及其左子树为第一棵树的二叉树形式，二叉树根的右子树可以看作是一个由除第一棵树外的森林转换后的二叉树，应用同样的方法，直到最后产生一颗没有右子树的二叉树为止，这样就得到了原森林。</p>
+<hr>
+<p><strong>树转换成二叉树的画法</strong><br>1.在兄弟结点之前加一连线<br>2.对每一个结点，只保留它与第一个子结点的连线，与其他子结点的连线全部抹掉<br>3.以树根为轴心，顺时针旋转45</p>
+<hr>
+<p><strong>森林转换成二叉树的画法</strong><br>1.将每棵树的根相连<br>2.将森林中的每棵树转换成相应的二叉树<br>3.以第一棵树的根为轴心顺时针旋转45</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[树与森林]]></title>
       <url>/2017/11/21/%E6%A0%91%E4%B8%8E%E6%A3%AE%E6%9E%97/</url>
       <content type="html"><![CDATA[<p>-树的存储结构</p>
@@ -74,7 +141,6 @@
       <url>/2017/11/20/C++%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
       <content type="html"><![CDATA[<p>-接近拖了一个月了才继续…</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
-<div class="note success"><p>城南小青龙 </p></div>
 <p><strong>变量名命名规则</strong><br>·在名称中只能使用字母字符、数字和下划线（_）<br>·名称的第一个字符不能是数字<br>·区分大写字符与小写字符<br>·不能将C++关键字用作名称<br>·以两个下划线或下划线和大写字母打头的名称全部被保留给实现<br>·C++对于名称的长度没有限制</p>
 <hr>
 <p><strong>整型</strong><br>C++的基本整型有char，short，int，long和long long</p>
