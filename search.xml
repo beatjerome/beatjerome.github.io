@@ -3,6 +3,36 @@
   
     
     <entry>
+      <title><![CDATA[Anyview数据结构-6]]></title>
+      <url>/2017/11/26/AnyView%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-6/</url>
+      <content type="html"><![CDATA[<p>-广工Anyview题解<br>-数据结构部分-6<br>-广义表部分</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>/<strong><strong>**</strong></strong><br>【题目】试按依次对每个元素递归分解的分析方法重写求广义表的深度的递归算法。<br>广义表类型GList的定义：<br>typedef enum {ATOM,LIST} ElemTag;<br>typedef struct GLNode{<br>     ElemTag tag;<br>     union {<br>       char atom;<br>       struct {<br>         GLNode <em>hp, </em>tp;<br>       } ptr;<br>     }un;<br>} <em>GList;<br><strong><strong>*</strong></strong></em>/</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> GListDepth(GList <span class="keyword">ls</span>)</div><div class="line"><span class="comment">/* Return the depth of list */</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> h1,h2;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">ls</span>==NULL)</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">ls</span>-&gt;tag==ATOM)</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    h1=GListDepth(<span class="keyword">ls</span>-&gt;un.ptr.hp)+<span class="number">1</span>;</div><div class="line">    h2=GListDepth(<span class="keyword">ls</span>-&gt;un.ptr.tp);</div><div class="line">    <span class="keyword">return</span> h1&gt;h2?h1:h2;</div><div class="line">              </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>/<strong><strong>**</strong></strong><br>【题目】试编写判别两个广义表是否相等的递归算法。<br>广义表类型GList的定义：<br>typedef enum {ATOM,LIST} ElemTag;<br>typedef struct GLNode{<br>     ElemTag tag;<br>     union {<br>       char atom;<br>       struct {<br>         GLNode <em>hp, </em>tp;<br>       } ptr;<br>     }un;<br>} <em>GList;<br><strong><strong>*</strong></strong></em>/</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">Status Equal(GList A, GList B)</div><div class="line"><span class="comment">/* 判断广义表A和B是否相等,是则返回TRUE,否则返回FALSE */</span></div><div class="line">&#123;</div><div class="line">   <span class="keyword">if</span>(A-&gt;tag==ATOM&amp;&amp;B-&gt;tag==ATOM)</div><div class="line">        <span class="keyword">if</span>(A-&gt;un.atom==B-&gt;un.atom)</div><div class="line">            <span class="keyword">return</span> <span class="keyword">TRUE</span>;</div><div class="line">        <span class="keyword">else</span> </div><div class="line">            <span class="keyword">return</span> <span class="keyword">FALSE</span>;</div><div class="line">   <span class="keyword">else</span> <span class="keyword">if</span>(A-&gt;tag==<span class="keyword">LIST</span>&amp;&amp;B-&gt;tag==<span class="keyword">LIST</span>)</div><div class="line">        <span class="keyword">if</span>(Equal(A-&gt;un.ptr.hp,B-&gt;un.ptr.hp)&amp;&amp;Equal(A-&gt;un.ptr.tp,B-&gt;un.ptr.tp))</div><div class="line">            <span class="keyword">return</span> <span class="keyword">TRUE</span>;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> <span class="keyword">FALSE</span>;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>/<strong><strong>**</strong></strong><br>【题目】试编写递归算法，输出广义表中所有原子项及其所在层次。<br>广义表类型GList的定义：<br>typedef enum {ATOM,LIST} ElemTag;<br>typedef struct GLNode{<br>     ElemTag tag;<br>     union {<br>       char atom;<br>       struct {<br>         GLNode <em>hp, </em>tp;<br>       } ptr;<br>     }un;<br>} <em>GList;<br><strong><strong>*</strong></strong></em>/</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">void OutAtom<span class="comment">(GList A, int layer, void(*Out2)</span><span class="comment">(char, int)</span>)</div><div class="line"><span class="comment">/* 递归地用函数Out2输出广义表的原子及其所在层次,layer表示当前层次 */</span></div><div class="line">&#123;</div><div class="line">   <span class="keyword">if</span><span class="comment">(A)</span>&#123;</div><div class="line">        <span class="keyword">if</span><span class="comment">(A-&gt;tag==ATOM)</span></div><div class="line">            Out<span class="number">2</span><span class="comment">(A-&gt;un.atom,layer)</span>;</div><div class="line">        else&#123;</div><div class="line">            OutAtom<span class="comment">(A-&gt;un.ptr.hp,layer+1,Out2)</span>;</div><div class="line">            OutAtom<span class="comment">(A-&gt;un.ptr.tp,layer,Out2)</span>;</div><div class="line">        &#125;</div><div class="line">   &#125;         </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Anyview-GDUT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AnyView </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[折半插入排序]]></title>
       <url>/2017/11/26/%E6%8A%98%E5%8D%8A%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
       <content type="html"><![CDATA[<p>-折半插入算法介绍</p>
