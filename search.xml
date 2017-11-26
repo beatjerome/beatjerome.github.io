@@ -3,6 +3,35 @@
   
     
     <entry>
+      <title><![CDATA[Verilog HDL初识]]></title>
+      <url>/2017/11/26/Verilog%20HDL-1/</url>
+      <content type="html"><![CDATA[<p>-风格描述介绍<br>-测试平台的编写</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>门级风格的描述</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//二选一数据选择器的门级风格描述</span></div><div class="line"><span class="function"><span class="keyword">module</span> <span class="title">mux_str</span><span class="params">(out,a,b,sel)</span></span>;</div><div class="line">	input a,b,sel;         <span class="comment">//输入端口声明</span></div><div class="line">	output out;            <span class="comment">//输出端口声明</span></div><div class="line">	<span class="function"><span class="keyword">not</span> <span class="title">gate</span><span class="params">(net1,sel)</span></span>;    <span class="comment">//非门gate中，net1是输出，sel是输入</span></div><div class="line">	<span class="function"><span class="keyword">and</span> <span class="title">gate2</span><span class="params">(net2,a,net1)</span></span>;<span class="comment">//与门gate2中，net2是输出，a和net1是输入</span></div><div class="line">	<span class="function"><span class="keyword">and</span> <span class="title">gate3</span><span class="params">(net3,b,sel)</span></span>; <span class="comment">//与门gate3中，net3是输出，b和sel是输入</span></div><div class="line">	<span class="function"><span class="keyword">or</span> <span class="title">gate4</span><span class="params">(out,net2,net3)</span></span>;</div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>数据流风格的描述</strong><br>    数据流风格描述方式是最常用的一种风格，用数据流描述方式对一个设计建模的最基本机制就是使用连续赋值语句。在连续赋值语句中，线网类型变量被赋予某个值，右边表达式的操作时无论何时发生变化，表达式都要重新计算，计算结果被赋予左边表达式的线网类型变量。<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> mux<span class="number">_f</span>low(<span class="keyword">out</span>,a,b,sel);</div><div class="line">	input a,b,sel;</div><div class="line">	output <span class="keyword">out</span>;</div><div class="line">	<span class="keyword">assign</span> <span class="keyword">out</span>=(sel)?b:a;      <span class="comment">//连续赋值</span></div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>行为风格的描述</strong><br>行为风格使用initial语句（语句只执行一次）和always语句（重复执行），只有变量类型数据能够在这两种语句中被赋值，所有initial语句和always语句在0时刻开始并发执行<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">module mux_beha(<span class="keyword">out</span>,a,b,sel);</div><div class="line">	<span class="keyword">input</span> a,b,sel;</div><div class="line">	output <span class="keyword">out</span>;</div><div class="line">	<span class="keyword">reg</span> <span class="keyword">out</span>;</div><div class="line">	always @(a,b,sel)   <span class="comment">//a,b,sel为敏感事件，一旦发生变化，即触发后面代码的执行</span></div><div class="line">		<span class="keyword">out</span>=(sel)?b:a;</div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>测试平台的编写</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">module testMux;</div><div class="line">	reg pa,pb,psel;</div><div class="line">	wire pout;</div><div class="line">	mux_beha tmux(pout,pa,pb,psel);      <span class="comment">//调用</span></div><div class="line"></div><div class="line">   initial</div><div class="line">	   begin</div><div class="line">		   pa=<span class="number">0</span>;pb=<span class="number">0</span>;psel=<span class="number">0</span>;<span class="comment">//赋初值</span></div><div class="line">		   #<span class="number">5</span> pa=<span class="number">1</span>;  <span class="comment">//五个单位时间延迟后进行赋值</span></div><div class="line">		   #<span class="number">5</span> pb=<span class="number">1</span>;</div><div class="line">		   #<span class="number">5</span> pa=<span class="number">0</span>;</div><div class="line">		   #<span class="number">5</span> psel=<span class="number">1</span>;</div><div class="line">		   #<span class="number">5</span> pa=<span class="number">1</span>;</div><div class="line">		   #<span class="number">5</span> pb=<span class="number">0</span>;</div><div class="line">		   #<span class="number">5</span> pa=<span class="number">0</span>;</div><div class="line">		end</div><div class="line"> </div><div class="line"> initial</div><div class="line">	 $monitor(<span class="string">"time=%t,a=%b.b=%b,sel=%b,out=%b"</span>,$time,pa,pb,psel,pout);</div><div class="line">	 <span class="comment">//调用系统任务$monitor，当pa、pb、psel、pout中任一个发生变化时就输出显示</span></div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Verilog HDL </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Anyview数据结构-6]]></title>
       <url>/2017/11/26/AnyView%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-6/</url>
       <content type="html"><![CDATA[<p>-广工Anyview题解<br>-数据结构部分-6<br>-广义表部分</p>

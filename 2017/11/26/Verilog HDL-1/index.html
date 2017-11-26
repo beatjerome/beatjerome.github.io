@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="programming language learning," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="-终于度过了低迷期">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="-风格描述介绍-测试平台的编写">
+<meta name="keywords" content="programming language learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树-1">
-<meta property="og:url" content="http://yoursite.com/2017/11/12/二叉树-1/index.html">
+<meta property="og:title" content="Verilog HDL初识">
+<meta property="og:url" content="http://yoursite.com/2017/11/26/Verilog HDL-1/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-终于度过了低迷期">
+<meta property="og:description" content="-风格描述介绍-测试平台的编写">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://img.blog.csdn.net/20171110155605187?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-11-12T07:01:42.876Z">
+<meta property="og:updated_time" content="2017-11-26T11:06:37.116Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树-1">
-<meta name="twitter:description" content="-终于度过了低迷期">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20171110155605187?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="Verilog HDL初识">
+<meta name="twitter:description" content="-风格描述介绍-测试平台的编写">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/12/二叉树-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/26/Verilog HDL-1/"/>
 
 
 
 
 
-  <title>二叉树-1 | Grocery</title>
+  <title>Verilog HDL初识 | Grocery</title>
   
 
 
@@ -299,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/二叉树-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/Verilog HDL-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -316,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二叉树-1</h1>
+          <h1 class="post-title" itemprop="name headline">Verilog HDL初识</h1>
         
 
         <div class="post-meta">
@@ -328,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T02:10:45+08:00">
-                2017-11-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T19:05:45+08:00">
+                2017-11-26
               </time>
             
 
@@ -344,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-12T15:01:42+08:00">
-                2017-11-12
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-26T19:06:37+08:00">
+                2017-11-26
               </time>
             
           </span>
@@ -363,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
-                    <span itemprop="name">Data structure</span>
+                  <a href="/categories/Verilog-HDL/" itemprop="url" rel="index">
+                    <span itemprop="name">Verilog HDL</span>
                   </a>
                 </span>
 
@@ -394,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  718
+                  492
                 </span>
               
 
@@ -410,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  2
                 </span>
               
             </div>
@@ -431,24 +429,16 @@
       
 
       
-        <p>-终于度过了低迷期</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>1.二叉树的定义</strong><br>二叉树是一种树形结构，其特点是每个节点至多只有两颗子树（即二叉树中不存在度大于2的结点），并且，二叉树的子树有左右之分，其次序不能任意颠倒。</p>
-<p><strong>二叉树与度为2的有序树的区别</strong><br>1.度为2的树至少有三个结点，而二叉树可以为空<br>2.度为2的有序树的孩子结点的左右次序是相对于另一孩子结点而言的，如果某个结点只有一个孩子结点，这个孩子结点就无需区分其左右次序</p>
-<p><strong>结点编号方式</strong><br>自上而下，自左向右<br>对于一个编号为i的结点，如果有双亲，双亲编号为i/2，如果有左孩子，左孩子编号为2i；如果有右孩子，则右孩子为2i+1；</p>
+        <p>-风格描述介绍<br>-测试平台的编写</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>门级风格的描述</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//二选一数据选择器的门级风格描述</span></div><div class="line"><span class="function"><span class="keyword">module</span> <span class="title">mux_str</span><span class="params">(out,a,b,sel)</span></span>;</div><div class="line">	input a,b,sel;         <span class="comment">//输入端口声明</span></div><div class="line">	output out;            <span class="comment">//输出端口声明</span></div><div class="line">	<span class="function"><span class="keyword">not</span> <span class="title">gate</span><span class="params">(net1,sel)</span></span>;    <span class="comment">//非门gate中，net1是输出，sel是输入</span></div><div class="line">	<span class="function"><span class="keyword">and</span> <span class="title">gate2</span><span class="params">(net2,a,net1)</span></span>;<span class="comment">//与门gate2中，net2是输出，a和net1是输入</span></div><div class="line">	<span class="function"><span class="keyword">and</span> <span class="title">gate3</span><span class="params">(net3,b,sel)</span></span>; <span class="comment">//与门gate3中，net3是输出，b和sel是输入</span></div><div class="line">	<span class="function"><span class="keyword">or</span> <span class="title">gate4</span><span class="params">(out,net2,net3)</span></span>;</div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
 <hr>
-<p><strong>特殊的二叉树</strong><br><strong>满二叉树</strong>：一颗高度为h，并且含有2的h次方-1个结点的二叉树称为满二叉树，树中每一层都含有最多的结点。</p>
-<p><strong>完全二叉树</strong>：若设二叉树的深度为h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第 h 层所有的结点都连续集中在最左边，这就是完全二叉树。换言之，就是每一个结点都与高度为h的满二叉树的结点一一对应。</p>
-<p><img src="http://img.blog.csdn.net/20171110155605187?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2Vla19qZXJvbWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p><strong>二叉排序树</strong>：左子树上所有结点的关键字均小于根结点的关键字；右子树上所有节点的关键字均大于根结点的关键字。左子树和右子树又各是一颗二叉排序树。</p>
-<p><strong>平衡二叉树</strong>：树上任一结点的左子树和右子树的深度之差不超过1</p>
+<p><strong>数据流风格的描述</strong><br>    数据流风格描述方式是最常用的一种风格，用数据流描述方式对一个设计建模的最基本机制就是使用连续赋值语句。在连续赋值语句中，线网类型变量被赋予某个值，右边表达式的操作时无论何时发生变化，表达式都要重新计算，计算结果被赋予左边表达式的线网类型变量。<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> mux<span class="number">_f</span>low(<span class="keyword">out</span>,a,b,sel);</div><div class="line">	input a,b,sel;</div><div class="line">	output <span class="keyword">out</span>;</div><div class="line">	<span class="keyword">assign</span> <span class="keyword">out</span>=(sel)?b:a;      <span class="comment">//连续赋值</span></div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
 <hr>
-<p><strong>二叉树的性质</strong><br>1.非空二叉树上叶子结点数N0等于度为2的结点树加1，即N0=N2+1</p>
-<ol>
-<li>非空二叉树上第k层上只是多有2的H次方-1个结点</li>
-<li>高度为H的二叉树中至多有2的H次方-1个结点</li>
-<li>对完全二叉树按从上到下，从左到右的顺序依次编号，有以下关系：<br>①当i&gt;1,结点i的双亲结点编号为i/2，即当i为偶数时，其双亲结点编号为i/2，它是双亲结点的左结点；当i为奇数时，其双亲结点的编号为(i-1)/2，它是双亲结点的右孩子<br>②当2i≤N时，结点i的左孩子编号为2i，否则无左孩子<br>③当2i+1≤N时，结点i的右孩子编号为2i+1，否则无右孩子<br>④结点i所在深度为log2i+1<br>5.具有N个结点的完全二叉树的高度为log2(N+1)或log2N+1</li>
-</ol>
-<h2 id="—"><a href="#—" class="headerlink" title="—"></a>—</h2>
+<p><strong>行为风格的描述</strong><br>行为风格使用initial语句（语句只执行一次）和always语句（重复执行），只有变量类型数据能够在这两种语句中被赋值，所有initial语句和always语句在0时刻开始并发执行<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">module mux_beha(<span class="keyword">out</span>,a,b,sel);</div><div class="line">	<span class="keyword">input</span> a,b,sel;</div><div class="line">	output <span class="keyword">out</span>;</div><div class="line">	<span class="keyword">reg</span> <span class="keyword">out</span>;</div><div class="line">	always @(a,b,sel)   <span class="comment">//a,b,sel为敏感事件，一旦发生变化，即触发后面代码的执行</span></div><div class="line">		<span class="keyword">out</span>=(sel)?b:a;</div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>测试平台的编写</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">module testMux;</div><div class="line">	reg pa,pb,psel;</div><div class="line">	wire pout;</div><div class="line">	mux_beha tmux(pout,pa,pb,psel);      <span class="comment">//调用</span></div><div class="line"></div><div class="line">   initial</div><div class="line">	   begin</div><div class="line">		   pa=<span class="number">0</span>;pb=<span class="number">0</span>;psel=<span class="number">0</span>;<span class="comment">//赋初值</span></div><div class="line">		   #<span class="number">5</span> pa=<span class="number">1</span>;  <span class="comment">//五个单位时间延迟后进行赋值</span></div><div class="line">		   #<span class="number">5</span> pb=<span class="number">1</span>;</div><div class="line">		   #<span class="number">5</span> pa=<span class="number">0</span>;</div><div class="line">		   #<span class="number">5</span> psel=<span class="number">1</span>;</div><div class="line">		   #<span class="number">5</span> pa=<span class="number">1</span>;</div><div class="line">		   #<span class="number">5</span> pb=<span class="number">0</span>;</div><div class="line">		   #<span class="number">5</span> pa=<span class="number">0</span>;</div><div class="line">		end</div><div class="line"> </div><div class="line"> initial</div><div class="line">	 $monitor(<span class="string">"time=%t,a=%b.b=%b,sel=%b,out=%b"</span>,$time,pa,pb,psel,pout);</div><div class="line">	 <span class="comment">//调用系统任务$monitor，当pa、pb、psel、pout中任一个发生变化时就输出显示</span></div><div class="line">endmodule</div></pre></td></tr></table></figure></p>
+<hr>
+
       
     </div>
     
@@ -494,7 +484,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/Tags/programming-language-learning/" rel="tag"># programming language learning</a>
           
         </div>
       
@@ -507,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/10/Anyview数据结构-5/" rel="next" title="Anyview数据结构-5">
-                <i class="fa fa-chevron-left"></i> Anyview数据结构-5
+              <a href="/2017/11/26/AnyView数据结构-6/" rel="next" title="Anyview数据结构-6">
+                <i class="fa fa-chevron-left"></i> Anyview数据结构-6
               </a>
             
           </div>
@@ -516,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/12/二叉树-2/" rel="prev" title="二叉树-2">
-                二叉树-2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -677,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#—"><span class="nav-number">2.</span> <span class="nav-text">—</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
             
 
           </div>
