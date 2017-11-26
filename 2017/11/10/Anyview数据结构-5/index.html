@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-广工Anyview题解-数据结构部分-4-递归基础">
+<meta name="description" content="-广工Anyview题解-数据结构部分-5-递归基础">
 <meta name="keywords" content="AnyView">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Anyview数据结构-5">
 <meta property="og:url" content="http://yoursite.com/2017/11/10/Anyview数据结构-5/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-广工Anyview题解-数据结构部分-4-递归基础">
+<meta property="og:description" content="-广工Anyview题解-数据结构部分-5-递归基础">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-10T03:54:58.670Z">
+<meta property="og:updated_time" content="2017-11-26T14:29:33.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Anyview数据结构-5">
-<meta name="twitter:description" content="-广工Anyview题解-数据结构部分-4-递归基础">
+<meta name="twitter:description" content="-广工Anyview题解-数据结构部分-5-递归基础">
 
 
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-10T11:54:58+08:00">
-                2017-11-10
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-26T22:29:33+08:00">
+                2017-11-26
               </time>
             
           </span>
@@ -429,7 +429,7 @@
       
 
       
-        <p>-广工Anyview题解<br>-数据结构部分-4<br>-递归基础<br><a id="more"></a><br>/<strong><strong>**</strong></strong><br>【题目】试编写如下定义的递归函数的递归算法:<br>    g(m,n) = 0             当m=0,n&gt;=0<br>    g(m,n) = g(m-1,2n)+n   当m&gt;0,n&gt;=0<br><strong><strong>**</strong></strong>/</p>
+        <p>-广工Anyview题解<br>-数据结构部分-5<br>-递归基础<br><a id="more"></a><br>/<strong><strong>**</strong></strong><br>【题目】试编写如下定义的递归函数的递归算法:<br>    g(m,n) = 0             当m=0,n&gt;=0<br>    g(m,n) = g(m-1,2n)+n   当m&gt;0,n&gt;=0<br><strong><strong>**</strong></strong>/</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">G</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span></div><div class="line"><span class="function"><span class="comment">/* 如果 m&lt;0 或 n&lt;0 则返回 -1 */</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(m&lt;<span class="number">0</span>||n&lt;<span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(m==<span class="number">0</span>&amp;&amp;n&gt;=<span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(m&gt;<span class="number">0</span>&amp;&amp;n&gt;=<span class="number">0</span>)</div><div class="line">       <span class="keyword">return</span> G(m<span class="number">-1</span>,<span class="number">2</span>*n)+n;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
 <p>/<strong><strong>**</strong></strong><br>【题目】试写出求递归函数F(n)的递归算法：<br>    F(n) = n+1      当n=0<br>    F(n) = nF(n/2)  当n&gt;0<br><strong><strong>**</strong></strong>/<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">F</span><span class="params">(<span class="keyword">int</span> n)</span></span></div><div class="line"><span class="function"><span class="comment">/* 如果 n&lt;0 则返回 -1 */</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(n&lt;<span class="number">0</span>) </div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(n==<span class="number">0</span>) </div><div class="line">        <span class="keyword">return</span> n+<span class="number">1</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(n&gt;<span class="number">0</span>) </div><div class="line">        <span class="keyword">return</span> n*F(n/<span class="number">2</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -589,7 +589,7 @@
               
                 <a href="/Archives">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -684,7 +684,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">29.6k</span>
+    <span title="Site words total count">30.2k</span>
   
 </div>
 
