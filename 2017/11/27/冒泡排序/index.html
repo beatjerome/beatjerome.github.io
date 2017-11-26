@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Computer Basics," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-代数系统概念与性质">
-<meta name="keywords" content="Computer Basics">
+<meta name="description" content="-冒泡排序算法思想-冒泡排序算法实现">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代数系统">
-<meta property="og:url" content="http://yoursite.com/2017/10/24/代数系统/index.html">
+<meta property="og:title" content="冒泡排序">
+<meta property="og:url" content="http://yoursite.com/2017/11/27/冒泡排序/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-代数系统概念与性质">
+<meta property="og:description" content="-冒泡排序算法思想-冒泡排序算法实现">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-24T13:59:07.572Z">
+<meta property="og:updated_time" content="2017-11-26T16:05:30.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代数系统">
-<meta name="twitter:description" content="-代数系统概念与性质">
+<meta name="twitter:title" content="冒泡排序">
+<meta name="twitter:description" content="-冒泡排序算法思想-冒泡排序算法实现">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/24/代数系统/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/27/冒泡排序/"/>
 
 
 
 
 
-  <title>代数系统 | Grocery</title>
+  <title>冒泡排序 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/24/代数系统/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/27/冒泡排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">代数系统</h1>
+          <h1 class="post-title" itemprop="name headline">冒泡排序</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-24T22:00:45+08:00">
-                2017-10-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-27T00:05:45+08:00">
+                2017-11-27
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-10-24T21:59:07+08:00">
-                2017-10-24
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-27T00:05:30+08:00">
+                2017-11-27
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Discrete-mathematics/" itemprop="url" rel="index">
-                    <span itemprop="name">Discrete mathematics</span>
+                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
+                    <span itemprop="name">Data structure</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  710
+                  360
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  1
                 </span>
               
             </div>
@@ -429,17 +429,24 @@
       
 
       
-        <p>-代数系统概念与性质</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>如果“*”是AXA到A的二元运算，则称运算“*”对集合A是<strong>封闭</strong>的，或者称“*”是A上的二元运算</p>
+        <p>-冒泡排序算法思想<br>-冒泡排序算法实现</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>算法介绍</p></div>
+冒泡排序又称起泡排序。它是通过一系列的“交换”动作完成的。首先，第一个关键字和第二个关键字比较，如果第一个大，则二者交换，否则不执行交换；然后第二个关键字和第三个关键字比较，如果第二个大，则执行交换，否则不交换......依次执行下去。第一趟冒泡排序完成，最大的关键字被交换到了最后。经过多趟排序，最终使整个序列有序。
+
+起泡排序算法结束的条件是在一趟排序过程中没有发生关键字交换。
+
+---
+<div class="note danger"><p>算法实现</p></div>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line"> <span class="comment">//默认待排序关键字为整型</span></div><div class="line">	<span class="keyword">int</span> i,j,flag;</div><div class="line">	<span class="keyword">int</span> temp;</div><div class="line">	<span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">1</span>;--i)&#123;</div><div class="line">		flag=<span class="number">0</span>;              <span class="comment">//flag用来标记本趟排序是否发生了交换</span></div><div class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++)</div><div class="line">			<span class="keyword">if</span>(R[i<span class="number">-1</span>]&gt;R[i])&#123;</div><div class="line">				temp=R[i];</div><div class="line">				R[i]=R[i<span class="number">-1</span>];</div><div class="line">				R[i<span class="number">-1</span>]=temp;</div><div class="line">				flag=<span class="number">1</span>;</div><div class="line">				&#125;</div><div class="line">			<span class="keyword">if</span>(flag==<span class="number">0</span>)</div><div class="line">				<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<p>设A是非空集合,<em>1,</em>2,…,<em>m分别是定义在A上的k1,k2,…,km元封闭运算，ki是正整数，i=1,2,…,m。集合A和</em>1,<em>2,…,</em>m所组成的系统称为<strong>代数系统</strong>，简称<strong>代数</strong></p>
-<hr>
-<p><strong>代数系统的基本运算规律</strong><br>1.结合律<br>2.交换律<br>3.消去律<br>4.幂等律<br>5.分配律<br>6.吸收律</p>
-<hr>
-<p><strong>代数系统的性质</strong><br><strong>幺元</strong>：单位元(英文常写作Identity Element，即IE)是集合里的一种特别的元，与该集合里的运算（可理解为实数里的*，但并不局限于）有关。当它和其他元素结合时，并不会改变那些元素。也叫幺元（么元）。若a<em>e=a，e称为右单位元；若e</em>a=a，e称为左单位元，若a<em>e=e</em>a=a，则e称为单位元。若该演算左右的元素能互换，左、右单位元相同，可称为双边单位元。<br><strong>零元</strong><br>设*是定义在集合A上的一个二元运算，如果有一个元素a1属于A，对于任意的元素x属于A，都有a1<em>x=a1，则称a为A中关于运算</em>的左零元；如果有一个元素a2属于A,a1不等于a2，对于任意的元素x属于A都有x<em>a2=a2，则称a2为A中关于运算</em>的右零元；如果A中的一个元素a，它既是左零元又是右零元，则称a为A中关于运算<em>的零元。<br><strong>逆元</strong><br>设S为一有二元运算 </em> 的集合。若e为(S,<em>)的单位元且a</em>b=e，则a称为b的左逆元素且b称为a的右逆元素。若一元素x同时是y的左逆元素和右逆元素时，x称为y的两面逆元素或简称为逆元素。S内的一有两面逆元素的元素被称为在S内为可逆的。</p>
-<hr>
-<p><strong>单射</strong>：设f是由集合A到集合B的映射，如果所有x,y∈A,且x≠y，都有f(x)≠f(y),则称f为由A到B的单射。</p>
-<p><strong>同态</strong>：假设M，M′是两个乘集，也就是说M和M′是两个各具有一个封闭的具有结合律的运算<em>与</em>‘的代数系统。σ是M射到M′的映射，并且任意两个元的乘积的像是这两个元的像的乘积，即对于M中任意两个元a,b,满足<br>σ(a<em>b)=σ(a)</em>’σ(b)；<br>也就是说，当a→σ(a)，b→σ(b)时，a<em>b→σ(a)</em>’σ(b)，<br>那么这映射σ就叫做M到M′上的同态。<br>如果 σ 是单射， 则称为单同态；如果 σ 是满射，则称为满同态。如果σ是双射， 则称为同构。<br>如果M, M’都是群， 那么同态也叫做群同态。</p>
+<div class="note primary"><p>时间复杂度</p></div>
+最坏情况下，每趟都要发生交换，复杂度为O（n2）
+最好情况下，每一趟只进行循环，不进行交换，复杂度为O（n）
+平均时间下时间复杂度为O（n2）
+
+---
+<div class="note default"><p>空间复杂度</p></div>
+<p>由算法可知，额外辅助空间只有一个temp，因此空间复杂度为O（1）</p>
 <hr>
 
       
@@ -487,7 +494,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Computer-Basics/" rel="tag"># Computer Basics</a>
+            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -500,8 +507,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/23/九度OJ-1001/" rel="next" title="九度OJ-1001">
-                <i class="fa fa-chevron-left"></i> 九度OJ-1001
+              <a href="/2017/11/26/希尔排序/" rel="next" title="希尔排序">
+                <i class="fa fa-chevron-left"></i> 希尔排序
               </a>
             
           </div>
@@ -509,10 +516,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/24/AnyView数据结构-1/" rel="prev" title="Anyview数据结构-1">
-                Anyview数据结构-1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

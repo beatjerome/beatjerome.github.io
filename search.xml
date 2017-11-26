@@ -3,6 +3,45 @@
   
     
     <entry>
+      <title><![CDATA[冒泡排序]]></title>
+      <url>/2017/11/27/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
+      <content type="html"><![CDATA[<p>-冒泡排序算法思想<br>-冒泡排序算法实现</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>算法介绍</p></div>
+冒泡排序又称起泡排序。它是通过一系列的“交换”动作完成的。首先，第一个关键字和第二个关键字比较，如果第一个大，则二者交换，否则不执行交换；然后第二个关键字和第三个关键字比较，如果第二个大，则执行交换，否则不交换......依次执行下去。第一趟冒泡排序完成，最大的关键字被交换到了最后。经过多趟排序，最终使整个序列有序。
+
+起泡排序算法结束的条件是在一趟排序过程中没有发生关键字交换。
+
+---
+<div class="note danger"><p>算法实现</p></div>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line"> <span class="comment">//默认待排序关键字为整型</span></div><div class="line">	<span class="keyword">int</span> i,j,flag;</div><div class="line">	<span class="keyword">int</span> temp;</div><div class="line">	<span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">1</span>;--i)&#123;</div><div class="line">		flag=<span class="number">0</span>;              <span class="comment">//flag用来标记本趟排序是否发生了交换</span></div><div class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++)</div><div class="line">			<span class="keyword">if</span>(R[i<span class="number">-1</span>]&gt;R[i])&#123;</div><div class="line">				temp=R[i];</div><div class="line">				R[i]=R[i<span class="number">-1</span>];</div><div class="line">				R[i<span class="number">-1</span>]=temp;</div><div class="line">				flag=<span class="number">1</span>;</div><div class="line">				&#125;</div><div class="line">			<span class="keyword">if</span>(flag==<span class="number">0</span>)</div><div class="line">				<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<div class="note primary"><p>时间复杂度</p></div>
+最坏情况下，每趟都要发生交换，复杂度为O（n2）
+最好情况下，每一趟只进行循环，不进行交换，复杂度为O（n）
+平均时间下时间复杂度为O（n2）
+
+---
+<div class="note default"><p>空间复杂度</p></div>
+<p>由算法可知，额外辅助空间只有一个temp，因此空间复杂度为O（1）</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[希尔排序]]></title>
       <url>/2017/11/26/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/</url>
       <content type="html"><![CDATA[<p>-希尔排序算法思想</p>
