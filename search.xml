@@ -39,7 +39,7 @@ Verilog HDL有两种形式的注释
     </entry>
     
     <entry>
-      <title><![CDATA[Verilog HDL初识]]></title>
+      <title><![CDATA[Verilog HDL-1]]></title>
       <url>/2017/11/26/Verilog%20HDL-1/</url>
       <content type="html"><![CDATA[<p>-风格描述介绍<br>-测试平台的编写</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>门级风格的描述</p></div> 
