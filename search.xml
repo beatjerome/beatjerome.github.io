@@ -3,9 +3,35 @@
   
     
     <entry>
-      <title><![CDATA[插入排序-1]]></title>
+      <title><![CDATA[折半插入排序]]></title>
+      <url>/2017/11/26/%E6%8A%98%E5%8D%8A%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
+      <content type="html"><![CDATA[<p>-折半插入算法介绍</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>折半插入排序</p></div>
+<p>如果线性表是有序的，进行查找可以用折半查找来实现。在确定出待插入位置后，就可以统一的向后移动元素了。</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">void InsertSort(ElemType A[],int n)&#123;</div><div class="line">	int i,j,low,high,mid;</div><div class="line">	for(i=<span class="number">2</span>;i&lt;=n;i++)&#123;           <span class="comment">//依次将A[2]~A[n]插入到前面已排好序的序列中</span></div><div class="line">		A[<span class="number">0</span>]=A[i];               <span class="comment">//将A[i]暂存到A[0]</span></div><div class="line">		low=<span class="number">1</span>;</div><div class="line">		high=i<span class="number">-1</span>;                <span class="comment">//设置查找范围</span></div><div class="line">		while(low&lt;=high)&#123;</div><div class="line">			mid=(low+high)/<span class="number">2</span>;    <span class="comment">//去中间点</span></div><div class="line">			if(A.[mid].<span class="type">key</span>&gt;A[<span class="number">0</span>].<span class="type">key</span>)</div><div class="line">				high=mid<span class="number">-1</span>;      <span class="comment">//查询左子表</span></div><div class="line">				else</div><div class="line">					low=mid+<span class="number">1</span>;   <span class="comment">//查询右子表</span></div><div class="line">			&#125;</div><div class="line">		for(j=i<span class="number">-1</span>;j&gt;=high+<span class="number">1</span>;--j)</div><div class="line">			A[j+<span class="number">1</span>]=A[j];         <span class="comment">//统一后移元素，空出插入位置</span></div><div class="line">		A[high+<span class="number">1</span>]=A[<span class="number">0</span>];          <span class="comment">//插入操作</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>从上述算法中，不难看出折半插入排序仅仅是减少了比较元素的次数，约为O（nlog2n），该比较次数与待排序表的初始状态无关，仅取决于表中元素个数n；而元素的移动次数没有改变，它取决于待排序表的初始状态。因此，折半插入排序的时间复杂度仍为O（n2）</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[直接插入排序]]></title>
       <url>/2017/11/23/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F-1/</url>
-      <content type="html"><![CDATA[<p>-插入排序算法简介<br>-插入排序算法分析</p>
+      <content type="html"><![CDATA[<p>-直接插入排序算法简介<br>-直接插入排序算法分析</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>插入排序</p></div>
 <p>插入排序是一种简单直观的排序方法，其基本思想在于每次将一个待排序的记录，按其关键字大小插入到前面已经排序的子序列中，知道全部记录插入完成。</p>
 <hr>
