@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[快速排序]]></title>
+      <url>/2017/11/27/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</url>
+      <content type="html"><![CDATA[<p>-快速排序算法思想<br>-快速排序算法实现<br>-快速排序性能分析</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>算法介绍</p></div>
+快速排序是“交换”累的排序，通过多次划分操作实现排序。以升序为例，其执行流程可以概括下：每一趟选择当前所有子序列中的一个关键字（通常是第一个）作为枢轴，将子序列中比枢轴小的移到枢轴前面，比枢轴打的移到枢轴后面；当本趟所有子序列都被枢轴以上述规则划分后会得到新的一组更短的子序列。
+
+---
+<div class="note info"><p>算法思想</p></div>
+<p>选第一个为关键字，从右开始找小于他的交换，再从左找大于它的交换，完成一趟排序。依次类推，多趟排序后使序列有序。</p>
+<hr>
+<div class="note danger"><p>算法实现</p></div>
+undefined
+
+---
+<div class="note primary"><p>时间复杂度</p></div>
+<p>最好情况下，复杂度为O（nlog2n）<br>最坏情况下，复杂度为O（n2）<br>平均情况下，复杂度为O（nlog2n）</p>
+<hr>
+<div class="note default"><p>空间复杂度</p></div>
+<p>快速排序是递归进行的，递归需要栈的辅助，算法的空间复杂度为O（log2n）</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Data structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[冒泡排序]]></title>
       <url>/2017/11/27/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
       <content type="html"><![CDATA[<p>-冒泡排序算法思想<br>-冒泡排序算法实现</p>

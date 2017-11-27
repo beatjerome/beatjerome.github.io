@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-排序简介">
+<meta name="description" content="-快速排序算法思想-快速排序算法实现-快速排序性能分析">
 <meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="排序">
-<meta property="og:url" content="http://yoursite.com/2017/11/22/排序-1/index.html">
+<meta property="og:title" content="快速排序">
+<meta property="og:url" content="http://yoursite.com/2017/11/27/快速排序/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-排序简介">
+<meta property="og:description" content="-快速排序算法思想-快速排序算法实现-快速排序性能分析">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-22T15:03:55.889Z">
+<meta property="og:updated_time" content="2017-11-27T03:24:14.948Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="排序">
-<meta name="twitter:description" content="-排序简介">
+<meta name="twitter:title" content="快速排序">
+<meta name="twitter:description" content="-快速排序算法思想-快速排序算法实现-快速排序性能分析">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/22/排序-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/27/快速排序/"/>
 
 
 
 
 
-  <title>排序 | Grocery</title>
+  <title>快速排序 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/22/排序-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/27/快速排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">排序</h1>
+          <h1 class="post-title" itemprop="name headline">快速排序</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-22T23:00:45+08:00">
-                2017-11-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-27T11:20:45+08:00">
+                2017-11-27
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-22T23:03:55+08:00">
-                2017-11-22
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-27T11:24:14+08:00">
+                2017-11-27
               </time>
             
           </span>
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  227
+                  285
                 </span>
               
 
@@ -429,18 +429,23 @@
       
 
       
-        <p>-排序简介</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>排序</p></div>
-<p>排序就是重新排列表中的元素，使表中的元素满足按关键字递增或递减的过程</p>
+        <p>-快速排序算法思想<br>-快速排序算法实现<br>-快速排序性能分析</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>算法介绍</p></div>
+快速排序是“交换”累的排序，通过多次划分操作实现排序。以升序为例，其执行流程可以概括下：每一趟选择当前所有子序列中的一个关键字（通常是第一个）作为枢轴，将子序列中比枢轴小的移到枢轴前面，比枢轴打的移到枢轴后面；当本趟所有子序列都被枢轴以上述规则划分后会得到新的一组更短的子序列。
+
+---
+<div class="note info"><p>算法思想</p></div>
+<p>选第一个为关键字，从右开始找小于他的交换，再从左找大于它的交换，完成一趟排序。依次类推，多趟排序后使序列有序。</p>
 <hr>
-<div class="note danger"><p>算法稳定性</p></div>
-<p>如果待排序表中有两个元素Ri、Rj，其对应关键字keyi=keyj，且在排序前Ri在Rj的前面，如果使用某一排序算法后，Ri仍然在Rj的前面，则称这个排序算法是稳定的，否则称排序算法是不稳定的<br>算法是否具有稳定性并不能衡量一个算法的优劣，它主要是对算法的性质进行描述</p>
+<div class="note danger"><p>算法实现</p></div>
+undefined
+
+---
+<div class="note primary"><p>时间复杂度</p></div>
+<p>最好情况下，复杂度为O（nlog2n）<br>最坏情况下，复杂度为O（n2）<br>平均情况下，复杂度为O（nlog2n）</p>
 <hr>
-<div class="note info"><p>内部排序</p></div>
-<p>指在排序期间元素全部存放在内存中的排序</p>
-<hr>
-<div class="note primary"><p>外部排序</p></div>
-<p>指在排序期间元素无法全部同时存放在内存中，必须在排序的过程中根据要求不断地在内、外存之间移动的排序</p>
+<div class="note default"><p>空间复杂度</p></div>
+<p>快速排序是递归进行的，递归需要栈的辅助，算法的空间复杂度为O（log2n）</p>
 <hr>
 
       
@@ -501,8 +506,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/22/树的应用--并查集/" rel="next" title="并查集">
-                <i class="fa fa-chevron-left"></i> 并查集
+              <a href="/2017/11/27/冒泡排序/" rel="next" title="冒泡排序">
+                <i class="fa fa-chevron-left"></i> 冒泡排序
               </a>
             
           </div>
@@ -510,10 +515,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/23/插入排序-1/" rel="prev" title="直接插入排序">
-                直接插入排序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
