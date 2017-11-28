@@ -14,9 +14,11 @@
 <p>选第一个为关键字，从右开始找小于他的交换，再从左找大于它的交换，完成一趟排序。依次类推，多趟排序后使序列有序。</p>
 <hr>
 <div class="note danger"><p>算法实现</p></div>
+
 undefined
 
 ---
+
 <div class="note primary"><p>时间复杂度</p></div>
 <p>最好情况下，复杂度为O（nlog2n）<br>最坏情况下，复杂度为O（n2）<br>平均情况下，复杂度为O（nlog2n）</p>
 <hr>
