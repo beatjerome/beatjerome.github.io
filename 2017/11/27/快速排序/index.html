@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Grocery">
 <meta property="og:description" content="-快速排序算法思想-快速排序算法实现-快速排序性能分析">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-28T13:30:05.768Z">
+<meta property="og:updated_time" content="2017-11-28T13:31:46.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速排序">
 <meta name="twitter:description" content="-快速排序算法思想-快速排序算法实现-快速排序性能分析">
@@ -342,7 +342,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T21:30:05+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T21:31:46+08:00">
                 2017-11-28
               </time>
             
@@ -430,18 +430,16 @@
 
       
         <p>-快速排序算法思想<br>-快速排序算法实现<br>-快速排序性能分析</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>算法介绍</p></div>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<div class="note success"><p>算法介绍</p></div>
 快速排序是“交换”累的排序，通过多次划分操作实现排序。以升序为例，其执行流程可以概括下：每一趟选择当前所有子序列中的一个关键字（通常是第一个）作为枢轴，将子序列中比枢轴小的移到枢轴前面，比枢轴打的移到枢轴后面；当本趟所有子序列都被枢轴以上述规则划分后会得到新的一组更短的子序列。
 
----
+
 <div class="note info"><p>算法思想</p></div>
 <p>选第一个为关键字，从右开始找小于他的交换，再从左找大于它的交换，完成一趟排序。依次类推，多趟排序后使序列有序。</p>
-<hr>
 <div class="note danger"><p>算法实现</p></div>
 
 undefined
-
----
 
 <div class="note primary"><p>时间复杂度</p></div>
 <p>最好情况下，复杂度为O（nlog2n）<br>最坏情况下，复杂度为O（n2）<br>平均情况下，复杂度为O（nlog2n）</p>

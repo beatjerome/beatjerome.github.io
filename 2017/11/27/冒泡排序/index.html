@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Grocery">
 <meta property="og:description" content="-冒泡排序算法思想-冒泡排序算法实现">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-26T16:05:30.823Z">
+<meta property="og:updated_time" content="2017-11-28T13:35:10.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="冒泡排序">
 <meta name="twitter:description" content="-冒泡排序算法思想-冒泡排序算法实现">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-27T00:05:30+08:00">
-                2017-11-27
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T21:35:10+08:00">
+                2017-11-28
               </time>
             
           </span>
@@ -438,7 +438,6 @@
 ---
 <div class="note danger"><p>算法实现</p></div>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line"> <span class="comment">//默认待排序关键字为整型</span></div><div class="line">	<span class="keyword">int</span> i,j,flag;</div><div class="line">	<span class="keyword">int</span> temp;</div><div class="line">	<span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">1</span>;--i)&#123;</div><div class="line">		flag=<span class="number">0</span>;              <span class="comment">//flag用来标记本趟排序是否发生了交换</span></div><div class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++)</div><div class="line">			<span class="keyword">if</span>(R[i<span class="number">-1</span>]&gt;R[i])&#123;</div><div class="line">				temp=R[i];</div><div class="line">				R[i]=R[i<span class="number">-1</span>];</div><div class="line">				R[i<span class="number">-1</span>]=temp;</div><div class="line">				flag=<span class="number">1</span>;</div><div class="line">				&#125;</div><div class="line">			<span class="keyword">if</span>(flag==<span class="number">0</span>)</div><div class="line">				<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
 <div class="note primary"><p>时间复杂度</p></div>
 最坏情况下，每趟都要发生交换，复杂度为O（n2）
 最好情况下，每一趟只进行循环，不进行交换，复杂度为O（n）

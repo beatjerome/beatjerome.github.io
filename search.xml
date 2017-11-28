@@ -6,18 +6,16 @@
       <title><![CDATA[快速排序]]></title>
       <url>/2017/11/27/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</url>
       <content type="html"><![CDATA[<p>-快速排序算法思想<br>-快速排序算法实现<br>-快速排序性能分析</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>算法介绍</p></div>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<div class="note success"><p>算法介绍</p></div>
 快速排序是“交换”累的排序，通过多次划分操作实现排序。以升序为例，其执行流程可以概括下：每一趟选择当前所有子序列中的一个关键字（通常是第一个）作为枢轴，将子序列中比枢轴小的移到枢轴前面，比枢轴打的移到枢轴后面；当本趟所有子序列都被枢轴以上述规则划分后会得到新的一组更短的子序列。
 
----
+
 <div class="note info"><p>算法思想</p></div>
 <p>选第一个为关键字，从右开始找小于他的交换，再从左找大于它的交换，完成一趟排序。依次类推，多趟排序后使序列有序。</p>
-<hr>
 <div class="note danger"><p>算法实现</p></div>
 
 undefined
-
----
 
 <div class="note primary"><p>时间复杂度</p></div>
 <p>最好情况下，复杂度为O（nlog2n）<br>最坏情况下，复杂度为O（n2）<br>平均情况下，复杂度为O（nlog2n）</p>
@@ -54,7 +52,6 @@ undefined
 ---
 <div class="note danger"><p>算法实现</p></div>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line"> <span class="comment">//默认待排序关键字为整型</span></div><div class="line">	<span class="keyword">int</span> i,j,flag;</div><div class="line">	<span class="keyword">int</span> temp;</div><div class="line">	<span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">1</span>;--i)&#123;</div><div class="line">		flag=<span class="number">0</span>;              <span class="comment">//flag用来标记本趟排序是否发生了交换</span></div><div class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++)</div><div class="line">			<span class="keyword">if</span>(R[i<span class="number">-1</span>]&gt;R[i])&#123;</div><div class="line">				temp=R[i];</div><div class="line">				R[i]=R[i<span class="number">-1</span>];</div><div class="line">				R[i<span class="number">-1</span>]=temp;</div><div class="line">				flag=<span class="number">1</span>;</div><div class="line">				&#125;</div><div class="line">			<span class="keyword">if</span>(flag==<span class="number">0</span>)</div><div class="line">				<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
 <div class="note primary"><p>时间复杂度</p></div>
 最坏情况下，每趟都要发生交换，复杂度为O（n2）
 最好情况下，每一趟只进行循环，不进行交换，复杂度为O（n）
