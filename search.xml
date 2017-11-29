@@ -44,20 +44,16 @@
       <content type="html"><![CDATA[<p>-快速排序算法思想<br>-快速排序算法实现<br>-快速排序性能分析</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
 <div class="note success"><p>算法介绍</p></div>
-快速排序是“交换”累的排序，通过多次划分操作实现排序。以升序为例，其执行流程可以概括下：每一趟选择当前所有子序列中的一个关键字（通常是第一个）作为枢轴，将子序列中比枢轴小的移到枢轴前面，比枢轴打的移到枢轴后面；当本趟所有子序列都被枢轴以上述规则划分后会得到新的一组更短的子序列。
-
-
-<div class="note info"><p>算法思想</p></div>
-<p>选第一个为关键字，从右开始找小于他的交换，再从左找大于它的交换，完成一趟排序。依次类推，多趟排序后使序列有序。</p>
-<div class="note danger"><p>算法实现</p></div>
-
-undefined
-
-<div class="note primary"><p>时间复杂度</p></div>
-<p>最好情况下，复杂度为O（nlog2n）<br>最坏情况下，复杂度为O（n2）<br>平均情况下，复杂度为O（nlog2n）</p>
+<p>快速排序是“交换”累的排序，通过多次划分操作实现排序。以升序为例，其执行流程可以概括下：每一趟选择当前所有子序列中的一个关键字（通常是第一个）作为枢轴，将子序列中比枢轴小的移到枢轴前面，比枢轴打的移到枢轴后面；当本趟所有子序列都被枢轴以上述规则划分后会得到新的一组更短的子序列。</p>
 <hr>
-<div class="note default"><p>空间复杂度</p></div>
-<p>快速排序是递归进行的，递归需要栈的辅助，算法的空间复杂度为O（log2n）</p>
+<p><strong>算法思想</strong><br>选第一个为关键字，从右开始找小于他的交换，再从左找大于它的交换，完成一趟排序。依次类推，多趟排序后使序列有序。</p>
+<hr>
+<p><strong>算法实现</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span>&#123;</div><div class="line"><span class="comment">//对从R[low]到R[r]的关键字排序</span></div><div class="line"><span class="keyword">int</span> temp;</div><div class="line"><span class="keyword">int</span> i=low,j=r;</div><div class="line"><span class="keyword">if</span>(low&lt;high)&#123;</div><div class="line">	temp=R[low];</div><div class="line">	<span class="keyword">while</span>(i!=j)&#123;</div><div class="line">		<span class="keyword">while</span>(j&gt;i&amp;&amp;R[i]&gt;=temp)</div><div class="line">			--j;</div><div class="line">		<span class="keyword">if</span>(i&lt;j)&#123;</div><div class="line">			R[i]=R[j];</div><div class="line">			++i;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">while</span>(i&lt;j&amp;&amp;R[i]&lt;temp)</div><div class="line">			++i;</div><div class="line">		</div><div class="line">	<span class="keyword">if</span>(i&lt;j)&#123;</div><div class="line">		R[j]=R[i];</div><div class="line">		--j;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	R[i]=temp;</div><div class="line">	QuickSort(R,low,i<span class="number">-1</span>);</div><div class="line">	QuickSort(R,i+<span class="number">1</span>,high);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>时间复杂度</strong><br>最好情况下，复杂度为O（nlog2n）<br>最坏情况下，复杂度为O（n2）<br>平均情况下，复杂度为O（nlog2n）</p>
+<hr>
+<p><strong>空间复杂度</strong><br>快速排序是递归进行的，递归需要栈的辅助，算法的空间复杂度为O（log2n）</p>
 <hr>
 ]]></content>
       
