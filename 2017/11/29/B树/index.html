@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Online judge," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-简单的求均值题">
-<meta name="keywords" content="Online judge">
+<meta name="description" content="-B树定义-B树操作">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ZOJ-1048题解">
-<meta property="og:url" content="http://yoursite.com/2017/10/28/ZOJ-1048/index.html">
+<meta property="og:title" content="B树">
+<meta property="og:url" content="http://yoursite.com/2017/11/29/B树/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-简单的求均值题">
+<meta property="og:description" content="-B树定义-B树操作">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-28T09:46:06.280Z">
+<meta property="og:updated_time" content="2017-11-29T01:07:21.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZOJ-1048题解">
-<meta name="twitter:description" content="-简单的求均值题">
+<meta name="twitter:title" content="B树">
+<meta name="twitter:description" content="-B树定义-B树操作">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/28/ZOJ-1048/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/29/B树/"/>
 
 
 
 
 
-  <title>ZOJ-1048题解 | Grocery</title>
+  <title>B树 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/28/ZOJ-1048/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/29/B树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ZOJ-1048题解</h1>
+          <h1 class="post-title" itemprop="name headline">B树</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-28T17:48:45+08:00">
-                2017-10-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-29T09:10:45+08:00">
+                2017-11-29
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-10-28T17:46:06+08:00">
-                2017-10-28
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-29T09:07:21+08:00">
+                2017-11-29
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ZOJ题解目录/" itemprop="url" rel="index">
-                    <span itemprop="name">ZOJ题解目录</span>
+                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
+                    <span itemprop="name">Data structure</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  288
+                  635
                 </span>
               
 
@@ -429,22 +429,21 @@
       
 
       
-        <p>-简单的求均值题</p>
-<a id="more"></a>
-<p>Financial Management<br>Time Limit: 2 Seconds      Memory Limit: 65536 KB</p>
-<p>Larry graduated this year and finally has a job. He’s making a lot of money, but somehow never seems to have enough. Larry has decided that he needs to grab hold of his financial portfolio and solve his financing problems. The first step is to figure out what’s been going on with his money. Larry has his bank account statements and wants to see how much money he has. Help Larry by writing a program to take his closing balance from each of the past twelve months and calculate his average account balance.</p>
-<p>Input Format: </p>
-<p>The input will be twelve lines. Each line will contain the closing balance of his bank account for a particular month. Each number will be positive and displayed to the penny. No dollar sign will be included.</p>
-<p>Output Format: </p>
-<p>The output will be a single number, the average (mean) of the closing balances for the twelve months. It will be rounded to the nearest penny, preceded immediately by a dollar sign, and followed by the end-of-line. There will be no other spaces or characters in the output. </p>
-<p>Sample Input: </p>
-<p>100.00<br>489.12<br>12454.12<br>1234.10<br>823.05<br>109.20<br>5.27<br>1542.25<br>839.18<br>83.99<br>1295.01<br>1.75</p>
-<p>Sample Output: </p>
-<p>$1581.42</p>
+        <p>-B树定义<br>-B树操作</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>B树定义</strong><br>B树，称为多路平衡查找树。B树中所有结点的孩子结点树的最大值称为B树的阶，通常称为m。</p>
+<p>一颗m阶B树或为空树，或为满足以下特性的m叉树：<br>1.树中每个结点至多有m棵子树（至多含有m-1个关键字）<br>2.若根结点不是终端结点，则至少有两颗子树<br>3.除根结点外的所有非叶结点至少有【m/2】棵子树。（至少含有【m/2】-1个关键字）【】是向上取整符号。<br>4.所有的叶结点都出现在同一层次上，并且不带信息</p>
 <hr>
-<p>简单的入门题，输入求均值输出就行</p>
+<p><strong>B树的查找</strong><br>B树的具体查找步骤如下：<br>1.先让key与根结点中的关键字比较，如果key等于k[i]（k[]为结点内的关键字数组），则查找成功</p>
+<p>2.若key &lt; k[1],则到p[0]所指示的子树中进行继续查找</p>
+<p>3.若key &gt; k[n],则到p[n]所指示的子树中进行继续查找</p>
+<p>4.若k[i] &lt; key &lt;  k [i+1],则到p[i]所指示的子树继续查找</p>
+<p>5.如果最后遇到空指针，则证明查找不成功</p>
 <hr>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt; </span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">float</span> a[<span class="number">12</span>];</div><div class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</div><div class="line">	<span class="keyword">float</span> sum=<span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">12</span>;i++)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a[i];</div><div class="line">		sum+=a[i];</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"$"</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">2</span>)&lt;&lt;sum/<span class="number">12</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>B树的插入</strong></p>
+<p>对于关键字的插入，需要找到插入位置。在B树的查找过程中，当遇到空指针时，则证明查找不成功，同时也找到了插入位置，即根据空指针可以确定在最底层非叶结点中的插入位置。</p>
+<p>为了方便，称最底层的非叶结点为<strong>终端结点</strong>。由此可见，B树结点的插入总是落在终端结点上。在插入过程中有可能破坏B树的特性，如果新关键字的插入使得结点中关键字的个数超过规定个数，这时要进行<strong>结点的拆分</strong>。</p>
+<hr>
+<p><strong>B树删除</strong><br>对于关键字的删除，需要找到待删除关键字。在结点中删除关键字的过程中也可能破除B树的特性，如旧关键字的删除可能使得结点中关键字的个数少于规定个数，这时可能需要向其兄弟结点借关键字或者和其孩子结点进行关键字的交换，也可能需要进行结点的合并。其中，和当前结点的孩子结点进行关键字的操作可以保证删除操作总是发生在终端结点上。</p>
 <hr>
 
       
@@ -492,7 +491,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Online-judge/" rel="tag"># Online judge</a>
+            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -505,8 +504,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/28/ZOJ-1037/" rel="next" title="ZOJ-1037题解">
-                <i class="fa fa-chevron-left"></i> ZOJ-1037题解
+              <a href="/2017/11/27/快速排序/" rel="next" title="快速排序">
+                <i class="fa fa-chevron-left"></i> 快速排序
               </a>
             
           </div>
@@ -514,10 +513,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/29/静电场-1/" rel="prev" title="静电场-1">
-                静电场-1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,8 +564,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -656,6 +660,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
