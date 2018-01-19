@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[PAT-B1001题解]]></title>
+      <url>/2018/01/19/PATB1001%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-注意提交格式！</p>
+<p>【PAT B1001】害死人不偿命的(3n+1)猜想<br>【题目描述】<br>卡拉兹(Callatz)猜想：<br>对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证(3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……<br>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过1000的正整数n，简单地数一下，需要多少步（砍几下）才能得到n=1？</p>
+<p>【输入格式】：<br>    每个测试输入包含1个测试用例，即给出自然数n的值。</p>
+<p>【输出格式】：<br>输出从n计算到1需要的步数。</p>
+<p>【输入样例】：<br>3<br>【输出样例】：<br>5</p>
+<p>题目分析：简单的模拟题，完成输入，按照奇数偶数的规律重复赋值，注意输入输出格式即可</p>
+<p>思路：<br>读入题目给出的n，之后用while循环语句反复判断n是否为1；<br>①如果n为1，则退出循环<br>②如果n不为一，则判断n是否为奇数。如果n为奇数，令$n=(3*n+1)/2$;否则$n=n/2$。之后令计数器+1<br>这样下去，当退出循环时，输出的计数器的值就是步数。</p>
+<p>AC代码：（C++）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">using namespace std;</div><div class="line">int main()&#123;</div><div class="line">	int i=0;			//计数器 </div><div class="line">	int n;				//测试数据 </div><div class="line">	cin&gt;&gt;n;</div><div class="line">	while(n!=1)&#123;</div><div class="line">		if(n%2==1)		//n为奇数 </div><div class="line">			n=(3*n+1)/2;</div><div class="line">		else			//n为偶数 </div><div class="line">			n=n/2;</div><div class="line">		i++;			//计数 </div><div class="line">	&#125;</div><div class="line">	cout&lt;&lt;i; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[计算机网络-note1]]></title>
       <url>/2018/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-note1/</url>
       <content type="html"><![CDATA[<p>-简单介绍OJ的做题技巧</p>
