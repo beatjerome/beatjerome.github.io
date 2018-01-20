@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Online judge," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-二叉树存储结构">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="-简单模拟">
+<meta name="keywords" content="Online judge">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树-2">
-<meta property="og:url" content="http://yoursite.com/2017/11/12/二叉树-2/index.html">
+<meta property="og:title" content="PAT-B1032题解">
+<meta property="og:url" content="http://yoursite.com/2018/01/20/PAT-B1032题解/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-二叉树存储结构">
+<meta property="og:description" content="-简单模拟">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-12T07:01:50.336Z">
+<meta property="og:updated_time" content="2018-01-20T02:52:53.729Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树-2">
-<meta name="twitter:description" content="-二叉树存储结构">
+<meta name="twitter:title" content="PAT-B1032题解">
+<meta name="twitter:description" content="-简单模拟">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/12/二叉树-2/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/20/PAT-B1032题解/"/>
 
 
 
 
 
-  <title>二叉树-2 | Grocery</title>
+  <title>PAT-B1032题解 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/二叉树-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/PAT-B1032题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二叉树-2</h1>
+          <h1 class="post-title" itemprop="name headline">PAT-B1032题解</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T15:01:45+08:00">
-                2017-11-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T10:52:45+08:00">
+                2018-01-20
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-12T15:01:50+08:00">
-                2017-11-12
+              <time title="Post modified" itemprop="dateModified" datetime="2018-01-20T10:52:53+08:00">
+                2018-01-20
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
-                    <span itemprop="name">Data structure</span>
+                  <a href="/categories/PAT题解目录/" itemprop="url" rel="index">
+                    <span itemprop="name">PAT题解目录</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  423
+                  536
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -429,14 +429,12 @@
       
 
       
-        <p>-二叉树存储结构</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>二叉树的存储结构</strong><br><strong>1.顺序存储结构</strong><br>二叉树的顺序存储结构就是用一组地址连续的存储单元依次自上而下、自左至右存储完全二叉树上的结点元素，即将完全二叉树上编号为i的结点元素存储在某个数组下标为i-1的分量中，然后通过一些办法确定结点在逻辑上的父子和兄弟关系。</p>
-<p>对于完全二叉树和满二叉树采用顺序存储比较合适<br>但对于一般的二叉树，为了让数组下标能反映二叉树中结点之间的逻辑关系，只能添加一些并不存在的空结点让其每个结点与完全二叉树上的结点相对照。用0表示其中并不存在的结点。</p>
-<hr>
-<p><strong>2.链式存储结构</strong><br>顺序存储对空间利用率是非常低的，因此，一般二叉树都采用链式存储结构。<br>链式结构使用一个链表来存储一颗二叉树，二叉树中每一个结点用链表的一个链结点来存储。<br>二叉链表至少包含三个域：<strong>数据域data、左指针域lchild、右指针域rchild</strong></p>
-<p>二叉树的链式存储结构描述如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></div><div class="line">	ElemType data;     <span class="comment">//数据域</span></div><div class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span>    <span class="comment">//左、右孩子指针</span></div><div class="line">&#125;BiTNode,*BiTree;</div></pre></td></tr></table></figure></p>
-<p>使用不同的存储结构，实现二叉树操作的算法也会完全不同。因此要选择合适的存储结构。<br><strong>容易验证，在含有n个结点的二叉链表中含有n+1个空链域</strong></p>
-<hr>
+        <p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>【1032】 挖掘机技术哪家强(20)<br>【时间限制】<br>200 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【判题程序】<br>Standard<br>【作者】<br>CHEN, Yue<br>【题目描述】<br>为了用事实说明挖掘机技术到底哪家强，PAT组织了一场挖掘机技能大赛。现请你根据比赛结果统计出技术最强的那个学校。<br>【输入格式】：<br>输入在第1行给出不超过105的正整数N，即参赛人数。随后N行，每行给出一位参赛者的信息和成绩，包括其所代表的学校的编号（从1开始连续编号）、及其比赛成绩（百分制），中间以空格分隔。<br>【输出格式】：<br>在一行中给出总得分最高的学校的编号、及其总分，中间以空格分隔。题目保证答案唯一，没有并列。</p>
+<p>【输入样例】：<br>6<br>3 65<br>2 80<br>1 100<br>2 70<br>3 40<br>3 0<br>【输出样例】：<br>2 150</p>
+<p>题目解析：开大数组记录每个学校的总分，对每个读入的数据进行数组的同步。再寻找数组中最大的值及对应的编号。<br>思路：<br>①令数组school[maxn]记录每个学校的总分，初值为0,。对每一个读入的学校schID与其对应的分数score，令school[schID]+score.<br>②令变量k记录最高总分的学校编号，变量MAX记录最高总分，初值-1.由于学校是连续编号的，因此枚举编号1~N,不断跟新k和MAX即可</p>
+<p>AC代码（C++）：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> sum[<span class="number">100001</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//存储学校总成绩数组</span></div><div class="line">	<span class="keyword">int</span> i;				<span class="comment">//学校编号</span></div><div class="line">	<span class="keyword">int</span> j;</div><div class="line">	<span class="keyword">int</span> a;			 	<span class="comment">//参赛成绩 </span></div><div class="line">	<span class="keyword">int</span> Max=<span class="number">1</span>;			<span class="comment">//学校的最大编号 </span></div><div class="line">	<span class="keyword">int</span> MaxSum=<span class="number">0</span>;		<span class="comment">//最大学校总成绩 </span></div><div class="line">	<span class="keyword">int</span> N;				<span class="comment">//参赛人数 </span></div><div class="line">	<span class="built_in">cin</span>&gt;&gt;N;</div><div class="line">	<span class="keyword">while</span>(N--)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;i;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a;</div><div class="line">		sum[i]+=a;</div><div class="line">		<span class="keyword">if</span>(i&gt;Max)</div><div class="line">			Max=i; </div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=Max;j++)&#123;</div><div class="line">		<span class="keyword">if</span>(sum[j]&gt;MaxSum)&#123;</div><div class="line">			MaxSum=sum[j];	<span class="comment">//记录最大总成绩 </span></div><div class="line">			i=j;			<span class="comment">//记录总成绩最大的学校编号 </span></div><div class="line">		&#125;</div><div class="line">	&#125; </div><div class="line">	<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;MaxSum;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>注意：开数组时一定要置零，一开始沒置零只能过17个，置零才能完全过20.</p>
 
       
     </div>
@@ -483,7 +481,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/Tags/Online-judge/" rel="tag"># Online judge</a>
           
         </div>
       
@@ -496,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/12/二叉树-1/" rel="next" title="二叉树-1">
-                <i class="fa fa-chevron-left"></i> 二叉树-1
+              <a href="/2018/01/19/PATB1001题解/" rel="next" title="PAT-B1001题解">
+                <i class="fa fa-chevron-left"></i> PAT-B1001题解
               </a>
             
           </div>
@@ -505,10 +503,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/13/二叉树-3/" rel="prev" title="二叉树-3">
-                二叉树-3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

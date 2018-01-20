@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-注意提交格式！ 【PAT B1001】害死人不偿命的(3n+1)猜想【题目描述】卡拉兹(Callatz)猜想：对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只">
+<meta name="description" content="-简单模拟">
 <meta name="keywords" content="Online judge">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PAT-B1001题解">
 <meta property="og:url" content="http://yoursite.com/2018/01/19/PATB1001题解/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-注意提交格式！ 【PAT B1001】害死人不偿命的(3n+1)猜想【题目描述】卡拉兹(Callatz)猜想：对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只">
+<meta property="og:description" content="-简单模拟">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-19T15:32:59.616Z">
+<meta property="og:updated_time" content="2018-01-20T02:52:33.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PAT-B1001题解">
-<meta name="twitter:description" content="-注意提交格式！ 【PAT B1001】害死人不偿命的(3n+1)猜想【题目描述】卡拉兹(Callatz)猜想：对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只">
+<meta name="twitter:description" content="-简单模拟">
 
 
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-01-19T23:32:59+08:00">
-                2018-01-19
+              <time title="Post modified" itemprop="dateModified" datetime="2018-01-20T10:52:33+08:00">
+                2018-01-20
               </time>
             
           </span>
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  481
+                  479
                 </span>
               
 
@@ -429,8 +429,8 @@
       
 
       
-        <p>-注意提交格式！</p>
-<p>【PAT B1001】害死人不偿命的(3n+1)猜想<br>【题目描述】<br>卡拉兹(Callatz)猜想：<br>对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证(3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……<br>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过1000的正整数n，简单地数一下，需要多少步（砍几下）才能得到n=1？</p>
+        <p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>【PAT B1001】害死人不偿命的(3n+1)猜想<br>【题目描述】<br>卡拉兹(Callatz)猜想：<br>对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证(3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……<br>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过1000的正整数n，简单地数一下，需要多少步（砍几下）才能得到n=1？</p>
 <p>【输入格式】：<br>    每个测试输入包含1个测试用例，即给出自然数n的值。</p>
 <p>【输出格式】：<br>输出从n计算到1需要的步数。</p>
 <p>【输入样例】：<br>3<br>【输出样例】：<br>5</p>
@@ -506,6 +506,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/01/20/PAT-B1032题解/" rel="prev" title="PAT-B1032题解">
+                PAT-B1032题解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -556,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -576,7 +589,7 @@
               
                 <a href="/Archives">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -644,6 +657,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -671,7 +700,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">62.5k</span>
+    <span title="Site words total count">63.1k</span>
   
 </div>
 

@@ -3,10 +3,36 @@
   
     
     <entry>
+      <title><![CDATA[PAT-B1032题解]]></title>
+      <url>/2018/01/20/PAT-B1032%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>【1032】 挖掘机技术哪家强(20)<br>【时间限制】<br>200 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【判题程序】<br>Standard<br>【作者】<br>CHEN, Yue<br>【题目描述】<br>为了用事实说明挖掘机技术到底哪家强，PAT组织了一场挖掘机技能大赛。现请你根据比赛结果统计出技术最强的那个学校。<br>【输入格式】：<br>输入在第1行给出不超过105的正整数N，即参赛人数。随后N行，每行给出一位参赛者的信息和成绩，包括其所代表的学校的编号（从1开始连续编号）、及其比赛成绩（百分制），中间以空格分隔。<br>【输出格式】：<br>在一行中给出总得分最高的学校的编号、及其总分，中间以空格分隔。题目保证答案唯一，没有并列。</p>
+<p>【输入样例】：<br>6<br>3 65<br>2 80<br>1 100<br>2 70<br>3 40<br>3 0<br>【输出样例】：<br>2 150</p>
+<p>题目解析：开大数组记录每个学校的总分，对每个读入的数据进行数组的同步。再寻找数组中最大的值及对应的编号。<br>思路：<br>①令数组school[maxn]记录每个学校的总分，初值为0,。对每一个读入的学校schID与其对应的分数score，令school[schID]+score.<br>②令变量k记录最高总分的学校编号，变量MAX记录最高总分，初值-1.由于学校是连续编号的，因此枚举编号1~N,不断跟新k和MAX即可</p>
+<p>AC代码（C++）：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> sum[<span class="number">100001</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//存储学校总成绩数组</span></div><div class="line">	<span class="keyword">int</span> i;				<span class="comment">//学校编号</span></div><div class="line">	<span class="keyword">int</span> j;</div><div class="line">	<span class="keyword">int</span> a;			 	<span class="comment">//参赛成绩 </span></div><div class="line">	<span class="keyword">int</span> Max=<span class="number">1</span>;			<span class="comment">//学校的最大编号 </span></div><div class="line">	<span class="keyword">int</span> MaxSum=<span class="number">0</span>;		<span class="comment">//最大学校总成绩 </span></div><div class="line">	<span class="keyword">int</span> N;				<span class="comment">//参赛人数 </span></div><div class="line">	<span class="built_in">cin</span>&gt;&gt;N;</div><div class="line">	<span class="keyword">while</span>(N--)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;i;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a;</div><div class="line">		sum[i]+=a;</div><div class="line">		<span class="keyword">if</span>(i&gt;Max)</div><div class="line">			Max=i; </div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=Max;j++)&#123;</div><div class="line">		<span class="keyword">if</span>(sum[j]&gt;MaxSum)&#123;</div><div class="line">			MaxSum=sum[j];	<span class="comment">//记录最大总成绩 </span></div><div class="line">			i=j;			<span class="comment">//记录总成绩最大的学校编号 </span></div><div class="line">		&#125;</div><div class="line">	&#125; </div><div class="line">	<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;MaxSum;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>注意：开数组时一定要置零，一开始沒置零只能过17个，置零才能完全过20.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1001题解]]></title>
       <url>/2018/01/19/PATB1001%E9%A2%98%E8%A7%A3/</url>
-      <content type="html"><![CDATA[<p>-注意提交格式！</p>
-<p>【PAT B1001】害死人不偿命的(3n+1)猜想<br>【题目描述】<br>卡拉兹(Callatz)猜想：<br>对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证(3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……<br>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过1000的正整数n，简单地数一下，需要多少步（砍几下）才能得到n=1？</p>
+      <content type="html"><![CDATA[<p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>【PAT B1001】害死人不偿命的(3n+1)猜想<br>【题目描述】<br>卡拉兹(Callatz)猜想：<br>对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证(3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……<br>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过1000的正整数n，简单地数一下，需要多少步（砍几下）才能得到n=1？</p>
 <p>【输入格式】：<br>    每个测试输入包含1个测试用例，即给出自然数n的值。</p>
 <p>【输出格式】：<br>输出从n计算到1需要的步数。</p>
 <p>【输入样例】：<br>3<br>【输出样例】：<br>5</p>
