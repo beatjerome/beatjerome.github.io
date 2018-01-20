@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[codeup-5901题解]]></title>
+      <url>/2018/01/20/codeup-5901%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-字符串处理<br><a id="more"></a><br>【题目描述】<br>读入一串字符，判断是否是回文串。“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。</p>
+<p>【输入】<br>一行字符串，长度不超过255。</p>
+<p>【输出】<br>如果是回文串，输出“YES”，否则输出“NO”。</p>
+<p>【样例输入】<br>12321<br>【样例输出】<br>YES</p>
+<p>AC代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;  </span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">256</span>;  </div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Judge</span><span class="params">(<span class="keyword">char</span> character[])</span>  </span></div><div class="line"><span class="function"></span>&#123;  </div><div class="line">    <span class="keyword">int</span> lenth=<span class="built_in">strlen</span>(character);  </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lenth/<span class="number">2</span>;i++)  </div><div class="line">    &#123;  </div><div class="line">        <span class="comment">//数组折中，i对应max-i-1   </span></div><div class="line">        <span class="keyword">if</span>(character[i]!=character[lenth<span class="number">-1</span>-i])  </div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;     </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;  </div><div class="line">&#125;  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span></div><div class="line"><span class="function"></span>&#123;     </div><div class="line">    <span class="keyword">char</span> character[maxn];  </div><div class="line">    <span class="keyword">while</span>(gets(character))  </div><div class="line">    &#123;  </div><div class="line">        <span class="keyword">bool</span> flag=Judge(character);  </div><div class="line">        <span class="keyword">if</span>(flag==<span class="literal">true</span>)  </div><div class="line">        &#123;  </div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%s"</span>,<span class="string">"YES\n"</span>);  </div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;  </div><div class="line">        &#125;  </div><div class="line">            <span class="keyword">else</span>  </div><div class="line">        &#123;  </div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%s"</span>,<span class="string">"NO\n"</span>);  </div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;     </div><div class="line">        &#125;  </div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> codeup题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1022题解]]></title>
       <url>/2018/01/20/PAT-B1022%E9%A2%98%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>-进制转换<br><a id="more"></a><br>【题目描述】<br>输入两个非负10进制整数A和B(&lt;=230-1)，输出A+B的D (1 &lt; D &lt;= 10)进制数。</p>
