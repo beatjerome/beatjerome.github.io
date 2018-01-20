@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[codeup-1934题解]]></title>
+      <url>/2018/01/20/codeup-1934%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-查找<br><a id="more"></a><br>【题目描述】：<br>输入一个数n，然后输入n个数值各不相同，再输入一个值x，输出这个值在这个数组中的下标（从0开始，若不在数组中则输出-1）。</p>
+<p>【输入】：<br>测试数据有多组，输入n(1&lt;=n&lt;=200)，接着输入n个数，然后输入x。</p>
+<p>【输出】：<br>对于每组输入,请输出结果。</p>
+<p>【样例输入】：<br>4<br>1 2 3 4<br>3</p>
+<p>【样例输出】：<br>2</p>
+<p>AC代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> a[<span class="number">201</span>]=&#123;<span class="number">0</span>&#125;;</div><div class="line">	<span class="keyword">int</span> x;</div><div class="line">	<span class="keyword">int</span> n;</div><div class="line">	<span class="keyword">int</span> k; </div><div class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF)&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);		<span class="comment">//输入n个数 </span></div><div class="line">		&#125;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);				<span class="comment">//输入要查找的树 </span></div><div class="line">		<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;n;k++)&#123;			<span class="comment">//遍历数组 </span></div><div class="line">			<span class="keyword">if</span>(a[k]==x)&#123;			<span class="comment">//找到了x </span></div><div class="line">				<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,k);	<span class="comment">//输出对应的下标 </span></div><div class="line">				<span class="keyword">break</span>;				<span class="comment">//退出查找 </span></div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(k==n)&#123;					<span class="comment">//在数组没有找到x </span></div><div class="line">			<span class="built_in">printf</span>(<span class="string">"-1\n"</span>);			<span class="comment">//输出-1 </span></div><div class="line">		&#125; </div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> codeup题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1032题解]]></title>
       <url>/2018/01/20/PAT-B1032%E9%A2%98%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>-简单模拟</p>
