@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[PAT-B1022题解]]></title>
+      <url>/2018/01/20/PAT-B1022%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-进制转换<br><a id="more"></a><br>【题目描述】<br>输入两个非负10进制整数A和B(&lt;=230-1)，输出A+B的D (1 &lt; D &lt;= 10)进制数。</p>
+<p>【输入格式】：<br>输入在一行中依次给出3个整数A、B和D。</p>
+<p>【输出格式】：<br>输出A+B的D进制数。</p>
+<p>【输入样例】：</p>
+<blockquote>
+<p>123 456 8</p>
+</blockquote>
+<p>【输出样例】：</p>
+<blockquote>
+<p>1103</p>
+</blockquote>
+<p>思路：先计算A+B（此时为十进制），然后把结果转换成D进制,而十进制转换为D进制进行“除基取余法”</p>
+<p>AC代码：<br>```</p>
+<p>#include<cstdio><br>int main(){<br>    int a,b,d;<br>    scanf(“%d%d%d”,&amp;a,&amp;b,&amp;d);<br>    int sum=a+b;<br>    int ans[31],num=0;   //ans存放D进制的每一位<br>    do{                           //进制转换<br>        ans[num++]=sum%d;<br>        sum=sum/d;<br>    }while(sum!=0);<br>    for(int i=num-1;i&gt;=0;i–){           //从高位到低位进行输出<br>        printf(“%d”,ans[i]);<br>    }<br>    return 0;<br>}</cstdio></p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1036题解]]></title>
       <url>/2018/01/20/PAT-B1036%E9%A2%98%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>-简单模拟<br><a id="more"></a><br>【题目描述】<br>美国总统奥巴马不仅呼吁所有人都学习编程，甚至以身作则编写代码，成为美国历史上首位编写计算机代码的总统。2014年底，为庆祝“计算机科学教育周”正式启动，奥巴马编写了很简单的计算机代码：在屏幕上画一个正方形。现在你也跟他一起画吧！</p>
