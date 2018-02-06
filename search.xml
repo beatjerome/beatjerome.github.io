@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[PAT-B1011题解]]></title>
+      <url>/2018/02/06/PAT-B1011%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-1011. A+B和C (15)<br>【时间限制】<br>150 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【判题程序】<br>Standard<br>【题目描述】<br>给定区间[-231, 231]内的3个整数A、B和C，请判断A+B是否大于C。<br>【输入格式】<br>输入第1行给出正整数T(&lt;=10)，是测试用例的个数。随后给出T组测试用例，每组占一行，顺序给出A、B和C。整数间以空格分隔。<br>【输出格式】<br>对每组测试用例，在一行中输出“Case #X: true”如果A+B&gt;C，否则输出“Case #X: false”，其中X是测试用例的编号（从1开始）。<br>【输入样例】<br>4<br>1 2 3<br>2 3 4<br>2147483647 0 2147483646<br>0 -2147483648 -2147483647<br>【输出样例】<br>Case #1: false<br>Case #2: true<br>Case #3: true<br>Case #4: false</p>
+<p>AC代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> T;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;T;</div><div class="line">	<span class="keyword">int</span> i=<span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(T--)&#123;</div><div class="line">		<span class="keyword">long</span> <span class="keyword">long</span> a,b,c;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;c;</div><div class="line">		<span class="keyword">if</span>(a+b&gt;c)</div><div class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"Case #"</span>&lt;&lt;i&lt;&lt;<span class="string">": true\n"</span>;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"Case #"</span>&lt;&lt;i&lt;&lt;<span class="string">": false\n"</span>;</div><div class="line">		i++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1009题解]]></title>
       <url>/2018/01/20/PAT-B1009%E9%A2%98%E8%A7%A3%E7%9B%AE%E5%BD%95/</url>
       <content type="html"><![CDATA[<p>-数组处理</p>
