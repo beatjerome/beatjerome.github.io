@@ -3,7 +3,31 @@
   
     
     <entry>
-      <title><![CDATA[PAT-B1011题解]]></title>
+      <title><![CDATA[PAT-B1026题解]]></title>
+      <url>/2018/02/06/PAT-B1026/</url>
+      <content type="html"><![CDATA[<p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PTA-B1026. 程序运行时间(15)<br>【时间限制】<br>200 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【题目描述】<br>要获得一个C语言程序的运行时间，常用的方法是调用头文件time.h，其中提供了clock()函数，可以捕捉从程序开始运行到clock()被调用时所耗费的时间。这个时间单位是clock tick，即“时钟打点”。同时还有一个常数CLK_TCK，给出了机器时钟每秒所走的时钟打点数。于是为了获得一个函数f的运行时间，我们只要在调用f之前先调用clock()，获得一个时钟打点数C1；在f执行完成后再调用clock()，获得另一个时钟打点数C2；两次获得的时钟打点数之差(C2-C1)就是f运行所消耗的时钟打点数，再除以常数CLK_TCK，就得到了以秒为单位的运行时间。<br>这里不妨简单假设常数CLK_TCK为100。现给定被测函数前后两次获得的时钟打点数，请你给出被测函数运行的时间。</p>
+<p>【输入格式】<br>输入在一行中顺序给出2个整数C1和C2。注意两次获得的时钟打点数肯定不相同，即C1 &lt; C2，并且取值在[0, 107]。<br>【输出格式】<br>在一行中输出被测函数运行的时间。运行时间必须按照“hh:mm:ss”（即2位的“时:分:秒”）格式输出；不足1秒的时间四舍五入到秒。<br>【输入样例】<br>123 4577973<br>【输出样例】<br>12:42:59</p>
+<p>AC代码：<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">using namespace std<span class="comment">;</span></div><div class="line"><span class="comment">int main()&#123;</span></div><div class="line"><span class="comment">	int c1,c2;</span></div><div class="line"><span class="comment">	int s,min,h;</span></div><div class="line"><span class="comment">	cin&gt;&gt;c1&gt;&gt;c2;</span></div><div class="line"><span class="comment">	int c3=c2-c1;</span></div><div class="line"><span class="comment">	if(c3%100&gt;=50)	//四舍五入操作 </span></div><div class="line"><span class="comment">		c3=c3/100+1;</span></div><div class="line"><span class="comment">	else</span></div><div class="line"><span class="comment">		c3=c3/100;</span></div><div class="line"><span class="comment">	s=c3%60;</span></div><div class="line"><span class="comment">	c3=c3/60;</span></div><div class="line"><span class="comment">	min=c3%60;</span></div><div class="line"><span class="comment">	h=c3/60;</span></div><div class="line"><span class="comment">	printf("%02d:%02d:%02d",h,min,s);</span></div><div class="line"><span class="comment">	return 0;</span></div><div class="line"><span class="comment">&#125;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PAT-B1016题解]]></title>
       <url>/2018/02/06/PAT-B1016%E9%A2%98%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>-简单模拟</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-B1016. 部分A+B (15)<br>【时间限制】<br>100 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【题目描述】<br>正整数A的“DA（为1位整数）部分”定义为由A中所有DA组成的新整数PA。例如：给定A = 3862767，DA = 6，则A的“6部分”PA是66，因为A中有2个6。<br>现给定A、DA、B、DB，请编写程序计算PA + PB。<br>【输入格式】<br>输入在一行中依次给出A、DA、B、DB，中间以空格分隔，其中0 &lt; A, B &lt; 1010。<br>【输出格式】<br>在一行中输出PA + PB的值。<br>输入样例1：<br>3862767 6 13530293 3<br>输出样例1：<br>399<br>输入样例2：<br>3862767 1 13530293 8<br>输出样例2：<br>0</p>
