@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[PAT-B1046题解]]></title>
+      <url>/2018/02/07/PAT-B1046%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-B1046. 划拳(15)<br>【时间限制】<br>400 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【题目描述】<br>划拳是古老中国酒文化的一个有趣的组成部分。酒桌上两人划拳的方法为：每人口中喊出一个数字，同时用手比划出一个数字。如果谁比划出的数字正好等于两人喊出的数字之和，谁就赢了，输家罚一杯酒。两人同赢或两人同输则继续下一轮，直到唯一的赢家出现。<br>下面给出甲、乙两人的划拳记录，请你统计他们最后分别喝了多少杯酒。<br>【输入格式】<br>输入第一行先给出一个正整数N（&lt;=100），随后N行，每行给出一轮划拳的记录，格式为：<br>甲喊 甲划 乙喊 乙划<br>其中“喊”是喊出的数字，“划”是划出的数字，均为不超过100的正整数（两只手一起划）。<br>【输出格式】<br>在一行中先后输出甲、乙两人喝酒的杯数，其间以一个空格分隔。<br>【输入样例】<br>5<br>8 10 9 12<br>5 10 5 10<br>3 8 5 12<br>12 18 1 13<br>4 16 12 15<br>【输出样例】<br>1 2</p>
+<hr>
+<p>AC代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> n;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">	<span class="keyword">int</span> a1,a2,b1,b2;</div><div class="line">	<span class="keyword">int</span> faila=<span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> failb=<span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span>(n--)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a1&gt;&gt;a2&gt;&gt;b1&gt;&gt;b2;</div><div class="line">		<span class="keyword">if</span>(a2==a1+b1&amp;&amp;b2!=a1+b1)	<span class="comment">//甲猜对乙没猜对 </span></div><div class="line">			failb++;</div><div class="line">		<span class="keyword">if</span>(b2==a1+b1&amp;&amp;a2!=a1+b1)	<span class="comment">//乙猜对甲没猜对</span></div><div class="line">			faila++; </div><div class="line">	&#125;</div><div class="line">	<span class="built_in">cout</span>&lt;&lt;faila&lt;&lt;<span class="string">" "</span>&lt;&lt;failb;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1026题解]]></title>
       <url>/2018/02/06/PAT-B1026/</url>
       <content type="html"><![CDATA[<p>-简单模拟</p>
