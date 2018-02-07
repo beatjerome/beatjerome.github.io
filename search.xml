@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[PAT-B1028题解]]></title>
+      <url>/2018/02/07/PAT-B1008%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p>PAT-B1008. 数组元素循环右移问题 (20)<br>【时间限制】<br>400 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【题目描述】<br>一个数组A中存有N（N&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移M（M&gt;=0）个位置，即将A中的数据由（A0 A1……AN-1）变换为（AN-M …… AN-1 A0 A1……AN-M-1）（最后M个数循环移至最前面的M个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？<br>【输入格式】<br>每个输入包含一个测试用例，第1行输入N ( 1&lt;=N&lt;=100)、M（M&gt;=0）；第2行输入N个整数，之间用空格分隔。<br>【输出格式】<br>在一行中输出循环右移M位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。<br>【输入样例】<br>6 2<br>1 2 3 4 5 6<br>【输出样例】<br>5 6 1 2 3 4</p>
+<hr>
+<p>AC代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> a[<span class="number">110</span>];</div><div class="line">	<span class="keyword">int</span> n,m;</div><div class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</div><div class="line">	<span class="keyword">if</span>(m&gt;n)			<span class="comment">//对m进行修正 </span></div><div class="line">		m=m%n;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a[i];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=n-m;i&lt;=n<span class="number">-1</span>;i++)&#123;</div><div class="line">		<span class="built_in">cout</span>&lt;&lt;a[i]&lt;&lt;<span class="string">" "</span>;</div><div class="line">	&#125; </div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-m;i++)&#123;</div><div class="line">		<span class="built_in">cout</span>&lt;&lt;a[i];</div><div class="line">		<span class="keyword">if</span>(i&lt;n-m<span class="number">-1</span>)</div><div class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1046题解]]></title>
       <url>/2018/02/07/PAT-B1046%E9%A2%98%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>-简单模拟</p>

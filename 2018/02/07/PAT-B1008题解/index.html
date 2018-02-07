@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Online judge," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-希尔排序算法思想">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="-简单模拟">
+<meta name="keywords" content="Online judge">
 <meta property="og:type" content="article">
-<meta property="og:title" content="希尔排序">
-<meta property="og:url" content="http://yoursite.com/2017/11/26/希尔排序/index.html">
+<meta property="og:title" content="PAT-B1028题解">
+<meta property="og:url" content="http://yoursite.com/2018/02/07/PAT-B1008题解/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-希尔排序算法思想">
+<meta property="og:description" content="-简单模拟">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-26T15:29:20.706Z">
+<meta property="og:updated_time" content="2018-02-07T03:13:47.389Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="希尔排序">
-<meta name="twitter:description" content="-希尔排序算法思想">
+<meta name="twitter:title" content="PAT-B1028题解">
+<meta name="twitter:description" content="-简单模拟">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/26/希尔排序/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/07/PAT-B1008题解/"/>
 
 
 
 
 
-  <title>希尔排序 | Grocery</title>
+  <title>PAT-B1028题解 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/希尔排序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/PAT-B1008题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">希尔排序</h1>
+          <h1 class="post-title" itemprop="name headline">PAT-B1028题解</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T23:28:45+08:00">
-                2017-11-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-07T11:13:45+08:00">
+                2018-02-07
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-26T23:29:20+08:00">
-                2017-11-26
+              <time title="Post modified" itemprop="dateModified" datetime="2018-02-07T11:13:47+08:00">
+                2018-02-07
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
-                    <span itemprop="name">Data structure</span>
+                  <a href="/categories/PAT题解目录/" itemprop="url" rel="index">
+                    <span itemprop="name">PAT题解目录</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  392
+                  333
                 </span>
               
 
@@ -429,20 +429,11 @@
       
 
       
-        <p>-希尔排序算法思想</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>算法介绍</p></div>
-希尔排序又叫做缩小增量排序，其本质还是插入排序，只不过是将待排序序列按照某种规则分成几个子序列，分别对这几个子序列进行直接插入排序。这个规则的体现就是增量的选取，如果增量为1，就是直接排序。
-
-增量是逐渐减小的。直接插入排序适合于序列基本有序的情况，希尔排序的每趟排序都会使整个序列变得更加有序，等整个序列基本又虚了，再进行一次直接插入排序，这样会使排序效率更高，这就是希尔排序的思想。
-
----
-<div class="note danger"><p>时间复杂度</p></div>
-<p>希尔排序的时间复杂度和增量选取有关，希尔排序的增量选取规则有很多，常见的增量选取规则有以下两个。<br>1.希尔自己提出的选取规则：<br>[n/2],[n/4],…,2,1<br>每次将增量除2向下取整，其中n为序列长度，此时时间复杂度为O（n2）</p>
-<p>2.帕佩尔诺夫和斯塔舍维奇提出的选取规则：<br>2的k次方+1,…,65,33,17,9,5,3,1<br>其中，k为大于等于1的整数，2的k次方小于待排序列长度，增量序列末尾的1是额外添加的。此时时间复杂度为O(n1.5)</p>
+        <p>-简单模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p>PAT-B1008. 数组元素循环右移问题 (20)<br>【时间限制】<br>400 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【题目描述】<br>一个数组A中存有N（N&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移M（M&gt;=0）个位置，即将A中的数据由（A0 A1……AN-1）变换为（AN-M …… AN-1 A0 A1……AN-M-1）（最后M个数循环移至最前面的M个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？<br>【输入格式】<br>每个输入包含一个测试用例，第1行输入N ( 1&lt;=N&lt;=100)、M（M&gt;=0）；第2行输入N个整数，之间用空格分隔。<br>【输出格式】<br>在一行中输出循环右移M位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。<br>【输入样例】<br>6 2<br>1 2 3 4 5 6<br>【输出样例】<br>5 6 1 2 3 4</p>
 <hr>
-<div class="note primary"><p>空间复杂度</p></div>
-<p>希尔排序的空间复杂度同直接插入排序一样，为O（1）</p>
-<hr>
+<p>AC代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> a[<span class="number">110</span>];</div><div class="line">	<span class="keyword">int</span> n,m;</div><div class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</div><div class="line">	<span class="keyword">if</span>(m&gt;n)			<span class="comment">//对m进行修正 </span></div><div class="line">		m=m%n;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a[i];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=n-m;i&lt;=n<span class="number">-1</span>;i++)&#123;</div><div class="line">		<span class="built_in">cout</span>&lt;&lt;a[i]&lt;&lt;<span class="string">" "</span>;</div><div class="line">	&#125; </div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-m;i++)&#123;</div><div class="line">		<span class="built_in">cout</span>&lt;&lt;a[i];</div><div class="line">		<span class="keyword">if</span>(i&lt;n-m<span class="number">-1</span>)</div><div class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -489,7 +480,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/Tags/Online-judge/" rel="tag"># Online judge</a>
           
         </div>
       
@@ -502,8 +493,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/26/Verilog HDL-3/" rel="next" title="Verilog HDL-3">
-                <i class="fa fa-chevron-left"></i> Verilog HDL-3
+              <a href="/2018/02/07/PAT-B1046题解/" rel="next" title="PAT-B1046题解">
+                <i class="fa fa-chevron-left"></i> PAT-B1046题解
               </a>
             
           </div>
@@ -511,10 +502,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/27/冒泡排序/" rel="prev" title="冒泡排序">
-                冒泡排序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
