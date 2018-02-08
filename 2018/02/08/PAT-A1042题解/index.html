@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Grocery">
 <meta property="og:description" content="-简单模拟">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-08T08:03:17.563Z">
+<meta property="og:updated_time" content="2018-02-08T08:35:11.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PAT-A1042题解">
 <meta name="twitter:description" content="-简单模拟">
@@ -342,7 +342,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-02-08T16:03:17+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-02-08T16:35:11+08:00">
                 2018-02-08
               </time>
             
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  696
+                  697
                 </span>
               
 
@@ -430,8 +430,7 @@
 
       
         <p>-简单模拟</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-A1042. Shuffling Machine (20)<br>【时间限制】<br>400 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>16000 B<br>Shuffling is a procedure used to randomize a deck of playing cards. Because standard shuffling techniques are seen as weak, and in order to avoid “inside jobs” where employees collaborate with gamblers by performing inadequate shuffles, many casinos employ automatic shuffling machines. Your task is to simulate a shuffling machine.<br>The machine shuffles a deck of 54 cards according to a given random order and repeats for a given number of times. It is assumed that the initial status of a card deck is in the following order:<br>S1, S2, …, S13, H1, H2, …, H13, C1, C2, …, C13, D1, D2, …, D13, J1, J2<br>where “S” stands for “Spade”, “H” for “Heart”, “C” for “Club”, “D” for “Diamond”, and “J” for “Joker”. A given order is a permutation of distinct integers in [1, 54]. If the number at the i-th position is j, it means to move the card from position i to position j. For example, suppose we only have 5 cards: S3, H5, C1, D13 and J2. Given a shuffling order {4, 2, 5, 3, 1}, the result will be: J2, H5, D13, S3, C1. If we are to repeat the shuffling again, the result will be: C1, H5, S3, J2, D13.</p>
-<p>【Input Specification】<br>Each input file contains one test case. For each case, the first line contains a positive integer K (&lt;= 20) which is the number of repeat times. Then the next line contains the given order. All the numbers in a line are separated by a space.<br>【Output Specification】<br>For each test case, print the shuffling results in one line. All the cards are separated by a space, and there must be no extra space at the end of the line.<br>【Sample Input】<br>2<br>36 52 37 38 3 39 40 53 54 41 11 12 13 42 43 44 2 4 23 24 25 26 27 6 7 8 48 49 50 51 9 10 14 15 16 5 17 18 19 1 20 21 22 28 29 30 31 32 33 34 35 45 46 47<br>【Sample Output】<br>S7 C11 C10 C12 S1 H7 H8 H9 D8 D9 S11 S12 S13 D10 D11 D12 S3 S4 S6 S10 H1 H2 C13 D2 D3 D4 H6 H3 D13 J1 J2 C1 C2 C3 C4 D1 S5 H5 H11 H12 C6 C7 C8 C9 S2 S8 S9 H10 D5 D6 D7 H4 H13 C5</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-A1042. Shuffling Machine (20)<br>【时间限制】<br>400 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>16000 B<br>【Abstract】<br>Shuffling is a procedure used to randomize a deck of playing cards. Because standard shuffling techniques are seen as weak, and in order to avoid “inside jobs” where employees collaborate with gamblers by performing inadequate shuffles, many casinos employ automatic shuffling machines. Your task is to simulate a shuffling machine.<br>The machine shuffles a deck of 54 cards according to a given random order and repeats for a given number of times. It is assumed that the initial status of a card deck is in the following order:<br>S1, S2, …, S13, H1, H2, …, H13, C1, C2, …, C13, D1, D2, …, D13, J1, J2<br>where “S” stands for “Spade”, “H” for “Heart”, “C” for “Club”, “D” for “Diamond”, and “J” for “Joker”. A given order is a permutation of distinct integers in [1, 54]. If the number at the i-th position is j, it means to move the card from position i to position j. For example, suppose we only have 5 cards: S3, H5, C1, D13 and J2. Given a shuffling order {4, 2, 5, 3, 1}, the result will be: J2, H5, D13, S3, C1. If we are to repeat the shuffling again, the result will be: C1, H5, S3, J2, D13.<br>【Input Specification】<br>Each input file contains one test case. For each case, the first line contains a positive integer K (&lt;= 20) which is the number of repeat times. Then the next line contains the given order. All the numbers in a line are separated by a space.<br>【Output Specification】<br>For each test case, print the shuffling results in one line. All the cards are separated by a space, and there must be no extra space at the end of the line.<br>【Sample Input】<br>2<br>36 52 37 38 3 39 40 53 54 41 11 12 13 42 43 44 2 4 23 24 25 26 27 6 7 8 48 49 50 51 9 10 14 15 16 5 17 18 19 1 20 21 22 28 29 30 31 32 33 34 35 45 46 47<br>【Sample Output】<br>S7 C11 C10 C12 S1 H7 H8 H9 D8 D9 S11 S12 S13 D10 D11 D12 S3 S4 S6 S10 H1 H2 C13 D2 D3 D4 H6 H3 D13 J1 J2 C1 C2 C3 C4 D1 S5 H5 H11 H12 C6 C7 C8 C9 S2 S8 S9 H10 D5 D6 D7 H4 H13 C5</p>
 <hr>
 <p>题意大致是：<br>给54张牌，给你顺序进行操作。每次操作把第i个位置的牌换到所给的顺序序列的第i个位置。输出用13张S，13张H，13张C，13张D，2张J进行输出。</p>
 <hr>
@@ -504,6 +503,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/08/PAT-A1046题解/" rel="prev" title="PAT-A1046题解">
+                PAT-A1046题解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -584,7 +587,7 @@
               
                 <a href="/Archives">
               
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -695,7 +698,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">66.6k</span>
+    <span title="Site words total count">67.1k</span>
   
 </div>
 
