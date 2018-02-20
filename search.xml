@@ -3,6 +3,80 @@
   
     
     <entry>
+      <title><![CDATA[C++-note2]]></title>
+      <url>/2018/02/21/C++-note2/</url>
+      <content type="html"><![CDATA[<p>-动态存储分配<br>-名称空间</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p><strong>单独编译</strong></p>
+<blockquote>
+<p>一般来说，会把程序分为三部分：<br>头文件：包含结构声明和使用这些结构的函数的原型<br>源代码文件：包含于结构有关的函数的代码<br>源代码文件：包含调用与结构相关的函数的代码</p>
+</blockquote>
+<p>使用自己编写的编写的头文件使用“ ”而不再使用&lt;&gt;.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//头文件的编写</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> HEAD_H_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> HEAD_H_</span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>自动存储持续性</strong><br>在默认的情况下，函数声明的函数参数和变量的存储持续性为自动，作用于为局部，没有链接性。当程序开始执行这些变量所属的代码块时，将为其分配内存。当函数结束时，这些变量都将消失。</p>
+<blockquote>
+<p>如果在代码块中定义了变量，则该变量的存在时间和作用于将被限制在该代码块内</p>
+</blockquote>
+<p>如果存在两个同名的变量，其中一个位于外部代码块中，而另一个位于内部代码块中。在这种情况下，程序执行内部代码块中的语句时，解释为内部代码块变量。</p>
+<p>一般程序使用栈来管理自动变量。</p>
+<hr>
+<p><strong>静态持续变量</strong><br>编译器分配固定的内存块来存储所有的静态变量，这些变量在整个程序执行期间一直存在。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//要创建链接性为外部的静态持续变量，必须在代码块外面声明它</span></div><div class="line"><span class="comment">//要创建链接性为内部的静态持续变量，必须在代码块外面声明并且加上static修饰</span></div><div class="line"><span class="comment">//要创建没有链接性的静态持续变量，必须在代码块内部声明它并且加上static修饰</span></div><div class="line"><span class="keyword">int</span> <span class="keyword">global</span>=<span class="number">1000</span>;             <span class="comment">//链接性为外部的静态持续变量</span></div><div class="line"><span class="keyword">static</span> <span class="keyword">int</span> one_file=<span class="number">50</span>;      <span class="comment">//链接性为内部的静态持续变量</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">funct1</span>(<span class="params"><span class="keyword">int</span> n</span>)</span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> count=<span class="number">0</span>;       <span class="comment">//没有链接性的静态持续变量</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果要在多个文件中使用外部变量，只需在一个文件包含该变量的定义，但在使用该变量的其他所有文件中都必须使用关键字extern声明它<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//file1.cpp</span></div><div class="line"><span class="keyword">extern</span> <span class="keyword">int</span> cats=<span class="number">20</span>;</div><div class="line"><span class="keyword">int</span> dogs=<span class="number">22</span>;</div><div class="line">...</div><div class="line"><span class="comment">//file2.cpp</span></div><div class="line"><span class="keyword">extern</span> <span class="keyword">int</span> cats;</div><div class="line">...</div><div class="line"><span class="comment">//file3.cpp</span></div><div class="line"><span class="keyword">extern</span> <span class="keyword">int</span> cats;</div><div class="line"><span class="keyword">extern</span> <span class="keyword">int</span> dogs;</div></pre></td></tr></table></figure></p>
+<p>如果在extern外部变量后，又声明了同名的变量，则本地使用的为本地声明的变量，加上：：作用域解析运算符后则是变量的全局版本。</p>
+<hr>
+<p>mutable可以用于指出，结构变量为const的情况下，其成员也可以被修改<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span>&#123;</span></div><div class="line">	<span class="keyword">char</span> name[<span class="number">20</span>];</div><div class="line">	<span class="keyword">mutable</span> <span class="keyword">int</span> accesses;</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> data p;</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>动态存储分配</strong><br>1.new的初始化<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化用于单值变量</span></div><div class="line"><span class="keyword">int</span> *pin=<span class="keyword">new</span> <span class="keyword">int</span> &#123;<span class="number">6</span>&#125;;</div><div class="line"><span class="keyword">double</span> *pdo=<span class="keyword">new</span> <span class="keyword">double</span> &#123;<span class="number">99.99</span>&#125;;</div><div class="line"><span class="comment">//初始化常规结构或数组需要用大括号的列表初始化</span></div><div class="line"><span class="keyword">struct</span> <span class="keyword">where</span> &#123;<span class="keyword">double</span> x,<span class="keyword">double</span> y,<span class="keyword">double</span> z&#125;;</div><div class="line"><span class="keyword">where</span> *one = <span class="keyword">new</span> <span class="keyword">where</span>&#123;<span class="number">2.5</span>,<span class="number">5.3</span>,<span class="number">7.2</span>&#125;;</div><div class="line"><span class="keyword">int</span> *ar=<span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">4</span>] &#123;<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>&#125;;</div></pre></td></tr></table></figure></p>
+<p>new运算符还有一种变体，被称为定位new运算符<br>要使用这种特性，需要包含new头文件<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;new&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">chaff</span>&#123;</span></div><div class="line">	<span class="keyword">char</span> dross[<span class="number">20</span>];</div><div class="line">	<span class="keyword">int</span> slag;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">char</span> buffer1[<span class="number">50</span>];</div><div class="line"><span class="keyword">char</span> buffer2[<span class="number">500</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	chaff *p1,*p2;</div><div class="line">	<span class="keyword">int</span> *p3,*p4;</div><div class="line">	p1=<span class="keyword">new</span> chaff;       <span class="comment">//在堆中分配</span></div><div class="line">	p3=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">20</span>];     <span class="comment">//在堆中分配</span></div><div class="line">	p2=<span class="keyword">new</span> (buffer1)chaff;    <span class="comment">//在buffer1中分配</span></div><div class="line">	p4=<span class="keyword">new</span> (buffer2)<span class="keyword">int</span> [<span class="number">20</span>]； <span class="comment">//在buffer2中分配</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//这段程序就实现了定位分配内存的功能...</span></div><div class="line"><span class="comment">//定位new分配的内存不能直接使用delete来释放</span></div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>名称空间</strong><br>C++新增了一种功能，即通过定义一种发明的区域来创建命名的名称空间。这样做的目的之一是提供一个声明名称的区域。一个名称空间中的名称不会与另外一个名称空间的相同名称发生冲突，同时允许程序的其他部分使用该名称空间中声明的东西。<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">namespace <span class="type">Jack</span>&#123;</div><div class="line">	double pail;</div><div class="line">	<span class="built_in">void</span> fetch();</div><div class="line">	<span class="built_in">int</span> pal;</div><div class="line">	struct well<span class="meta">&#123;...&#125;</span>;</div><div class="line">&#125;</div><div class="line">namespace <span class="type">Jill</span>&#123;</div><div class="line">	double bucket(double n)<span class="meta">&#123;...&#125;</span></div><div class="line">	double fetch;</div><div class="line">	<span class="built_in">int</span> pal;</div><div class="line">	struct <span class="type">Hill</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>1.名称空间可以是全局的，也可以位于另一个名称空间中，但不能代码块中<br>2.因此，在默认情况下，名称空间中声明的名称的链接性为外部的<br>3.任何名称空间中的名称都不会与其他名称空间中的名称冲突<br>4.名称空间是开放的，即可以把名称加入到已有的名称空间中</p>
+</blockquote>
+<p>当然需要一种方法来访问给定名称空间的名称。最简单的方法就是通过作用域解析运算符：：，使用名称空间来限定该名称；<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Jack::pail=<span class="number">12.34</span>;</div><div class="line">Jill::Hill mole;</div><div class="line">Jack::fetch();</div></pre></td></tr></table></figure></p>
+<p> 而如果我们不希望每次使用名称都对它进行限定。using声明使特定的标识符可用，using编译指令使整个名称空间可用。<br> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> Jill::fetch;    <span class="comment">//using声明</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> Jack;       <span class="comment">//using编译指令</span></div></pre></td></tr></table></figure></p>
+<p> 如果两个名称空间中有相同的成员pal，不能通过using声明限定它们<br> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//错误示范</span></div><div class="line"><span class="keyword">using</span> jack::pal;</div><div class="line"><span class="keyword">using</span> jill::pal;</div><div class="line">pal=<span class="number">4</span>;    <span class="comment">//conflict</span></div></pre></td></tr></table></figure></p>
+<p> 同样的，如果某个名称已经在函数中生命了，则不能用using声明导入相同的名称。<br> 如果有局部声明，将隐藏全局变量和名称空间的名称。</p>
+<blockquote>
+<p>局部变量声明后直接用<br>全局变量如果未有重名局部变量，可直接使用，否则要使用作用域解析运算符<br>名称空间例如jill::name来用，如果未有全局变量和局部变量重名的声明，在using声明或者using编译指令后可直接使用。</p>
+</blockquote>
+<p>客观来说，使用using声明比使用using编译指令更安全，它只导入指定的名称。</p>
+<blockquote>
+<p>补充，可以将名称空间声明进行嵌套。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> <span class="title">elements</span>&#123;</div><div class="line">	<span class="keyword">float</span> water;</div><div class="line">	<span class="keyword">namespace</span> <span class="title">fire</span>&#123;</div><div class="line">		<span class="keyword">int</span> flame;</div><div class="line">		..</div><div class="line">	&#125;</div><div class="line">	...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>因此这里的flame就是element::fire::flame.<br>同样，可以使用下面的usiang编译指令使内部的名称可用<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> namspace elements::fire；</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>此外也可以在名称空间中使用using声明和using编译指令<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">nampspace myth&#123;</div><div class="line">	<span class="keyword">using</span> Jill::fetch;</div><div class="line">	<span class="keyword">using</span> nampspace elements;</div><div class="line">	<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</div><div class="line">	<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>此后，由于Jill::fetch现在位于名称空间myth，因此要访问fetch<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">std</span>::<span class="built_in">cin</span>&gt;&gt;myth::fetch;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>可以通过省略名称空间的名称来创建未命名的名称空间<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span>&#123;</div><div class="line">	<span class="keyword">int</span> ice;</div><div class="line">	<span class="keyword">int</span> bandycoot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>这就像后面跟着using编译指令一样，也就是说在该名称空间中声明的潜在作用域为：从声明点到该声明区域末尾。由于这种名称空间没有名称，因此不能显式地使用using编译指令或using声明来使它在其他位置都可用。具体而言，就是不能在未命名名称空间所属文件之外的其他文件中使用该名称空间中的名称。</p>
+<hr>
+<p><strong>名称空间的指导原则</strong></p>
+<blockquote>
+<p>1.使用在已命名的名称空间中声明的变量，而不是使用外部全局变量<br>2.使用在已命名的名称空间中声明的变量，而不是使用静态全局变量<br>3.如果开发了一个函数库或类库，将其放在一个名称空间中。<br>4.不要在头文件中使用using编译指令。因为这样做掩盖了要让哪些名称可用。<br>5.导入名称时，首选使用作用域解析运算符或using声明的方法。<br>6.对于using声明，首选将其作用域设置为局部而不是全局。</p>
+</blockquote>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> C++ programming language </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[POJ-1002题解]]></title>
       <url>/2018/02/20/POJ1002%E7%AE%97%E6%B3%95%E8%A7%A3%E6%9E%90/</url>
       <content type="html"><![CDATA[<p>-简单模拟</p>
