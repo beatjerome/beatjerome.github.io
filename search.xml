@@ -3,6 +3,71 @@
   
     
     <entry>
+      <title><![CDATA[C++-note3]]></title>
+      <url>/2018/02/22/C++-note3/</url>
+      <content type="html"><![CDATA[<p>-类与对象</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>类与对象</strong></p>
+<blockquote>
+<p>一般来说，类规范由两个部分组成<br>1.类声明：以数据成员的方式描述数据部分。以成员函数（被称为方法）的方式描述公有接口<br>2.类方法定义：描述如何实现类成员函数<br>简单来说，类声明提供了类的蓝图，而方法定义则提供了细节</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//范例</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> STOCKOO_H_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> STOCKOO_H_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stock</span>&#123;</span></div><div class="line">	<span class="keyword">private</span>:</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">string</span> company;</div><div class="line">		<span class="keyword">long</span> shares;</div><div class="line">		<span class="keyword">double</span> share_val;</div><div class="line">		<span class="keyword">double</span> total_val;</div><div class="line">		<span class="keyword">void</span> set_tol&#123; total_val=shares*share_val; &#125;</div><div class="line">	<span class="keyword">public</span>:</div><div class="line">		<span class="keyword">void</span> acquire&#123;<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp; co,<span class="keyword">long</span> n,<span class="keyword">double</span> pr&#125;;</div><div class="line">		<span class="keyword">void</span> buy&#123;<span class="keyword">long</span> num,<span class="keyword">double</span> price&#125;;</div><div class="line">		<span class="keyword">void</span> sell&#123;<span class="keyword">long</span> num,<span class="keyword">double</span> price&#125;;</div><div class="line">		<span class="keyword">void</span> update&#123;<span class="keyword">double</span> price&#125;;</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</div><div class="line">	&#125;;</div><div class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<p>·关键字class指出了这些代码定义了一个类设计</p>
+<hr>
+<p><strong>访问控制</strong><br>关键字private和public描述了对类成员的访问控制。<br>使用类对象的程序都可以直接访问public部分。而对于private部分，只能通过公有成员函数（或友元函数）来访问。</p>
+<blockquote>
+<p>将实现细节放在一起并将它们与抽象分开被称为封装</p>
+</blockquote>
+<p>不必在类声明中使用关键字private，这是类对象的默认访问控制。也就是说，只需要声明哪些部分是public的即可。</p>
+<hr>
+<p><strong>类成员函数的实现</strong><br>除了类声明之外，还需要创建类描述的第二部分：为那些由类声明中的原型表示的成员函数提供代码。成员函数定义与常规函数定义非常相似，<br>但是，他们有两个特殊的地方：<br>1.定义成员函数时，使用作用域解析运算符（::）来标识函数所属的类<br>2.类方法可以访问类的private组件</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用对象的成员函数</span></div><div class="line">Stock kate ,joe ;</div><div class="line">kate.<span class="keyword">show</span>();</div><div class="line">joe.<span class="keyword">show</span>();</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>小结</strong><br>指定类设计的第一步是提供类声明。类声明类似结构声明，可以包括数据成员和函数成员。声明私有部分，其中声明的成员只能通过成员函数进行访问；声明公有部分，在其中声明的成员可被使用类对象的程序直接访问。<strong>通常来说，数据成员被放在私有部分，成员函数放在公有部分</strong>。<br>指定类设计的第二部是实现类成员函数。可以在类声明中提供完整的函数定义，而不是函数原型，但通常是单独提供函数定义（除非函数很简单）。</p>
+<hr>
+<p><strong>构造函数</strong><br>C++提供了两种使用构造函数来初始化对象的方式<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//first</span></div><div class="line">Stock food=Stock(<span class="string">"World cabbage"</span>,<span class="number">250</span>,<span class="number">1.25</span>);</div><div class="line"><span class="comment">//second</span></div><div class="line">Stock food(<span class="string">"World cabbage"</span>,<span class="number">250</span>,<span class="number">1.25</span>);</div></pre></td></tr></table></figure></p>
+<p>默认构造函数是在未提供显示初始值时，用来创建对象的构造函数。<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//范例</span></div><div class="line">Stock fluffy_the_cat;</div></pre></td></tr></table></figure></p>
+<p>当且仅当没有定义任何构造函数时，编译器才会提供默认构造函数。</p>
+<blockquote>
+<p>定义默认构造函数的方式有两种<br>其一是给已有构造函数的所有参数提供默认值<br>其二是通过函数重载来定义另一个构造函数</p>
+</blockquote>
+<p>使用上述任何一种方法，创建了默认构造函数后，便可以声明对象变量而不对他们进行显式初始化。<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Stock <span class="keyword">first</span>；</div><div class="line">Stock <span class="keyword">first</span>=Stock();</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>析构函数</strong></p>
+<p>析构函数完成的是清理操作。如果构造函数使用new来分配内存，则西沟函数将使用delete来释放这些内存。<strong>析构函数名称：在类名前加上~，如Stock类的析构函数为~Stock()</strong>。和构造函数一样，析构函数也可以没有返回值和声明类型。</p>
+<blockquote>
+<p>与构造函数不同的是，析构函数没有参数。</p>
+</blockquote>
+<hr>
+<p><strong>列表初始化</strong><br>可以将列表初始化语法用于类,只要保证参数一一对应即可。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Stock::Stock（<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp; co,<span class="keyword">long</span> n=<span class="number">0</span>,<span class="keyword">double</span> pr=<span class="number">0.0</span>);</div><div class="line">Stock jock&#123;<span class="string">"Hello world"</span>,<span class="number">10000</span>,<span class="number">520.1314</span>);</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>const成员函数</strong><br>const成员函数保证函数不会修改调用对象。C++定义const成员函数是将const放在函数的括号后面。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> <span class="keyword">const</span></span>;</div><div class="line"><span class="comment">//如此以来，保证显示类中数据时不会修改调用</span></div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong><font color="#0000FF">构造函数与析构函数小结</font></strong><br>1.构造函数时一种特殊的类成员函数，在创建类对象时被调用。构造函数的名称和类名相同，但通过函数重载，可以创建多个同名的构造函数。另外，构造函数没有声明类型。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化范例1（2参数）</span></div><div class="line">Bozo(<span class="keyword">const</span> <span class="keyword">char</span> *fname,<span class="keyword">const</span> <span class="keyword">char</span> *lname);    <span class="comment">//构造函数原型</span></div><div class="line">Bozo Fufu=&#123;<span class="string">"Fufu"</span>,<span class="string">"James"</span>);         <span class="comment">//初始化方法1</span></div><div class="line">Bozo Jerome&#123;<span class="string">"Jerome"</span>,<span class="string">"James"</span>);      <span class="comment">//初始化方法2</span></div><div class="line">Bozo *pc=<span class="keyword">new</span> Bozo(<span class="string">"popo"</span>,<span class="string">"Le Peu"</span>); <span class="comment">//初始化方法3</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化范例2（1参数）</span></div><div class="line">Bozo<span class="comment">(int n)</span>;    <span class="comment">//构造函数原型</span></div><div class="line">Bozo a=Bozo<span class="comment">(40)</span>;<span class="comment">//初始化方法1</span></div><div class="line">Bozo room<span class="comment">(60)</span>;  <span class="comment">//初始化方法2</span></div><div class="line">Bozo tubby=<span class="number">32</span>;  <span class="comment">//初始化方法3（可关闭，可能会带来意外）</span></div></pre></td></tr></table></figure>
+<p>2.默认构造函数没有参数，因此如果创建对象时没有进行显式地初始化，则调用默认构造函数。如果程序中没有提供任何构造函数，则编译器回味程序定义一个默认构造函数；否则必须自己提供默认构造函数。默认构造函数可以没有任何参数。但是一旦有参数，必须给参数附上默认值。<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Bozo();</span></div><div class="line"><span class="keyword">Bistro(const </span>char *s=<span class="string">"Chez Zero"</span>)<span class="comment">;</span></div><div class="line">//对于未被初始化的对象，程序将使用默认构造函数来创建：</div><div class="line"><span class="keyword">Bozo </span><span class="keyword">bubi;</span></div><div class="line"><span class="keyword">Bozo </span>*pb<span class="symbol">=new</span> <span class="keyword">Bozo;</span></div></pre></td></tr></table></figure></p>
+<p>3.当对象被删除时，程序将调用析构函数。每个类都只能有一个析构函数。析构函数没有返回类型，也没有参数。其名称为类名称前加上~。</p>
+<hr>
+<p><strong>类作用域</strong><br>在类中定义的名称的作用域都为整个类，作用域为整个类的名称只在该类中是已知的，在类外是不可知的。因此，可以在不同的类中使用相同的类成员名而不会引起冲突。此外，类作用域意味着不能从外部直接访问类的成员。要访问类的成员，必须通过对象。</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Stock <span class="built_in">sleep</span>(<span class="string">"Jerome"</span>,<span class="number">100</span>,<span class="number">0.25</span>);</div><div class="line"><span class="built_in">sleep</span>.<span class="keyword">show</span>();</div><div class="line"><span class="keyword">show</span>();     <span class="comment">//invalid</span></div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> C++ programming language </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[C++-note2]]></title>
       <url>/2018/02/21/C++-note2/</url>
       <content type="html"><![CDATA[<p>-动态存储分配<br>-名称空间</p>
