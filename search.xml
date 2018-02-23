@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[C++-note2]]></title>
+      <title><![CDATA[C++-note4]]></title>
       <url>/2018/02/23/C++-note4/</url>
       <content type="html"><![CDATA[<p>-类的使用<br>-运算符重载</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>运算符重载</strong><br>运算符重载是一种形式的C++多态。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//重载范例</span></div><div class="line"><span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)</div><div class="line">	a[i]=b[i]+<span class="built_in">c</span>[i];</div><div class="line"><span class="comment">//可以定义一个数组的类，重载+运算符</span></div><div class="line">a=b+<span class="built_in">c</span>;</div></pre></td></tr></table></figure></p>
