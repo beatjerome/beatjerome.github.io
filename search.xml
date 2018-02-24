@@ -3,6 +3,42 @@
   
     
     <entry>
+      <title><![CDATA[C++-note5]]></title>
+      <url>/2018/02/24/C++-note5/</url>
+      <content type="html"><![CDATA[<p>-类继承<br>-string类</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>静态类成员</strong><br>在类声明中，可以声明static成员。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">a</span>&#123;</span></div><div class="line">	...</div><div class="line">	<span class="keyword">private</span>:</div><div class="line">		<span class="keyword">static</span> <span class="keyword">int</span> num;   <span class="comment">//在声明类后，该成员是静态的（假如创建了10个a对象</span></div><div class="line">						  <span class="comment">//它们的num成员值相同）</span></div><div class="line">		...</div><div class="line">	<span class="keyword">public</span>:</div><div class="line">		...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>静态类成员有一个特点：无论创建了多少对象，程序都只创建一个静态类变量副本。也就是说，类的所有对象都共享同一个静态成员。</p>
+<hr>
+<p><strong>类继承</strong><br>类继承能够从已有的类派生出新的类，而派生类继承了原有类（基类）的特征，包括方法。<br>1.可以在已有类的基础上添加功能。<br>2.可以给类添加数据。<br>3.可以修改类方法的行为。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">rateplayer</span>:</span><span class="keyword">public</span> Table&#123;</div><div class="line">...  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>冒号指出rateplayer的基类是Table。public说明Table是一个公有基类，这成为公有派生。使用公有派生，基类的公有成员将成为派生类的公有成员；基类的私有部分也将成为派生类的一部分，但只能通过基类的公有和保护方法访问。</p>
+<blockquote>
+<p>派生类特征<br>1.派生类对象存储了基类的额数据成员（派生类继承了基类的实现）；<br>2.派生类对象可以使用基类的方法；<br>3.派生类对象需要自己的构造函数；<br>4.派生类可以根据需要添加额外的数据成员和成员函数。</p>
+</blockquote>
+<hr>
+<p><strong>string类</strong><br>使用string需要带头文件string.h<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">string</span>(size_type n,<span class="built_in">char</span> c);   	//创建一个包含n个元素的<span class="built_in">string</span>对象，每个元素都初始化为字符c</div><div class="line"><span class="built_in">string</span>(<span class="keyword">const</span> <span class="built_in">string</span> &amp;str);     	//将一个<span class="built_in">string</span>对象初始化为<span class="built_in">string</span>对象str</div><div class="line"><span class="built_in">string</span>(<span class="keyword">const</span> <span class="built_in">char</span> *s);   		//将<span class="built_in">string</span>对象初始化为字符串s</div><div class="line"><span class="built_in">string</span>(<span class="keyword">const</span> <span class="built_in">char</span> *s,size_type n);   //将<span class="built_in">string</span>对象初始化为字符串s的前n个字符</div></pre></td></tr></table></figure></p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> <span class="literal">one</span>(<span class="string">"Jerome"</span>);   <span class="comment"> //将one初始化为jerome</span></div><div class="line"><span class="literal">one</span>+=<span class="string">"James"</span>;             <span class="comment"> //通过重载的+=将James加在对象one后面</span></div><div class="line"><span class="literal">one</span>[<span class="number">2</span>]=<span class="string">'p'</span>;                   <span class="comment"> //通过[]可以使用数组表示法来访问string对象中的各个字符</span></div></pre></td></tr></table></figure>
+<hr>
+<p><strong>string输入</strong><br>对于string对象，有两种方式<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">string</span> stuff;</div><div class="line"><span class="built_in">cin</span>&gt;&gt;stuff;            <span class="comment">//read a word;</span></div><div class="line">getline(<span class="built_in">cin</span>,stuff);    <span class="comment">//read a line,without a '\n'</span></div></pre></td></tr></table></figure></p>
+<p>string的getline()将自动调整string对象的大小，使之刚好能够存储输入的字符<br>string对象的size()和length()成员函数都返回字符串中的字符数</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> C++ programming language </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[C++-note4]]></title>
       <url>/2018/02/23/C++-note4/</url>
       <content type="html"><![CDATA[<p>-类的使用<br>-运算符重载</p>
