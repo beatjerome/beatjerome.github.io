@@ -639,6 +639,48 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Python-note1]]></title>
+      <url>/2018/02/02/python-note1/</url>
+      <content type="html"><![CDATA[<p>-基本知识</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>开始hello world</strong><br>在python解释器提示符，输入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"Hello world!"</span>)</span></span></div></pre></td></tr></table></figure></p>
+<p>回车，屏幕上打印出Hello world！字样</p>
+<hr>
+<p><strong>注释</strong><br>注释是任何存在于#号右侧的文字</p>
+<hr>
+<p><strong>单引号</strong><br>可以使用单引号来指定字符串，例如’what is love’<br>所有引号内空间，包括空格与制表符，都将按原样保留。<br><strong>双引号</strong><br>被双引号包括的字符串和被单引号阔气的字符串的工作机制完全相同。<br><strong>三引号</strong><br>可以通过使用’’’来指定字符串。在三引号之间可以自由的使用单引号和双引号<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">'''</div><div class="line">one </div><div class="line">two</div><div class="line">there</div><div class="line">'''</div></pre></td></tr></table></figure></p>
+<p><strong>与C/C++不一样的是，python的字符串是不可变的。一旦创造了一串字符串，就不能在改变了。</strong></p>
+<hr>
+<p><strong>format()方法</strong><br>format()方法可以使我们从其他信息中构建字符串。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#范例</span></div><div class="line"><span class="string">age=20</span></div><div class="line"><span class="string">name='james'</span></div><div class="line"><span class="string">print('&#123;0&#125;</span> <span class="string">was</span> <span class="string">&#123;1&#125;</span> <span class="string">years</span> <span class="string">old'.format(name,age))</span></div><div class="line"><span class="string">print('Why</span> <span class="string">is</span> <span class="string">&#123;0&#125;</span> <span class="string">playing</span> <span class="string">with</span> <span class="string">python')</span></div><div class="line"><span class="bullet">-</span><span class="meta">---</span></div><div class="line"><span class="string">输出：</span></div><div class="line"><span class="string">james</span> <span class="string">was</span> <span class="number">20</span> <span class="string">years</span> <span class="string">old</span></div><div class="line"><span class="string">Why</span> <span class="string">is</span> <span class="string">james</span> <span class="string">playing</span> <span class="string">with</span> <span class="string">python</span></div></pre></td></tr></table></figure></p>
+<p>{0}对应的是变量name，它是该格式化方法中的第一个参数。<br>{1}对应的是变量age，它是该格式化方法中的第二个参数。<br>数字只是一个可选选项，不是必须的，因此可以略去中括号的数字。</p>
+<p>python中的format方法所做的事情便是将每个参数替换至格式所在的位置。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#format方法的详细格式</div><div class="line">#对于浮点数<span class="string">'0.333'</span>保留小数点后三位</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'&#123;0:.3f&#125;'</span>.format(<span class="number">1.0</span>/<span class="number">3</span>)</span></span></div><div class="line">#使用下划线填充，并保持文字处于中间位置</div><div class="line">#使用（^）定义字符串长度为<span class="number">11</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'&#123;0:_^11&#125;'</span>.format(<span class="string">'hello'</span>)</span></span></div><div class="line">#基于关键字的输出</div><div class="line"><span class="function"><span class="title">printf</span><span class="params">(<span class="string">'&#123;name&#125; wrote &#123;book&#125;'</span>.format(name=<span class="string">'James'</span>,book=<span class="string">'Essential python'</span>)</span></span>)</div><div class="line"><span class="comment">//以上代码输出</span></div><div class="line"><span class="number">0.333</span></div><div class="line">___hello___</div><div class="line">James wrote Essential python</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>换行</strong><br>print总是会以一个不可见的“新一行”字符（\n）结尾，因此重复调用print将会自动换行<br>为了防止这一现象的发生，可以通过end指定其应以空白结尾：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'a'</span>,end=<span class="string">''</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'b'</span>,end=<span class="string">''</span>)</span></span></div><div class="line"><span class="comment">//输出结果</span></div><div class="line">ab</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'a'</span>,end=<span class="string">' '</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'b'</span>,end=<span class="string">' '</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'c'</span>)</span></span></div><div class="line"><span class="comment">//输出结果</span></div><div class="line"><span class="selector-tag">a</span> <span class="selector-tag">b</span> c</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>转义序列</strong><br>如果希望生成包含单引号的字符串，不能指定“What’s your name?”，这会让python对于何处是字符串的开始和结束感到疑惑。因此，必须指定单引号不代表字符串的结尾。<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#两种方式指定</span></div><div class="line">'What\'s your name?'</div><div class="line">"What's your name?<span class="string">"</span></div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>标识符</strong><br>命名标识符时，需要遵循以下规则：<br>1.第一个字符必须是字母表中的字母或下划线<br>2.标识符的其他部分可以由字符、下划线、数字（0~9）组成。<br>3.标识符名称区分大小写</p>
+<hr>
+<p><strong>逻辑行与物理行</strong><br>物理行是指编写程序时所看到的内容。<br>逻辑行是Python所看到的单个语句。<br>如果要在一行物理行中指定多行逻辑行，必须通过分好（；）来明确表明逻辑行或语句的结束。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#逻辑等同的几个例子</span></div><div class="line"><span class="comment">#example 1</span></div><div class="line"><span class="attribute">i</span>=5</div><div class="line"><span class="builtin-name">print</span>(i)</div><div class="line"><span class="comment">#example 2</span></div><div class="line"><span class="attribute">i</span>=5;</div><div class="line"><span class="builtin-name">print</span>(i);</div><div class="line"><span class="comment">#example 3</span></div><div class="line"><span class="attribute">i</span>=5;print(i);</div><div class="line"><span class="comment">#example 4</span></div><div class="line"><span class="attribute">i</span>=5;print(i)</div></pre></td></tr></table></figure></p>
+<p>事实上，一般来说不会使用分号。</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Python programming language </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1009题解]]></title>
       <url>/2018/01/20/PAT-B1009%E9%A2%98%E8%A7%A3%E7%9B%AE%E5%BD%95/</url>
       <content type="html"><![CDATA[<p>-数组处理</p>
