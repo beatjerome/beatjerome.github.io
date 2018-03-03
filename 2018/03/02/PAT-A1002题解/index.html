@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Online judge," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-折半插入算法介绍">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="-多项式加法">
+<meta name="keywords" content="Online judge">
 <meta property="og:type" content="article">
-<meta property="og:title" content="折半插入排序">
-<meta property="og:url" content="http://yoursite.com/2017/11/26/折半插入排序/index.html">
+<meta property="og:title" content="PAT-A1002题解">
+<meta property="og:url" content="http://yoursite.com/2018/03/02/PAT-A1002题解/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-折半插入算法介绍">
+<meta property="og:description" content="-多项式加法">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-26T03:12:43.647Z">
+<meta property="og:updated_time" content="2018-03-03T00:56:46.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="折半插入排序">
-<meta name="twitter:description" content="-折半插入算法介绍">
+<meta name="twitter:title" content="PAT-A1002题解">
+<meta name="twitter:description" content="-多项式加法">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/26/折半插入排序/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/02/PAT-A1002题解/"/>
 
 
 
 
 
-  <title>折半插入排序 | Grocery</title>
+  <title>PAT-A1002题解 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/折半插入排序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/PAT-A1002题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">折半插入排序</h1>
+          <h1 class="post-title" itemprop="name headline">PAT-A1002题解</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T11:12:45+08:00">
-                2017-11-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T08:58:45+08:00">
+                2018-03-02
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-26T11:12:43+08:00">
-                2017-11-26
+              <time title="Post modified" itemprop="dateModified" datetime="2018-03-03T08:56:46+08:00">
+                2018-03-03
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Data-structure/" itemprop="url" rel="index">
-                    <span itemprop="name">Data structure</span>
+                  <a href="/categories/PAT题解目录/" itemprop="url" rel="index">
+                    <span itemprop="name">PAT题解目录</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  295
+                  323
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -429,12 +429,17 @@
       
 
       
-        <p>-折半插入算法介绍</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><div class="note success"><p>折半插入排序</p></div>
-<p>如果线性表是有序的，进行查找可以用折半查找来实现。在确定出待插入位置后，就可以统一的向后移动元素了。</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">void InsertSort(ElemType A[],int n)&#123;</div><div class="line">	int i,j,low,high,mid;</div><div class="line">	for(i=<span class="number">2</span>;i&lt;=n;i++)&#123;           <span class="comment">//依次将A[2]~A[n]插入到前面已排好序的序列中</span></div><div class="line">		A[<span class="number">0</span>]=A[i];               <span class="comment">//将A[i]暂存到A[0]</span></div><div class="line">		low=<span class="number">1</span>;</div><div class="line">		high=i<span class="number">-1</span>;                <span class="comment">//设置查找范围</span></div><div class="line">		while(low&lt;=high)&#123;</div><div class="line">			mid=(low+high)/<span class="number">2</span>;    <span class="comment">//去中间点</span></div><div class="line">			if(A.[mid].<span class="type">key</span>&gt;A[<span class="number">0</span>].<span class="type">key</span>)</div><div class="line">				high=mid<span class="number">-1</span>;      <span class="comment">//查询左子表</span></div><div class="line">				else</div><div class="line">					low=mid+<span class="number">1</span>;   <span class="comment">//查询右子表</span></div><div class="line">			&#125;</div><div class="line">		for(j=i<span class="number">-1</span>;j&gt;=high+<span class="number">1</span>;--j)</div><div class="line">			A[j+<span class="number">1</span>]=A[j];         <span class="comment">//统一后移元素，空出插入位置</span></div><div class="line">		A[high+<span class="number">1</span>]=A[<span class="number">0</span>];          <span class="comment">//插入操作</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>从上述算法中，不难看出折半插入排序仅仅是减少了比较元素的次数，约为O（nlog2n），该比较次数与待排序表的初始状态无关，仅取决于表中元素个数n；而元素的移动次数没有改变，它取决于待排序表的初始状态。因此，折半插入排序的时间复杂度仍为O（n2）</p>
+        <p>-多项式加法</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-A1002. A+B for Polynomials (25)<br>时间限制<br>400 ms<br>内存限制<br>65536 kB<br>代码长度限制<br>16000 B<br>判题程序<br>Standard<br>作者<br>CHEN, Yue<br>This time, you are supposed to find A+B where A and B are two polynomials.</p>
+<p>Input</p>
+<p>Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial: K N1 aN1 N2 aN2 … NK aNK, where K is the number of nonzero terms in the polynomial, Ni and aNi (i=1, 2, …, K) are the exponents and coefficients, respectively. It is given that 1 &lt;= K &lt;= 10，0 &lt;= NK &lt; … &lt; N2 &lt; N1 &lt;=1000.</p>
+<p>Output</p>
+<p>For each test case you should output the sum of A and B in one line, with the same format as the input. Notice that there must be NO extra space at the end of each line. Please be accurate to 1 decimal place.</p>
+<p>Sample Input<br>2 1 2.4 0 3.2<br>2 2 1.5 1 0.5<br>Sample Output<br>3 2 1.5 1 2.9 0 3.2</p>
 <hr>
+<p>题目大意：题目很简单，给你多项式项数，给出系数和幂次，进行两个多项式的求和</p>
+<hr>
+<p>AC代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> max=<span class="number">1010</span>;</div><div class="line">	<span class="keyword">double</span> p[max]=&#123;<span class="number">0</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> k,n,count=<span class="number">0</span>;</div><div class="line">	<span class="keyword">double</span> a;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>,&amp;n,&amp;a);</div><div class="line">		p[n]+=a;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>,&amp;n,&amp;a);</div><div class="line">		p[n]+=a;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;max;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(p[i]!=<span class="number">0</span>)</div><div class="line">			count++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,count);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=max<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</div><div class="line">		<span class="keyword">if</span>(p[i]!=<span class="number">0</span>)</div><div class="line">			<span class="built_in">printf</span>(<span class="string">" %d %0.1f"</span>,i,p[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -481,7 +486,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/Tags/Online-judge/" rel="tag"># Online judge</a>
           
         </div>
       
@@ -494,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/23/插入排序-1/" rel="next" title="直接插入排序">
-                <i class="fa fa-chevron-left"></i> 直接插入排序
+              <a href="/2018/02/27/python-note1/" rel="next" title="Python-note1">
+                <i class="fa fa-chevron-left"></i> Python-note1
               </a>
             
           </div>
@@ -504,8 +509,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/26/AnyView数据结构-6/" rel="prev" title="Anyview数据结构-6">
-                Anyview数据结构-6 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/02/PAT-A1009题解/" rel="prev" title="PAT-A1009题解">
+                PAT-A1009题解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

@@ -31,6 +31,67 @@
     </entry>
     
     <entry>
+      <title><![CDATA[PAT-A1009题解]]></title>
+      <url>/2018/03/02/PAT-A1009%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-多项式乘法</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-A1009. Product of Polynomials (25)<br>时间限制<br>400 ms<br>内存限制<br>65536 kB<br>代码长度限制<br>16000 B<br>判题程序<br>Standard<br>作者<br>CHEN, Yue<br>This time, you are supposed to find A*B where A and B are two polynomials.</p>
+<p>Input Specification:</p>
+<p>Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial: K N1 aN1 N2 aN2 … NK aNK, where K is the number of nonzero terms in the polynomial, Ni and aNi (i=1, 2, …, K) are the exponents and coefficients, respectively. It is given that 1 &lt;= K &lt;= 10, 0 &lt;= NK &lt; … &lt; N2 &lt; N1 &lt;=1000.</p>
+<p>Output Specification:</p>
+<p>For each test case you should output the product of A and B in one line, with the same format as the input. Notice that there must be NO extra space at the end of each line. Please be accurate up to 1 decimal place.</p>
+<p>Sample Input<br>2 1 2.4 0 3.2<br>2 2 1.5 1 0.5<br>Sample Output<br>3 3 3.6 2 6.0 1 1.6</p>
+<hr>
+<p>题目大意：读入格式与A1002相同，不过这里求的是多项式乘法</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">poly</span>&#123;</span></div><div class="line">	<span class="keyword">int</span> <span class="built_in">exp</span>; 		<span class="comment">//指数</span></div><div class="line">	<span class="keyword">double</span> cof; 	<span class="comment">//系数 </span></div><div class="line">&#125;poly[<span class="number">1010</span>];</div><div class="line"><span class="keyword">double</span> answer[<span class="number">2010</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> k,count=<span class="number">0</span>;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>,&amp;poly[i].<span class="built_in">exp</span>,&amp;poly[i].cof);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</div><div class="line">		<span class="keyword">int</span> <span class="built_in">exp</span>;</div><div class="line">		<span class="keyword">double</span> cof;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>,&amp;<span class="built_in">exp</span>,&amp;cof);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;k;j++)&#123;</div><div class="line">			answer[<span class="built_in">exp</span>+poly[j].<span class="built_in">exp</span>]+=cof*poly[j].cof;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">2000</span>;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(answer[i]!=<span class="number">0.0</span>)</div><div class="line">			count++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,count);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2000</span>;i&gt;=<span class="number">0</span>;i--)&#123;</div><div class="line">		<span class="keyword">if</span>(answer[i]!=<span class="number">0</span>)</div><div class="line">			<span class="built_in">printf</span>(<span class="string">" %d %0.1f"</span>,i,answer[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PAT-A1002题解]]></title>
+      <url>/2018/03/02/PAT-A1002%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-多项式加法</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-A1002. A+B for Polynomials (25)<br>时间限制<br>400 ms<br>内存限制<br>65536 kB<br>代码长度限制<br>16000 B<br>判题程序<br>Standard<br>作者<br>CHEN, Yue<br>This time, you are supposed to find A+B where A and B are two polynomials.</p>
+<p>Input</p>
+<p>Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial: K N1 aN1 N2 aN2 … NK aNK, where K is the number of nonzero terms in the polynomial, Ni and aNi (i=1, 2, …, K) are the exponents and coefficients, respectively. It is given that 1 &lt;= K &lt;= 10，0 &lt;= NK &lt; … &lt; N2 &lt; N1 &lt;=1000.</p>
+<p>Output</p>
+<p>For each test case you should output the sum of A and B in one line, with the same format as the input. Notice that there must be NO extra space at the end of each line. Please be accurate to 1 decimal place.</p>
+<p>Sample Input<br>2 1 2.4 0 3.2<br>2 2 1.5 1 0.5<br>Sample Output<br>3 2 1.5 1 2.9 0 3.2</p>
+<hr>
+<p>题目大意：题目很简单，给你多项式项数，给出系数和幂次，进行两个多项式的求和</p>
+<hr>
+<p>AC代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> max=<span class="number">1010</span>;</div><div class="line">	<span class="keyword">double</span> p[max]=&#123;<span class="number">0</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> k,n,count=<span class="number">0</span>;</div><div class="line">	<span class="keyword">double</span> a;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>,&amp;n,&amp;a);</div><div class="line">		p[n]+=a;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>,&amp;n,&amp;a);</div><div class="line">		p[n]+=a;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;max;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(p[i]!=<span class="number">0</span>)</div><div class="line">			count++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,count);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=max<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</div><div class="line">		<span class="keyword">if</span>(p[i]!=<span class="number">0</span>)</div><div class="line">			<span class="built_in">printf</span>(<span class="string">" %d %0.1f"</span>,i,p[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Python-note1]]></title>
       <url>/2018/02/27/python-note1/</url>
       <content type="html"><![CDATA[<p>-基本知识</p>
