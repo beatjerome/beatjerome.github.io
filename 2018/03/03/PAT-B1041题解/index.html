@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="programming language learning," />
+  <meta name="keywords" content="Online judge," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-C++基础介绍">
-<meta name="keywords" content="programming language learning">
+<meta name="description" content="-查找算法">
+<meta name="keywords" content="Online judge">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开始学习C++">
-<meta property="og:url" content="http://yoursite.com/2017/10/30/开始学习C++/index.html">
+<meta property="og:title" content="PAT-B1041题解">
+<meta property="og:url" content="http://yoursite.com/2018/03/03/PAT-B1041题解/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-C++基础介绍">
+<meta property="og:description" content="-查找算法">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-30T02:41:48.530Z">
+<meta property="og:updated_time" content="2018-03-03T07:51:53.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开始学习C++">
-<meta name="twitter:description" content="-C++基础介绍">
+<meta name="twitter:title" content="PAT-B1041题解">
+<meta name="twitter:description" content="-查找算法">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/30/开始学习C++/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/03/PAT-B1041题解/"/>
 
 
 
 
 
-  <title>开始学习C++ | Grocery</title>
+  <title>PAT-B1041题解 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/30/开始学习C++/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/03/PAT-B1041题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开始学习C++</h1>
+          <h1 class="post-title" itemprop="name headline">PAT-B1041题解</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T10:42:45+08:00">
-                2017-10-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-03T15:31:45+08:00">
+                2018-03-03
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-10-30T10:41:48+08:00">
-                2017-10-30
+              <time title="Post modified" itemprop="dateModified" datetime="2018-03-03T15:51:53+08:00">
+                2018-03-03
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">C++ programming language</span>
+                  <a href="/categories/PAT题解目录/" itemprop="url" rel="index">
+                    <span itemprop="name">PAT题解目录</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  291
+                  526
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -429,17 +429,19 @@
       
 
       
-        <p>-C++基础介绍</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>Hello world</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;  //预处理器编译指令</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  <span class="comment">//编译指令</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;   <span class="comment">//函数头</span></div><div class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"HelloWorld"</span>&lt;&lt;<span class="built_in">endl</span>;  <span class="comment">//cout语句输出，endl换行</span></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;   <span class="comment">//C++注释用“//......”或者“/* ...... */”来进行注释</span></div></pre></td></tr></table></figure></p>
-<p>如C一般，这种程序在运行完之后立即关闭，需要加一句<code>cin.get();</code>语句来保持打开状态，直到按任何键才关闭。</p>
-<p>using编译指令使得std名称空间中的所有名称都可用，例如：可以直接使用cout和cin，而不用加std：：前缀。</p>
+        <p>-查找算法</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><ol>
+<li>考试座位号(15)<br>时间限制<br>400 ms<br>内存限制<br>65536 kB<br>代码长度限制<br>8000 B<br>判题程序<br>Standard<br>作者<br>CHEN, Yue<br>每个PAT考生在参加考试时都会被分配两个座位号，一个是试机座位，一个是考试座位。正常情况下，考生在入场时先得到试机座位号码，入座进入试机状态后，系统会显示该考生的考试座位号码，考试时考生需要换到考试座位就座。但有些考生迟到了，试机已经结束，他们只能拿着领到的试机座位号码求助于你，从后台查出他们的考试座位号码。</li>
+</ol>
+<p>输入格式：</p>
+<p>输入第一行给出一个正整数N（&lt;=1000），随后N行，每行给出一个考生的信息：“准考证号 试机座位号 考试座位号”。其中准考证号由14位数字组成，座位从1到N编号。输入保证每个人的准考证号都不同，并且任何时候都不会把两个人分配到同一个座位上。</p>
+<p>考生信息之后，给出一个正整数M（&lt;=N），随后一行中给出M个待查询的试机座位号码，以空格分隔。</p>
+<p>输出格式：</p>
+<p>对应每个需要查询的试机座位号码，在一行中输出对应考生的准考证号和考试座位号码，中间用1个空格分隔。</p>
+<p>输入样例：<br>4<br>10120150912233 2 4<br>10120150912119 4 1<br>10120150912126 1 3<br>10120150912002 3 2<br>2<br>3 4<br>输出样例：<br>10120150912002 2<br>10120150912119 1</p>
 <hr>
-<p><strong>C++语句</strong><br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int i<span class="comment">; //声明语句</span></div><div class="line"><span class="attribute">i</span>=<span class="number">1</span><span class="comment">;  //赋值语句</span></div></pre></td></tr></table></figure></p>
-<p>除此之外，C++还有许多的其他语句，循环等。</p>
-<hr>
-<p><strong>类简介</strong><br>类是面向对象编程的核心概念之一，也是JAVA语言的核心，C++的优势在于既可以面向过程，也可以面向对象，是一种综合编程语言。类定义描述的是数据格式及其用法，而对象是根据数据格式规范创建的实体</p>
-<hr>
-<p><strong>关键字</strong><br>C++中有int,double,new等关键字，这些关键字都是C++专用的，不能用于自定义变量名，函数名……</p>
+<p>AC代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">const int maxn=1010;</div><div class="line">struct student&#123;</div><div class="line">	long long id;   //准考证号</div><div class="line">	int examseat;   //考试座位号 </div><div class="line">&#125;testseat[maxn];    //以试机座位号作为下标来记录考生</div><div class="line">int main()&#123;</div><div class="line">	int n,m,seat,examseat;</div><div class="line">	long long id;</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);     //考生人数 </div><div class="line">	for(int i=0;i&lt;n;i++)&#123;</div><div class="line">		scanf(&quot;%lld %d %d&quot;,&amp;id,&amp;seat,&amp;examseat);</div><div class="line">		testseat[seat].id=id;</div><div class="line">		testseat[seat].examseat=examseat;</div><div class="line">	&#125;</div><div class="line">	scanf(&quot;%d&quot;,&amp;m);		//查询个数 </div><div class="line">	for(int i=0;i&lt;m;i++)&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;seat);</div><div class="line">		printf(&quot;%lld %d\n&quot;,testseat[seat].id,testseat[seat].examseat);</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>采用这种存储方式，时间复杂度较低</p>
 <hr>
 
       
@@ -487,7 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/programming-language-learning/" rel="tag"># programming language learning</a>
+            <a href="/Tags/Online-judge/" rel="tag"># Online judge</a>
           
         </div>
       
@@ -500,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/29/静电场-1/" rel="next" title="静电场-1">
-                <i class="fa fa-chevron-left"></i> 静电场-1
+              <a href="/2018/03/03/PAT-A1009题解/" rel="next" title="PAT-A1009题解">
+                <i class="fa fa-chevron-left"></i> PAT-A1009题解
               </a>
             
           </div>
@@ -509,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/30/静电场-2/" rel="prev" title="静电场-2">
-                静电场-2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

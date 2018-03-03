@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[PAT-B1041题解]]></title>
+      <url>/2018/03/03/PAT-B1041%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-查找算法</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><ol>
+<li>考试座位号(15)<br>时间限制<br>400 ms<br>内存限制<br>65536 kB<br>代码长度限制<br>8000 B<br>判题程序<br>Standard<br>作者<br>CHEN, Yue<br>每个PAT考生在参加考试时都会被分配两个座位号，一个是试机座位，一个是考试座位。正常情况下，考生在入场时先得到试机座位号码，入座进入试机状态后，系统会显示该考生的考试座位号码，考试时考生需要换到考试座位就座。但有些考生迟到了，试机已经结束，他们只能拿着领到的试机座位号码求助于你，从后台查出他们的考试座位号码。</li>
+</ol>
+<p>输入格式：</p>
+<p>输入第一行给出一个正整数N（&lt;=1000），随后N行，每行给出一个考生的信息：“准考证号 试机座位号 考试座位号”。其中准考证号由14位数字组成，座位从1到N编号。输入保证每个人的准考证号都不同，并且任何时候都不会把两个人分配到同一个座位上。</p>
+<p>考生信息之后，给出一个正整数M（&lt;=N），随后一行中给出M个待查询的试机座位号码，以空格分隔。</p>
+<p>输出格式：</p>
+<p>对应每个需要查询的试机座位号码，在一行中输出对应考生的准考证号和考试座位号码，中间用1个空格分隔。</p>
+<p>输入样例：<br>4<br>10120150912233 2 4<br>10120150912119 4 1<br>10120150912126 1 3<br>10120150912002 3 2<br>2<br>3 4<br>输出样例：<br>10120150912002 2<br>10120150912119 1</p>
+<hr>
+<p>AC代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">const int maxn=1010;</div><div class="line">struct student&#123;</div><div class="line">	long long id;   //准考证号</div><div class="line">	int examseat;   //考试座位号 </div><div class="line">&#125;testseat[maxn];    //以试机座位号作为下标来记录考生</div><div class="line">int main()&#123;</div><div class="line">	int n,m,seat,examseat;</div><div class="line">	long long id;</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);     //考生人数 </div><div class="line">	for(int i=0;i&lt;n;i++)&#123;</div><div class="line">		scanf(&quot;%lld %d %d&quot;,&amp;id,&amp;seat,&amp;examseat);</div><div class="line">		testseat[seat].id=id;</div><div class="line">		testseat[seat].examseat=examseat;</div><div class="line">	&#125;</div><div class="line">	scanf(&quot;%d&quot;,&amp;m);		//查询个数 </div><div class="line">	for(int i=0;i&lt;m;i++)&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;seat);</div><div class="line">		printf(&quot;%lld %d\n&quot;,testseat[seat].id,testseat[seat].examseat);</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>采用这种存储方式，时间复杂度较低</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-A1009题解]]></title>
       <url>/2018/03/03/PAT-A1009%E9%A2%98%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>-多项式乘法</p>
