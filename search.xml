@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[PAT-A1011题解]]></title>
+      <url>/2018/03/04/PAT-A1011%E9%A2%98%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<p>-模拟</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><ol>
+<li>World Cup Betting (20)</li>
+</ol>
+<p>时间限制<br>400 ms<br>内存限制<br>65536 kB<br>代码长度限制<br>16000 B<br>判题程序<br>Standard<br>作者<br>CHEN, Yue<br>With the 2010 FIFA World Cup running, football fans the world over were becoming increasingly excited as the best players from the best teams doing battles for the World Cup trophy in South Africa. Similarly, football betting fans were putting their money where their mouths were, by laying all manner of World Cup bets.</p>
+<p>Chinese Football Lottery provided a “Triple Winning” game. The rule of winning was simple: first select any three of the games. Then for each selected game, bet on one of the three possible results – namely W for win, T for tie, and L for lose. There was an odd assigned to each result. The winner’s odd would be the product of the three odds times 65%.</p>
+<p>For example, 3 games’ odds are given as the following:</p>
+<p> W    T    L<br>1.1  2.5  1.7<br>1.2  3.0  1.6<br>4.1  1.2  1.1<br>To obtain the maximum profit, one must buy W for the 3rd game, T for the 2nd game, and T for the 1st game. If each bet takes 2 yuans, then the maximum profit would be (4.1<em>3.0</em>2.5<em>65%-1)</em>2 = 37.98 yuans (accurate up to 2 decimal places).</p>
+<p>Input</p>
+<p>Each input file contains one test case. Each case contains the betting information of 3 games. Each game occupies a line with three distinct odds corresponding to W, T and L.</p>
+<p>Output</p>
+<p>For each test case, print in one line the best bet of each game, and the maximum profit accurate up to 2 decimal places. The characters and the number must be separated by one space.</p>
+<p>Sample Input<br>1.1 2.5 1.7<br>1.2 3.0 1.6<br>4.1 1.2 1.1<br>Sample Output<br>T T W 37.98</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">char</span> s[<span class="number">3</span>]=&#123;<span class="string">'W'</span>,<span class="string">'T'</span>,<span class="string">'L'</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">double</span> ans=<span class="number">1.0</span>,tem,a;</div><div class="line">	<span class="keyword">int</span> index;    <span class="comment">//记录最大的下标</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">2</span>;i++)&#123;</div><div class="line">		tem=<span class="number">0.0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">2</span>;j++)&#123;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;a);</div><div class="line">			<span class="keyword">if</span>(a&gt;tem)&#123;</div><div class="line">				tem=a;</div><div class="line">				index=j;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		ans*=tem;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%c "</span>,s[index]);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%.2f"</span>,(ans*<span class="number">0.65</span><span class="number">-1</span>)*<span class="number">2</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>; </div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> PAT题解目录 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Online judge </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PAT-B1028题解]]></title>
       <url>/2018/03/03/PAT-B1028%E9%A2%98%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>-查找</p>
