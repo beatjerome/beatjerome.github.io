@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[Python-note2]]></title>
+      <url>/2018/03/12/python-note2/</url>
+      <content type="html"><![CDATA[<p>-基本知识<br>-条件语句</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>if语句</strong><br>if语句用于检查语句<br><figure class="highlight hsp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//范例</span></div><div class="line">number=<span class="number">23</span></div><div class="line">guess = <span class="keyword">int</span> (<span class="keyword">input</span>(<span class="string">'Enter an integer:'</span>))</div><div class="line"></div><div class="line"><span class="keyword">if</span> guess==number:</div><div class="line">	<span class="meta">#新块开始</span></div><div class="line">	<span class="keyword">print</span>(<span class="string">'yes ,you guess it'</span>)</div><div class="line">	<span class="keyword">print</span>(<span class="string">'...'</span>)</div><div class="line">	<span class="meta">#新块结束</span></div><div class="line">elif guess&lt;number:</div><div class="line">	<span class="keyword">print</span>(<span class="string">'1'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">	<span class="keyword">print</span>(<span class="string">'no'</span>)</div></pre></td></tr></table></figure></p>
+<p>与C/C++不同的是，python的if选择语句不在使用括号，而在语句结尾添加：<br>while语句也是如此，就不再赘述</p>
+<hr>
+<p><strong>for循环</strong><br><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#<span class="keyword">case</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="keyword">range</span>(<span class="number">1</span>,<span class="number">5</span>):</div><div class="line">	print(i)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">	print(<span class="symbol">'The</span> <span class="keyword">for</span> <span class="keyword">loop</span> <span class="keyword">is</span> over')</div><div class="line">#output</div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">2</span></div><div class="line"><span class="number">3</span></div><div class="line"><span class="number">4</span></div><div class="line">The <span class="keyword">for</span> <span class="keyword">loop</span> <span class="keyword">is</span> over</div></pre></td></tr></table></figure></p>
+<p>range(1,5)输出序列【1,2,3,4】<br>如果向range函数提供三个参数，range(1,5,2)输出序列【1，3】<br>第三个参数是作为递增的间隔。</p>
+<p>break和continue与C/C++中无异</p>
+<hr>
+<p><strong>函数</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//范例</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">say_hello</span><span class="params">()</span>:</span></div><div class="line"><span class="comment">#该块属于这一函数</span></div><div class="line">	print(<span class="string">'hello world'</span>)</div><div class="line"><span class="comment">#函数结束</span></div><div class="line">	say_hello()</div><div class="line">	say_hello()</div></pre></td></tr></table></figure></p>
+<p>添加参数的函数与C/C++中无异</p>
+<hr>
+<p><strong>global语句</strong><br>如果要在函数中改变全局变量，需要用到global关键字，将其声明为并非局部变量。<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">x</span>=<span class="number">50</span></div><div class="line"></div><div class="line">def func():</div><div class="line">	<span class="keyword">global</span> <span class="keyword">x</span></div><div class="line">	print('<span class="keyword">x</span> is',<span class="keyword">x</span>)</div><div class="line">	<span class="keyword">x</span>=<span class="number">2</span></div><div class="line">	print('changed <span class="keyword">global</span> <span class="keyword">x</span> <span class="keyword">to</span>',<span class="keyword">x</span>)</div><div class="line">	func()</div><div class="line">	print('value of <span class="keyword">x</span> is',<span class="keyword">x</span>)</div></pre></td></tr></table></figure></p>
+<hr>
+<p>默认参数值与C++相同</p>
+<hr>
+<p><strong>条件语句的开始与结束</strong><br>python的块是由缩进来决定的。<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#缩进决定条件语句的开始与结束</span></div><div class="line"><span class="built_in">number</span> = <span class="number">23</span></div><div class="line">guess int(input('Enter a <span class="built_in">integer</span>: '))</div><div class="line"><span class="keyword">if</span> <span class="built_in">number</span>==guess:</div><div class="line">	print('<span class="number">1</span><span class="string">")</span></div><div class="line"><span class="string">	print("</span><span class="number">2</span><span class="string">")</span></div></pre></td></tr></table></figure></p>
+<p>什么意思呢？就是说python的条件语句的开始与结束是缩进决定的。开始缩进则进入，结束缩进则退出。</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Python programming language </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[电路交换与分组交换]]></title>
       <url>/2018/03/12/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E4%B8%8E%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/</url>
       <content type="html"><![CDATA[<p>-区别三种交换技术</p>
