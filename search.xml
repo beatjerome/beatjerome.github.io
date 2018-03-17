@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[机器学习之西瓜书-note1]]></title>
+      <url>/2018/03/17/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A5%BF%E7%93%9C%E4%B9%A6-note1/</url>
+      <content type="html"><![CDATA[<p>-诸论<br>-基本术语介绍</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong><font size="5">『第一章 诸论』</font></strong><br><strong><font size="5">『1.1 引言』</font></strong><br><strong>学习算法</strong>：机器学习所研究的主要内容，是关于在计算机上从数据中产生“模型”的算法，即“学习算法”。</p>
+<p><strong>学习算法的作用</strong>：<br>1.基于提供的经验数据产生模型；<br>2.面对新情况时，模型可提供相应的判断。</p>
+<p><strong>模型</strong>：泛指从数据中学得的结果。</p>
+<hr>
+<p><strong><font size="5">『1.2 基本术语』</font></strong><br><strong>数据集</strong>：记录的集合<br><strong>示例/样本/特征向量</strong>：每条记录或空间中的每个点<br><strong>属性/特征</strong>：反映事件或对象在某方面的表现或性质的事项<br><strong>属性值</strong>：属性上的取值<br><strong>属性空间/样本空间/输入空间</strong>：属性张成的空间<br><strong>维数</strong>：示例的属性描述个数<br><strong>学习/训练</strong>：从数据中学的模型的过程<br><strong>训练数据</strong>：训练过程中使用的数据<br><strong>训练样本</strong>：训练过程中使用数据的每个样本<br><strong>训练集</strong>：训练样本组成的集合<br><strong>假设</strong>：学得模型对应了关于数据的某种潜在数据<br><strong>真实/真相</strong>：这种潜在规律本身<br><strong>学习器</strong>：学习算法在给定数据和参数空间上的实例化<br><strong>标记</strong>：关于示例结果的信息<br><strong>样例</strong>：拥有了标记信息的示例<br><strong>标记空间/输出空间</strong>：所有标记的集合<br><img src="//img-blog.csdn.net/20180316232806599" alt="这里写图片描述"><br><strong>测试</strong>：学得模型后，使用其进行预测的过程<br><strong>测试样本</strong>：被预测的样本<br><strong>聚类</strong>：将新联系中的样例分成若干组<br><strong>簇</strong>：每组称为一个簇，这些自动形成的簇可能对应一些潜在的概念划分<br><img src="//img-blog.csdn.net/20180317012109324?" alt="这里写图片描述"></p>
+<font size="5">机器学习的目标是使学得的模型能很好地适用于新样本，而不仅仅是在训练样本上工作得很好</font><br><strong>泛化能力</strong>：学得模型适用于新样本的能力<br><br>—<br><strong><font size="5">『1.3 假设空间』</font></strong><br>归纳与演绎是科学推理的两大基本手段；<br><img src="//img-blog.csdn.net/20180317012914931?" alt="这里写图片描述"><br><br>归纳学习有狭义与广义之分；<br>广义的归纳学习大体相当于从样例中学习；<br>狭义的归纳学习要求从训练数据中学得概念。因此也称为<strong>概念学习/概念形成</strong><br><br>概念学习中最基本的是<strong>布尔概念学习</strong>。也就是对“是”“不是”这样的可表示为0/1布尔值的目标概念的学习。<br><br><strong>学习过程</strong>可看作一个在所有假设组成的空间中进行搜索的过程，<strong>搜索目标</strong>是找到与训练集匹配的假设。<br><br><strong>假设空间</strong>：机器学习中可能的函数构成的空间称为“假设空间”<br><strong>版本空间</strong>：一个与训练集一致的“假设集合”<br><br>『假设空间规模问题』<br>1.如果某一属性值无论取什么值都合适，用通配符”<em>“来表示<br>2.概念根本就不存在，用ø来表示<br>书中西瓜的例子，有”色泽“”根蒂“”敲声“三种属性，每个属性又有“三种”可能值，但是事实上面临的假设空间大小规模为4</em>4<em>4+1=65。这是因为“无论取什么值都合适”也是一种属性值。也就是说，事实上，每种属性有四种取值，3+都合适。<br>4（色泽）</em>4（根蒂）<em>4（敲声）+1（好瓜概念不存在）=65<br><br><br><br><br>—<br><strong><font size="5">『1.4 归纳偏好』</font></strong><br><em>*归纳偏好/偏好</em></em>：机器学习算法在学习过程中对某种类型假设的偏好<br><br><font size="5">任何一个“正确”的模型的学习算法必须有某种偏好</font>
+
+<p><strong>“奥卡姆剃刀”原则</strong>：若有多个假设与观察一致，则选最简单的那个<br>奥卡姆剃刀并非唯一可行的原则，奥卡姆剃刀本身就存在不同的诠释</p>
+<p><strong>”没有免费的午餐“定理（NFL定理）</strong>：总误差与算法无关<br><strong>1</strong>.没有一个学习算法可以在任何领域总是产生最准确的学习器。不管采用何种学习算法，至少存在一个目标函数，能够使得随机猜测算法是更好的算法。<br><strong>2</strong>.NFL定理最重要的寓意：脱离具体问题，空泛地谈论”什么学习算法更好“毫无意义，因为若考虑所有潜在的问题，则所有学习算法一样好。</p>
+<hr>
+<p><strong><font size="5">『习题』</font></strong><br><strong>1.1</strong> 表1.1中若只包含编号为1和4的两个样例，试给出相应的版本空间。<br><strong>答</strong>：因为编号1和编号4的三个属性值均不相同。与训练集一致的假设集合为版本空间。<br>其取值则共有七种，其合取式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">（色泽＝青绿）∧（根蒂＝ ∗ ）∧（敲声＝ ∗ ）</div><div class="line"></div><div class="line">（色泽＝ ∗ ）∧（根蒂＝蜷缩）∧（敲声＝ ∗ ）</div><div class="line"></div><div class="line">（色泽＝ ∗ ）∧（根蒂＝ ∗ ）∧（敲声＝浊响）</div><div class="line"></div><div class="line">（色泽＝青绿）∧（根蒂＝蜷缩）∧（敲声＝ ∗ ）</div><div class="line"></div><div class="line">（色泽＝青绿）∧（根蒂＝ ∗ ）∧（敲声＝浊响）</div><div class="line"></div><div class="line">（色泽＝ ∗ ）∧（根蒂＝蜷缩）∧（敲声＝浊响）</div><div class="line"></div><div class="line">（色泽＝青绿）∧（根蒂＝蜷缩）∧（敲声＝浊响）</div></pre></td></tr></table></figure>
+<p><strong>1.2</strong> 与使用单个合取式来进行假设表示相比，使用“析合范式”将使得假设空间具有更强的表示能力。例如：<br>好瓜←→（(色泽=<em>)∧(根蒂=蜷缩)∧(敲声=</em>)）∨（(色泽=乌黑)∧(根蒂=*)∧(敲声=沉闷)）<br>会把“（(色泽=青绿)∧(根蒂=蜷缩)∧(敲声=清脆)）”以及“（(色泽=乌黑)∧(根蒂=硬挺)∧(敲声=沉闷)）”都分类为“好瓜”。<br>若使用最多包含k个合取式的析合范式来表达表1.1西瓜分类问题的假设空间，试估算共有多少种可能的假设。</p>
+<p><strong>答</strong>：此表的色泽属性只有：1.青绿、2.乌黑 两种属性值，故其假设空间规模大小为： 3×4×4+1=49种。<br>k的最大值为49。<br>因此，可能的假设有2<sup>49</sup>中可能的假设。</p>
+<p><strong>1.3</strong>1.3 若数据包含噪声，则假设空间中有可能不存在与所有训练样本都一致的假设。在此情形下，试设计一种归纳偏好用于假设选择。<br><strong>答</strong>：在训练过程中选取满足样本最多的假设</p>
+<p><strong>1.4</strong> 本章1.4节在论述“没有免费的午餐”定理时，默认使用了“分类错误率”作为性能度量来对分类器进行评估。若换用其他性能度量l,试证明没有免费的午餐”定理仍成立。<br><strong>答</strong>：还是考虑二分类的问题， NFL首先要保证真实目标函数​ 均匀分布，对于有​个样本的二分类问题，显然​共有​ 种情况。其中一半是与假设一致的，此时，​应该是个常数，隐含的条件就是（一个比较合理的充分条件）​ 。如果不满足，NFL不成立。</p>
+<p><strong>1.5</strong>试述机器学习能在互联网搜索的哪些环节起什么作用。<br><strong>答</strong>：<br>最常见的，消息推送，比如淘宝发送的某些感兴趣的商品。（商品推荐，物品推荐）<br>网站相关度排行，通过点击量，网页内容进行综合分析。<br>图片搜索，现在大部分是通过标签来搜索，不过基于像素的搜索总会有把。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Learning notes </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Machine learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[自顶向下-note1]]></title>
       <url>/2018/03/16/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B-note1/</url>
       <content type="html"><![CDATA[<p>-计算机网络基础<br>-分组交换电路交换<br>-分层模型</p>
@@ -293,44 +331,6 @@
         <tags>
             
             <tag> Online judge </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[机器学习之西瓜书-note1]]></title>
-      <url>/2018/03/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A5%BF%E7%93%9C%E4%B9%A6-note1/</url>
-      <content type="html"><![CDATA[<p>-诸论<br>-基本术语介绍</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong><font size="5">『第一章 诸论』</font></strong><br><strong><font size="5">『1.1 引言』</font></strong><br><strong>学习算法</strong>：机器学习所研究的主要内容，是关于在计算机上从数据中产生“模型”的算法，即“学习算法”。</p>
-<p><strong>学习算法的作用</strong>：<br>1.基于提供的经验数据产生模型；<br>2.面对新情况时，模型可提供相应的判断。</p>
-<p><strong>模型</strong>：泛指从数据中学得的结果。</p>
-<hr>
-<p><strong><font size="5">『1.2 基本术语』</font></strong><br><strong>数据集</strong>：记录的集合<br><strong>示例/样本/特征向量</strong>：每条记录或空间中的每个点<br><strong>属性/特征</strong>：反映事件或对象在某方面的表现或性质的事项<br><strong>属性值</strong>：属性上的取值<br><strong>属性空间/样本空间/输入空间</strong>：属性张成的空间<br><strong>维数</strong>：示例的属性描述个数<br><strong>学习/训练</strong>：从数据中学的模型的过程<br><strong>训练数据</strong>：训练过程中使用的数据<br><strong>训练样本</strong>：训练过程中使用数据的每个样本<br><strong>训练集</strong>：训练样本组成的集合<br><strong>假设</strong>：学得模型对应了关于数据的某种潜在数据<br><strong>真实/真相</strong>：这种潜在规律本身<br><strong>学习器</strong>：学习算法在给定数据和参数空间上的实例化<br><strong>标记</strong>：关于示例结果的信息<br><strong>样例</strong>：拥有了标记信息的示例<br><strong>标记空间/输出空间</strong>：所有标记的集合<br><img src="//img-blog.csdn.net/20180316232806599" alt="这里写图片描述"><br><strong>测试</strong>：学得模型后，使用其进行预测的过程<br><strong>测试样本</strong>：被预测的样本<br><strong>聚类</strong>：将新联系中的样例分成若干组<br><strong>簇</strong>：每组称为一个簇，这些自动形成的簇可能对应一些潜在的概念划分<br><img src="//img-blog.csdn.net/20180317012109324?" alt="这里写图片描述"></p>
-<font size="5">机器学习的目标是使学得的模型能很好地适用于新样本，而不仅仅是在训练样本上工作得很好</font><br><strong>泛化能力</strong>：学得模型适用于新样本的能力<br><br>—<br><strong><font size="5">『1.3 假设空间』</font></strong><br>归纳与演绎是科学推理的两大基本手段；<br><img src="//img-blog.csdn.net/20180317012914931?" alt="这里写图片描述"><br><br>归纳学习有狭义与广义之分；<br>广义的归纳学习大体相当于从样例中学习；<br>狭义的归纳学习要求从训练数据中学得概念。因此也称为<strong>概念学习/概念形成</strong><br><br>概念学习中最基本的是<strong>布尔概念学习</strong>。也就是对“是”“不是”这样的可表示为0/1布尔值的目标概念的学习。<br><br><strong>学习过程</strong>可看作一个在所有假设组成的空间中进行搜索的过程，<strong>搜索目标</strong>是找到与训练集匹配的假设。<br><br><strong>假设空间</strong>：机器学习中可能的函数构成的空间称为“假设空间”<br><strong>版本空间</strong>：一个与训练集一致的“假设集合”<br><br>『假设空间规模问题』<br>1.如果某一属性值无论取什么值都合适，用通配符”<em>“来表示<br>2.概念根本就不存在，用ø来表示<br>书中西瓜的例子，有”色泽“”根蒂“”敲声“三种属性，每个属性又有“三种”可能值，但是事实上面临的假设空间大小规模为4</em>4<em>4+1=65。这是因为“无论取什么值都合适”也是一种属性值。也就是说，事实上，每种属性有四种取值，3+都合适。<br>4（色泽）</em>4（根蒂）<em>4（敲声）+1（好瓜概念不存在）=65<br><br><br><br><br>—<br><strong><font size="5">『1.4 归纳偏好』</font></strong><br><em>*归纳偏好/偏好</em></em>：机器学习算法在学习过程中对某种类型假设的偏好<br><br><font size="5">任何一个“正确”的模型的学习算法必须有某种偏好</font>
-
-<p><strong>“奥卡姆剃刀”原则</strong>：若有多个假设与观察一致，则选最简单的那个<br>奥卡姆剃刀并非唯一可行的原则，奥卡姆剃刀本身就存在不同的诠释</p>
-<p><strong>”没有免费的午餐“定理（NFL定理）</strong>：总误差与算法无关<br><strong>1</strong>.没有一个学习算法可以在任何领域总是产生最准确的学习器。不管采用何种学习算法，至少存在一个目标函数，能够使得随机猜测算法是更好的算法。<br><strong>2</strong>.NFL定理最重要的寓意：脱离具体问题，空泛地谈论”什么学习算法更好“毫无意义，因为若考虑所有潜在的问题，则所有学习算法一样好。</p>
-<hr>
-<p><strong><font size="5">『习题』</font></strong><br><strong>1.1</strong> 表1.1中若只包含编号为1和4的两个样例，试给出相应的版本空间。<br><strong>答</strong>：因为编号1和编号4的三个属性值均不相同。与训练集一致的假设集合为版本空间。<br>其取值则共有七种，其合取式为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">（色泽＝青绿）∧（根蒂＝ ∗ ）∧（敲声＝ ∗ ）</div><div class="line"></div><div class="line">（色泽＝ ∗ ）∧（根蒂＝蜷缩）∧（敲声＝ ∗ ）</div><div class="line"></div><div class="line">（色泽＝ ∗ ）∧（根蒂＝ ∗ ）∧（敲声＝浊响）</div><div class="line"></div><div class="line">（色泽＝青绿）∧（根蒂＝蜷缩）∧（敲声＝ ∗ ）</div><div class="line"></div><div class="line">（色泽＝青绿）∧（根蒂＝ ∗ ）∧（敲声＝浊响）</div><div class="line"></div><div class="line">（色泽＝ ∗ ）∧（根蒂＝蜷缩）∧（敲声＝浊响）</div><div class="line"></div><div class="line">（色泽＝青绿）∧（根蒂＝蜷缩）∧（敲声＝浊响）</div></pre></td></tr></table></figure>
-<p><strong>1.2</strong> 与使用单个合取式来进行假设表示相比，使用“析合范式”将使得假设空间具有更强的表示能力。例如：<br>好瓜←→（(色泽=<em>)∧(根蒂=蜷缩)∧(敲声=</em>)）∨（(色泽=乌黑)∧(根蒂=*)∧(敲声=沉闷)）<br>会把“（(色泽=青绿)∧(根蒂=蜷缩)∧(敲声=清脆)）”以及“（(色泽=乌黑)∧(根蒂=硬挺)∧(敲声=沉闷)）”都分类为“好瓜”。<br>若使用最多包含k个合取式的析合范式来表达表1.1西瓜分类问题的假设空间，试估算共有多少种可能的假设。</p>
-<p><strong>答</strong>：此表的色泽属性只有：1.青绿、2.乌黑 两种属性值，故其假设空间规模大小为： 3×4×4+1=49种。<br>k的最大值为49。<br>因此，可能的假设有2<sup>49</sup>中可能的假设。</p>
-<p><strong>1.3</strong>1.3 若数据包含噪声，则假设空间中有可能不存在与所有训练样本都一致的假设。在此情形下，试设计一种归纳偏好用于假设选择。<br><strong>答</strong>：在训练过程中选取满足样本最多的假设</p>
-<p><strong>1.4</strong> 本章1.4节在论述“没有免费的午餐”定理时，默认使用了“分类错误率”作为性能度量来对分类器进行评估。若换用其他性能度量l,试证明没有免费的午餐”定理仍成立。<br><strong>答</strong>：还是考虑二分类的问题， NFL首先要保证真实目标函数​ 均匀分布，对于有​个样本的二分类问题，显然​共有​ 种情况。其中一半是与假设一致的，此时，​应该是个常数，隐含的条件就是（一个比较合理的充分条件）​ 。如果不满足，NFL不成立。</p>
-<p><strong>1.5</strong>试述机器学习能在互联网搜索的哪些环节起什么作用。<br><strong>答</strong>：<br>最常见的，消息推送，比如淘宝发送的某些感兴趣的商品。（商品推荐，物品推荐）<br>网站相关度排行，通过点击量，网页内容进行综合分析。<br>图片搜索，现在大部分是通过标签来搜索，不过基于像素的搜索总会有把。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Learning notes </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine learning </tag>
             
         </tags>
         
