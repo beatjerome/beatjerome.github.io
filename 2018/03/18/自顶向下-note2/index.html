@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/1.jpeg?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.jpeg?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.jpeg?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/1.jpeg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="NetWork," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="-应用层协议-FTP-HTTP-电子邮件系统">
+<meta name="keywords" content="NetWork">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自顶向下-note2">
+<meta property="og:url" content="http://yoursite.com/2018/03/18/自顶向下-note2/index.html">
+<meta property="og:site_name" content="Grocery">
+<meta property="og:description" content="-应用层协议-FTP-HTTP-电子邮件系统">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-03-18T11:29:43.633Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自顶向下-note2">
+<meta name="twitter:description" content="-应用层协议-FTP-HTTP-电子邮件系统">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/18/自顶向下-note2/"/>
+
+
+
+
+
+  <title>自顶向下-note2 | Grocery</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Grocery</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">作死のBlog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/Tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/Archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/18/自顶向下-note2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="城南小青龙">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/4.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Grocery">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">自顶向下-note2</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-18T19:28:45+08:00">
+                2018-03-18
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2018-03-18T19:29:43+08:00">
+                2018-03-18
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Learning-notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  5,144
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  18
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>-应用层协议<br>-FTP<br>-HTTP<br>-电子邮件系统</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><font size="5">『第二章 应用层』</font><br><font size="5">『2.1 应用层协议原理』</font><br><strong><font size="5">网络应用程序体系结构</font></strong><br>研究网络应用的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。<br>应用程序体系结构由应用程序研发者设计、规定了如何在各终端系统上阻止该程序。<br>应用程序体系结构有两种主流的体系结构：<strong>客户-服务器结构</strong>和<strong>对等（P2P）体系结构</strong>。<br><br><strong>客户-服务器结构</strong><br>1.其中，有一个总是打开的主机成为<strong>服务器</strong>。<br>2.在客户-服务器结构中，客户之间并不直接通信。<br>3.服务器具有固定的、周知的地址，称为<strong>IP地址</strong>，客户通过向服务器的IP地址发送分组来与其联系。<br><font color="#00008B" size="4">具有客户-服务器体系结构的非常著名的应用程序包括Web、FTP、Telnet和电子邮件</font>
+
+<p><strong>P2P体系结构</strong><br>1.对位于数据中心的专用服务器有最小的（或没有）依赖<br>2.应用程序在间断连接的主机之间使用直接通信，这些主机对被称为<strong>对等方</strong></p>
+<font color="#00008B" size="4">许多目前流行的、流量密集型的应用都是P2P体系结构的，包括文件共享、对等方协助下载加速器（迅雷）、因特网电话（skype）和IPTV（迅雷看看和PPstream）</font>
+
+<p>P2P具有<strong>自扩展性</strong>。在一个P2P文件共享应用中，尽管每个对等方都由于请求文件产生工作量，但每个对等方通过向其他对等方分发文件也为系统增加了服务能力。</p>
+<hr>
+<p><strong><font size="5">进程通信</font></strong><br>在操作系统的术语中，进行通信的实际上是<strong>进程</strong>，而不是程序。<br>一个进程可以被认为是运行在端系统中的一个程序。当进程运行在相同的端系统上时，它们使用进程间通信机制相互通信。<br>进程间通信的规则由端系统上的操作系统确定。</p>
+<p>在两个不同端系统上的进程，通过跨越计算机网络交换<strong>报文</strong>而相互通信。<br>发送进程生成并向网络中发送报文；<br>接受进程接受这些报文并可能通过将报文发送回去进行响应。</p>
+<p><strong>1.客户和服务器进程</strong><br>网络应用程序有成对的进程组成，这些进程通过网络相互发送报文。对每对通信进程，通常将这两个进程之一标识为<strong>客户</strong>，而另一个进程标识为<strong>服务器</strong>。</p>
+<font color="#00008B" size="4">在给定的一对进程之间的通信会话场景中，发起通信（即在该回话开始时发送与其他进程的联系）的进程被称为<strong>客户</strong>，在会话开始时等待联系的进程是<strong>服务器</strong></font>
+
+<p><strong>2.进程与计算机网络之间的接口</strong><br>进程通过一个称为<strong>套接字</strong>的软件接口向网络发送报文和从网络接受报文。<br>套接字也成为应用程序和网络之间的<strong>应用程序编程接口</strong></p>
+<p><strong>3.进程寻址</strong><br>在一台主机上运行的进程为了向在另一台主机上运行的进程发送分组，接受进程需要有一个地址。为了标识该接受进程，需要定义两种信息：①主机的地址；②定义在目的主机中的接受进程的标识符。</p>
+<font color="#00008B" size="4">在因特网中，<strong>主机</strong>由其IP地址标识</font><br>除了知道报文送往目的地的主机地址以外，发送进程还必须指定运行在接受主机上的接受进程。<br>目的地<strong>端口号</strong>就用于这个目的。<br><br>—<br><strong><font size="5">可供应用程序使用的运输服务</font></strong><br>套接字是应用程序进程和运输层协议之间的接口。<br>一个运输层协议可以提供以下集中服务：<br>1.可靠数据传输<br>2.吞吐量<br>3.定时<br>4.安全性<br><br><br><strong>可靠数据传输</strong><br>运输层协议能够潜在的向应用程序提供一个重要服务是进程到进程的可靠数据传输。当一个运输协议提供这种服务时，发送进程只要将其数据传递进套接字，就可以完全相信该数据能无差错地到达接收进程。<br><br><strong>吞吐量</strong><br>运输层协议能够以某种特定速率提供确保的可用吞吐量。<br>具有吞吐量要求的应用程序被称为<strong>带宽敏感应用</strong><br>相对的，<strong>弹性应用</strong>则可根据情况或多或少的利用可供使用的吞吐量。<br><br><strong>定时</strong><br>运输层协议可以提供定时保证。一个保证的例子如：发送方注入进套接字中的每个比特到达接收方的套接字不迟于100ms<br><br><strong>安全性</strong><br>运输协议能够加密由发送进程传输的所有数据，在接受主机中，运输层协议能够在将数据交付给接收进程之前解密这些数据。<br><br>—<br><strong><font size="5">因特网提供的传输服务</font></strong><br>因特网为应用程序提供两个运输层协议 ，即<strong>UDP</strong>和<strong>TCP</strong>。<br><br><strong>TCP服务</strong><br>TCP服务模型包括<strong>面向连接服务</strong>和<strong>可靠数据传输服务</strong>。当某个应用程序调用TCP作为其运输协议时，该应用程序就能获得来自TCP的这两种服务。<br><strong>面向连接的服务</strong>：在应用层数据报文开始流动之前，TCP让客户和服务器互相交换运输层控制信息。这个所谓握手过程提示客户和服务器，使它们为大量分组的到来做好准备。在握手阶段后，一个<strong>TCP连接</strong>就在两个进程的套接字之间建立了。这条连接是全双工的。当应用程序结束报文发送时，必须拆除该连接。<br><strong>可靠的数据传送服务</strong><br>通信进程能够依靠TCP，无差错、按适当顺序交付所有发送的数据。当应用程序的一段将字节流传进套接字时，它能够依靠TCP将相同的字节流交付给接收方的套接字，而保证没有字节的丢失和冗余。<br><br>TCP协议还具有拥塞控制机制。当发送方和接收方之间的网络发生拥塞时，TCP的拥塞控制机制会抑制发送进程。<br><font color="#00008B" size="4">无论是TCP还是UDP都没有提供任何加密机制。研制了TCP的加强版本，称为<strong>安全套接字层</strong>，SSL。SSL不是与TCP和UDP在同一层次上的第三种因特网传输协议，而是一种对TCP的加强，这种强化是在应用层上实现的。</font>
+
+<p><strong>UDP服务</strong><br>UDP是一种不提供不必要服务的轻量级运输协议，它仅仅提供最小服务。UDP是无连接的，因此在两个进程通信前没有握手过程。UDP协议提供一种不可靠数据传送服务。UDP没有拥塞控制机制。</p>
+<hr>
+<p><strong><font size="5">应用层协议</font></strong><br><strong>应用层协议</strong>定义了运行在不同端系统上的应用程序进程如何相互传递报文；<br>应用层协议定义了：<br>1.交换的报文类型，例如：请求报文和响应报文<br>2.各种报文类型的语法，如报文中的各个字段及这些字段是如何描述的<br>3.字段的语义，即这些字段中包含的信息的含义<br>4.一个进程何时以及如何发送报文，对报文进行响应的规则</p>
+<hr>
+<font size="5">『2.2 Web和HTTP』</font><br><strong><font size="5">HTTP概况</font></strong><br>Web的应用层协议是<strong>超文本传输协议</strong>，<strong>HTTP</strong>，它是Web的核心。<br>HTTP由两个程序实现：一个客户程序和一个服务器程序。客户程序和服务器程序运行在不同的端系统中，通过交换HTTP报文进行会话。HTTP定义了这些报文的结构以及客户和程序进行报文交换的方式。<br><br><br><strong>Web页面</strong>是由<strong>对象</strong>组成的。一个<strong>对象</strong>只是一个文件。多数Web页面含有一个HTML基本文件以及几个引用对象。HTML基本文件通过对象的URL地址引用页面中的其他对象。每个<strong>URL地址</strong>由两部分组成：存放对象的服务器主机名和对象的路径名。<br><br><strong>Web服务器</strong>实现了HTTP的服务器端，用于存储Web对象，每个对象由URL寻址。<br><br><font color="#00008B" size="4">HTTP定义了Web客户向Web服务器请求Web页面的方式，以及服务器向客户传送Web页面的方式。</font>
+
+<p>HTTP使用TCP作为它的支撑运输协议。HTTP并不保存关于客户的任何信息，所以HTTP是一个<strong>无状态协议</strong>。</p>
+<p><strong>非持续连接和持续连接</strong><br><strong>非持续连接</strong>：每个请求/响应对是经一个单独的TCP连接发送<br><strong>持续连接</strong>：所有的请求以及响应经相同的TCP连接发送 </p>
+<p><strong>往返时间</strong>：往返时间（RTT）是指一个短分组从客户到服务器然后再返回客户所花费的时间。<br><strong>“三次握手”过程</strong>：客户向服务器发送一个小TCP报文段，服务器用一个小TCP报文段做出确认和响应。最后，客户向服务器返回确认。完成三次握手后，向该TCP连接发送一个HTTP请求报文。</p>
+<font color="#00008B" size="4">粗略来讲，总的响应时间就是两个RTT加上服务器传输HTML的时间。</font>
+
+
+
+<hr>
+<p><strong><font size="5">HTTP报文格式</font></strong><br>HTTP报文有两种：<br>1.请求报文<br>2.响应报文</p>
+<p><strong><font size="5">请求报文</font></strong><br>HTTP请求报文的第一行叫做<strong>请求行</strong>，其后继的行叫做<strong>首部行</strong>。<br><strong>请求行</strong>有3个字段:<br>1.方法字段<br>2.URL字段<br>3.HTTP版本字段</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">GET</span> <span class="string">/somedir/page.html</span> HTTP/1.1</div></pre></td></tr></table></figure>
+<p>方法字段可以取几种不同的值：<strong>GET</strong>、<strong>POST</strong>、<strong>HEAD</strong>、<strong>PUT</strong>和<strong>DELETE</strong>。绝大部分HTTP请求报文使用GET方法。URL字段带有请求对象的标识。</p>
+<p><strong>首部行</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Host： </div><div class="line">www<span class="selector-class">.someschool</span><span class="selector-class">.edu</span></div></pre></td></tr></table></figure></p>
+<p>首部行指明了对象所在的主机。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Connection： <span class="built_in">close</span></div></pre></td></tr></table></figure>
+<p>告诉服务器不希望麻烦地使用持续连接，它要求服务器在发送完被请求对象后就关闭这条连接。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">User</span>-agent： Mozilla/<span class="number">5.0</span></div></pre></td></tr></table></figure>
+<p>指明用户代理，即向服务器发送请求的浏览器类型。</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Accept</span>-language： fr</div></pre></td></tr></table></figure>
+<p>表示用户想得到该对象的法语版本</p>
+<p><strong><font size="5">响应报文</font></strong><br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</div><div class="line">Connection： close</div><div class="line"><span class="built_in">Date</span>： Tue， <span class="number">09</span> Aug <span class="number">2011</span> <span class="number">15</span>:<span class="number">44</span>:<span class="number">04</span> GMT</div><div class="line">Server: Apache/<span class="number">2.2</span><span class="number">.3</span> (CentOS)</div><div class="line">Last<span class="params">-Modified</span>: Tue，<span class="number">09</span> Aug <span class="number">2011</span> <span class="number">15</span>:<span class="number">11</span>:<span class="number">03</span> GMT</div><div class="line">Content<span class="params">-Length</span>: <span class="number">6821</span></div><div class="line">Content<span class="params">-Type</span>: text/html</div><div class="line"></div><div class="line">(<span class="built_in">data</span> <span class="built_in">data</span> <span class="built_in">data</span> <span class="built_in">data</span> <span class="built_in">data</span> <span class="params">...</span>)</div></pre></td></tr></table></figure></p>
+<p>这个响应报文有三个部分：一个初始<strong>状态行</strong>，6个<strong>首部行</strong>，然后是<strong>实体主体</strong>。<br>实体主体部分是报文的主要部分，它包含了所请求的对象本身（表示为data data data data data …）。<br>状态行有三个字段：<strong>协议版本字段</strong>、<strong>状态码</strong>和相应<strong>状态信息</strong>。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</div><div class="line"><span class="comment">//该状态行指示服务器正在使用HTTP/1.1，并且一切正常</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Connection： <span class="built_in">close</span></div><div class="line"><span class="comment">//该首部行告诉客户，发送完报文后将关闭该TCP连接。</span></div></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Date</span>： <span class="selector-tag">Tue</span>， <span class="selector-tag">09</span> <span class="selector-tag">Aug</span> <span class="selector-tag">2011</span> <span class="selector-tag">15</span><span class="selector-pseudo">:44</span><span class="selector-pseudo">:04</span> <span class="selector-tag">GMT</span></div><div class="line"><span class="comment">//该首部行指示服务器产生并发送该响应报文的日期和时间</span></div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Server</span>: Apache/<span class="number">2.2</span><span class="number">.3</span> (CentOS)</div><div class="line"><span class="comment">//该首部行指示该报文是由一台Apache Web服务器产生的</span></div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Last-<span class="string">Modified:</span> Tue，<span class="number">09</span> Aug <span class="number">2011</span> <span class="number">15</span>:<span class="number">11</span>:<span class="number">03</span> GMT</div><div class="line"><span class="comment">//该首部行指示了对象创建或者最后修改的时间</span></div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Content-<span class="string">Length:</span> <span class="number">6821</span></div><div class="line"><span class="comment">//该首部行指示了被发送对象的字节数</span></div></pre></td></tr></table></figure>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Content-<span class="built_in">Type</span>: <span class="built_in">text</span>/html</div><div class="line"><span class="comment">//该首部行指示了实体主体中的对象是HTML文本</span></div></pre></td></tr></table></figure>
+<p> 状态码及其相应的短语指示了请求的结果：</p>
+<font color="#00008B" size="3"> 200 OK: 请求成功，信息在返回的响应报文中<br> 301 Moved Permanently： 请求的对象已经被永久转移了，新的URL定义在响应报文的<br>Location：首部行中。客户软件将自动获取新的URL。<br> 400 Bad Request： 一个通用差错代码，指示该请求不能被服务器理解。<br> 404 Not Found： 被请求的文档不在服务器上。<br> 505 HTTP Version Not Supported：服务器不支持请求报文使用的HTTP协议版本。<br></font>
+
+
+<hr>
+<p><strong><font size="5">用户与服务器的交互</font></strong><br>Web站点希望能够识别用户，为此，HTTP使用了<strong>cookie</strong><br>cookie技术有4个组件：<br>1.在HTTP响应报文中的一个cookie首部行；<br>2.在HTTP请求报文中的一个cookie首部行；<br>3.在用户端系统中保留有一个cookie文件，并由用户的浏览器进行管理；<br>4.位于Web站点的一个后端数据库。</p>
+<hr>
+<p><strong><font size="5">Web缓存</font></strong><br><strong>Web缓存器</strong>也叫<strong>代理服务器</strong>，它是能够代表初始Web服务器来满足HTTP请求的网络实体。Web缓存器有自己的磁盘存储空间，并在存储空间中保存最近请求过的对象副本。</p>
+<p>因特网部署Web缓存器有两个原因。<br>首先，Web缓存器可以大大减少对客户请求的响应时间。<br>其次，Web缓存器能够大大减少一个机构的接入链路到因特网的通信量。</p>
+<p><strong>条件GET方法</strong><br>条件GET请求报文：<br>1.请求报文使用GET方法<br>2.请求报文中包含一个“If-Modified-Since: ”首部行</p>
+<hr>
+<font size="5">『2.3 文本传输协议：FTP』</font><br><strong>HTTP</strong>和<strong>FTP</strong>都是文本传输协议，并且有很多共同的特点。例如：都运行在TCP上。<br>然而，这两个应用层协议也有一些重要区别，最显著的就是FTP使用两个并行的TCP连接来传输文件：<strong>控制连接</strong>和<strong>数据连接</strong>。<br><strong>控制连接</strong>：用于两主机之间传输控制信息，如用户标识，口令，改变远程目录的命令以及“存放”和“获取”文件的命令。<br><strong>数据连接</strong>：用于实际发送一份文件。<br>FTP使用控制连接来传输控制信息，因此FTP控制信息是<strong>带外</strong>传送的。<br>HTTP协议是在传输文件的同一个TCP连接中发送请求和响应首部行的。HTTP是<strong>带内</strong>发送控制信息的。<br><font color="#00008B" size="3">FTP服务器必须在整个会话期间保留用户的<strong>状态</strong>。HTTP则是无状态的，它不必对任何用户状态进行追踪</font>
+
+<p><strong>FTP命令</strong></p>
+<font color="#00008B" size="3">常见的命令如下：<br>USER username: 用于向服务器传送用户标识<br>PASS password: 用于向服务器发送用户口令<br>LIST: 用于请求服务器会送当前远程目录中的所有文件列表。该文件列表是经一个（新建且非持续连接）数据连接传送的，而不是在控制TCP连接上传送。<br>RETR filename: 用于在远程主机的当前目录检索文件。该命令引起远程主机发起一个数据连接，并经该数据连接发送所请求的文件。<br>STOR filename: 用于在远程主机的当前目录上存放文件。</font>
+
+<hr>
+<font size="5">『2.4 因特网中的电子邮件』</font><br>因特网电子邮件系统主要由三个主要部分：<strong>用户代理</strong>，<strong>邮件服务器</strong>和<strong>简单邮件传输协议</strong>。<br><strong>SMTP</strong>是因特网电子邮件中主要的应用层协议。它使用TCP可靠数据传输服务，从发送方的邮件服务器向接收方的邮件服务器发送邮件。<br><br><strong><font size="5">SMTP</font></strong><br>SMTP是电子邮件应用的核心。<br><strong>HTTP</strong>：<br>1.从Web服务器向Web客户传送文件<br>2.进行文件传输时，使用持续连接<br>3.HTTP是<strong>拉协议</strong>，从服务器拉取信息<br>4.HTTP数据不受限制<br>5.HTTP把每个对象封装到他自己的HTTP响应报文中<br><strong>SMTP</strong>：<br>1.从发送邮件服务器到接收邮件服务器<br>2.进行文件传输时，使用持续连接<br>3.SMTP是<strong>推协议</strong>，发送邮件服务器把文件推向接收邮件服务器<br>4.SMTP要求每个报文使用7比特ASCII码格式<br>5.SMTP吧所有报文对象放在一个报文之中<br><br>—<br><strong>邮件访问协议</strong><br>部分流行的邮件访问协议，包括<strong>第三版的邮局协议（POP3）</strong>，<strong>因特网邮件访问协议(IMAP)</strong>以及<strong>HTTP</strong>。<br><br><strong>POP3</strong><br>POP3是一个极为简单的邮件访问协议。<br>随着建立TCP连接，POP3按照三个阶段进行工作：<strong>特许</strong>、<strong>事务处理</strong>以及<strong>更新</strong>。<br>在<strong>特许阶段</strong>，用户代理发送用户民和口令以鉴别用户。<br>在<strong>事务处理阶段</strong>，用户代理取回报文。<br>在<strong>更新阶段</strong>，它出现在客户发出了quit命令之后，目的是结束该POP3会话。<br><br>在POP3的事务处理过程中，用户代理发出一些命令，服务器对每个命令做出回答。回答可能有两种：+OK（服务器表示前面的命令是正常的），-ERR（服务器用来指示前面的命令出错）<br><br><strong>IMAP</strong><br>IMAP比POP3有更多的特色，但是同时，也比POP3复杂的多。<br>IMAP服务器把每个报文与一个文件夹联系起来。<br>IMAP协议为用户提供了创建文件夹以及将邮件从一个文件夹移动到另一个文件夹的命令。IMAP还为用户提供了在远程文件夹中查询邮件的命令，按指定条件去查询匹配的条件。IMAP另一个重要特性是它具有允许用户代理获取报文组件的命令。<br><br><br>—<br><font size="5">『2.5 DNS：因特网的目录服务』</font><br>主机的一种标识方法是用它的<strong>主机名</strong>，如cnn.com、www.yahoo.com等。但是主机名几乎没有提供关于主机在因特网中位置的信息。主机也可以使用<strong>IP地址</strong>进行标识。一个IP地址由4个字节组成，并有着严格的层次结构。<br><br><strong>DNS</strong><br><strong>域名系统（DNS）</strong>的主要任务就是将人们喜欢的主机名标识方式转换成路由器喜欢的IP地址标识方式。<br>DNS是：<br>1.一个由分层的<strong>DNS服务器</strong>实现的分布式数据库；<br>2.一个使得主机能够查询分布式数据库的应用层协议。<br><br><font color="#00008B" size="3">DNS协议运行在UDP之上</font>
+
+<p>DNS通常是由其他应用层协议所使用的，包括<strong>HTTP</strong>、<strong>SMTP</strong>和<strong>FTP</strong>，将用户提供的主机名解析为IP地址。<br>除了进行主机名到IP地址的转换之外，DNS还提供了一些重要的服务：<br>1.<strong>主机别名</strong><br>2.<strong>邮件服务器别名</strong><br>3.<strong>负载分配</strong> DNS也用于在冗余的服务器上进行负载分配。繁忙站点被荣誉分布在多台服务器上。</p>
+<hr>
+<p><strong>DNS工作机理</strong><br>集中式设计有很多问题：<br>1.单点故障<br>2.通信容量<br>3.远距离的集中式数据库<br>4.维护</p>
+<p><font color="#00008B" size="3">DNS采用了分布式的设计方案</font><br>有三种类型DNS服务器：<br>1.根DNS服务器<br>2.顶级域服务器（TLD）<br>3.权威DNS服务器<br>还有另一类服务器，<strong>本地DNS服务器</strong>，但严格来说不属于层次结构。</p>
+<p><strong>DNS缓存</strong><br>为了改善时延性能并减少在因特网上到处传输的DNS报文数量。<br>在一个请求链中，当某DNS服务器接收一个DNS回答时，它能将该回答中的信息缓存在本地存储器中。</p>
+<p><strong>DNS记录和报文</strong><br>共同实现DNS分布式数据库的所有DNS服务器存储了<strong>资源记录（RR）</strong>。RR提供了主机名到IP地址的映射。</p>
+<p><strong>资源记录</strong>是一个包含了下列字段的4字组：<br>（Name ，Value，Type，TTL）<br><strong>TTL</strong>是该记录的生存时间，它决定了资源纪律应当从缓存中删除的时间。Name和Value的值取决于Type：<br>1.如果Type=A，则Name是主机名，Value是该主机名对应的IP地址。<br>2.如果Type=NS，则Name是个域，Value是个知道如何获取该域名中主机IP地址的权威DNS服务器的主机名。<br>3.如果Type=CNAME，Value是别名为Name的主机对应的规范主机名。<br>4.如果Type=MX，则Value是个别名为Name的邮件服务器的规范主机名。</p>
+<hr>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks for your reward！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/2.jpg" alt="城南小青龙 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/3.jpg" alt="城南小青龙 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Tags/NetWork/" rel="tag"># NetWork</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/17/机器学习之西瓜书-note1/" rel="next" title="机器学习之西瓜书-note1">
+                <i class="fa fa-chevron-left"></i> 机器学习之西瓜书-note1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/4.jpg"
+                alt="城南小青龙" />
+            
+              <p class="site-author-name" itemprop="name">城南小青龙</p>
+              <p class="site-description motion-element" itemprop="description">Jerome</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/Archives">
+              
+                  <span class="site-state-item-count">91</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/beatjerome" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/geek_jerome" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-skype"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/beatjerome" target="_blank" title="码云">
+                    
+                      <i class="fa fa-fw fa-stack-overflow"></i>码云</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">城南小青龙</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">88.9k</span>
+  
+</div>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_page_pv">
+  Views:<span id="busuanzi_value_page_pv">  </span>
+<span id="busuanzi_container_site_uv"> 
+ || Vistors:<span id="busuanzi_value_site_uv"></span>
+
+</span>
+</span>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
