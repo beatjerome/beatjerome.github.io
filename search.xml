@@ -3,6 +3,51 @@
   
     
     <entry>
+      <title><![CDATA[Python Crash Course-note1]]></title>
+      <url>/2018/03/23/Python%20Crash%20Course-note1/</url>
+      <content type="html"><![CDATA[<p>-基本知识</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>Hello world</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"Hello world"</span>)</span></span></div><div class="line"><span class="comment">//变量形式</span></div><div class="line">message=<span class="string">"Hello world"</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(message)</span></span></div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>变量命名规则</strong><br>1.变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头。<br>2.变良名不能包含空格，但可使用下划线来分隔。<br>3.不能将python关键字和函数名用作变量名。<br>4.变量名应既简短又具有描述性。<br>5.慎用小写字母l和大写字母O。</p>
+<hr>
+<p><strong><font size="5">字符串</font></strong><br>字符串就是一系列字符。在python中，使用单引号或双引号括起来都行。</p>
+<p><strong>使用方法修改字符串大小写</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">name=<span class="string">"ada lovelace"</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(name.title()</span></span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">Ada Lovelace</div></pre></td></tr></table></figure></p>
+<p>方法是python对数据可进行的一种操作。每个方法后都跟着一对括号，因为通常需要额外的信息来完成工作。这种信息是括号内提供的。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">name=<span class="string">"James"</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(name.upper()</span></span>)</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(name.lower()</span></span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">JAMES</div><div class="line">james</div></pre></td></tr></table></figure>
+<p>title()以首字母大写的方式显示每个单词，upper()以每个字母都大写显示，lower以每个字母都小写显示</p>
+<p><strong>合并（拼接）字符串</strong><br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">first=<span class="string">"Lebron"</span></div><div class="line">second=<span class="string">"James"</span></div><div class="line">full=first+<span class="string">" "</span>+second</div><div class="line">print(full)</div><div class="line">//输出</div><div class="line">Lebron James</div></pre></td></tr></table></figure></p>
+<p>Python使用+来合并字符串；</p>
+<p><strong>使用制表符或换行符</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">"Languages:<span class="subst">\n</span>Python<span class="subst">\n</span>C<span class="subst">\n</span>JavaScript"</span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">Languages：</div><div class="line">Python</div><div class="line">C</div><div class="line">JavaScript</div><div class="line"></div><div class="line">print(<span class="string">"Languages:<span class="subst">\n</span><span class="subst">\t</span>Python<span class="subst">\n</span><span class="subst">\t</span>C<span class="subst">\n</span><span class="subst">\t</span>JavaScript"</span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">	Languages：</div><div class="line">	Python</div><div class="line">	C</div><div class="line">	JavaScript</div></pre></td></tr></table></figure></p>
+<p><strong>删除空白</strong><br>Python能够找出字符串开头和末尾的空白。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">language=<span class="string">"Python "</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language.rstrip()</span></span>)</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language)</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line">有空格</div><div class="line">无空格</div><div class="line">有空格</div><div class="line"><span class="comment">//这种方法是暂时的，若要将空格删除保存</span></div><div class="line">language=language.rstrip()</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language)</span></span></div><div class="line"><span class="comment">//此后，language保存为Python</span></div></pre></td></tr></table></figure></p>
+<p>Python还可以剔除字符串开头的空白，或者同时提出字符串两端的空白。使用lstrip()和strip()分别可以实现。</p>
+<p><strong>避免语法错误</strong><br>如果字符串中有单引号时，如果使用单引号来标识字符串，则会让Python不知道哪里是字符串的结束而出错。因此，如果字符串中有单引号，应用双引号来标识字符串。三引号最保险，但不常用。</p>
+<hr>
+<p><strong><font size="5">数字</font></strong><br><strong>整数运算</strong><br>其他与算数运算基本无异。<br>Python使用**来表示乘方<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">print(<span class="number">2</span>**<span class="number">3</span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="number">8</span></div></pre></td></tr></table></figure></p>
+<p><strong>浮点数运算</strong><br>浮点数运算也与平常无异。<br>不过，浮点数包含的小数位数可能是不确定的。需要进行处理多余小数位。</p>
+<p><strong>使用str()转换类型</strong><br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">age=23</div><div class="line">message=<span class="string">"Happy"</span>+age+<span class="string">"ed Birthday!"</span></div><div class="line">print(message)</div><div class="line">//error</div><div class="line">age=23</div><div class="line">message=<span class="string">"Happy"</span>+str(age)+<span class="string">"ed Birthday!"</span></div><div class="line">print(message)</div><div class="line">//输出</div><div class="line">Happy 23rd birthday</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong><font size="5">注释</font></strong><br>注释的写法：C/C++用//<br>Python中用#来注释</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">TEST</span></div></pre></td></tr></table></figure>
+<hr>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Python programming language </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[自顶向下-note2]]></title>
       <url>/2018/03/18/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B-note2/</url>
       <content type="html"><![CDATA[<p>-应用层协议<br>-FTP<br>-HTTP<br>-电子邮件系统</p>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Online judge," />
+  <meta name="keywords" content="programming language learning," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-简单模拟">
-<meta name="keywords" content="Online judge">
+<meta name="description" content="-基本知识">
+<meta name="keywords" content="programming language learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PAT-B1011题解">
-<meta property="og:url" content="http://yoursite.com/2018/02/06/PAT-B1011题解/index.html">
+<meta property="og:title" content="Python Crash Course-note1">
+<meta property="og:url" content="http://yoursite.com/2018/03/23/Python Crash Course-note1/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-简单模拟">
+<meta property="og:description" content="-基本知识">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-06T13:52:24.198Z">
+<meta property="og:updated_time" content="2018-03-23T03:41:58.527Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PAT-B1011题解">
-<meta name="twitter:description" content="-简单模拟">
+<meta name="twitter:title" content="Python Crash Course-note1">
+<meta name="twitter:description" content="-基本知识">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/06/PAT-B1011题解/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/23/Python Crash Course-note1/"/>
 
 
 
 
 
-  <title>PAT-B1011题解 | Grocery</title>
+  <title>Python Crash Course-note1 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/06/PAT-B1011题解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/23/Python Crash Course-note1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PAT-B1011题解</h1>
+          <h1 class="post-title" itemprop="name headline">Python Crash Course-note1</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-06T21:52:45+08:00">
-                2018-02-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-23T11:45:45+08:00">
+                2018-03-23
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-02-06T21:52:24+08:00">
-                2018-02-06
+              <time title="Post modified" itemprop="dateModified" datetime="2018-03-23T11:41:58+08:00">
+                2018-03-23
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PAT题解目录/" itemprop="url" rel="index">
-                    <span itemprop="name">PAT题解目录</span>
+                  <a href="/categories/Python-programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">Python programming language</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  242
+                  660
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  3
                 </span>
               
             </div>
@@ -429,9 +429,31 @@
       
 
       
-        <p>-简单模拟</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>PAT-1011. A+B和C (15)<br>【时间限制】<br>150 ms<br>【内存限制】<br>65536 kB<br>【代码长度限制】<br>8000 B<br>【判题程序】<br>Standard<br>【题目描述】<br>给定区间[-231, 231]内的3个整数A、B和C，请判断A+B是否大于C。<br>【输入格式】<br>输入第1行给出正整数T(&lt;=10)，是测试用例的个数。随后给出T组测试用例，每组占一行，顺序给出A、B和C。整数间以空格分隔。<br>【输出格式】<br>对每组测试用例，在一行中输出“Case #X: true”如果A+B&gt;C，否则输出“Case #X: false”，其中X是测试用例的编号（从1开始）。<br>【输入样例】<br>4<br>1 2 3<br>2 3 4<br>2147483647 0 2147483646<br>0 -2147483648 -2147483647<br>【输出样例】<br>Case #1: false<br>Case #2: true<br>Case #3: true<br>Case #4: false</p>
-<p>AC代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> T;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;T;</div><div class="line">	<span class="keyword">int</span> i=<span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(T--)&#123;</div><div class="line">		<span class="keyword">long</span> <span class="keyword">long</span> a,b,c;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;c;</div><div class="line">		<span class="keyword">if</span>(a+b&gt;c)</div><div class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"Case #"</span>&lt;&lt;i&lt;&lt;<span class="string">": true\n"</span>;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"Case #"</span>&lt;&lt;i&lt;&lt;<span class="string">": false\n"</span>;</div><div class="line">		i++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p>-基本知识</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>Hello world</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"Hello world"</span>)</span></span></div><div class="line"><span class="comment">//变量形式</span></div><div class="line">message=<span class="string">"Hello world"</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(message)</span></span></div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>变量命名规则</strong><br>1.变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头。<br>2.变良名不能包含空格，但可使用下划线来分隔。<br>3.不能将python关键字和函数名用作变量名。<br>4.变量名应既简短又具有描述性。<br>5.慎用小写字母l和大写字母O。</p>
+<hr>
+<p><strong><font size="5">字符串</font></strong><br>字符串就是一系列字符。在python中，使用单引号或双引号括起来都行。</p>
+<p><strong>使用方法修改字符串大小写</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">name=<span class="string">"ada lovelace"</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(name.title()</span></span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">Ada Lovelace</div></pre></td></tr></table></figure></p>
+<p>方法是python对数据可进行的一种操作。每个方法后都跟着一对括号，因为通常需要额外的信息来完成工作。这种信息是括号内提供的。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">name=<span class="string">"James"</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(name.upper()</span></span>)</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(name.lower()</span></span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">JAMES</div><div class="line">james</div></pre></td></tr></table></figure>
+<p>title()以首字母大写的方式显示每个单词，upper()以每个字母都大写显示，lower以每个字母都小写显示</p>
+<p><strong>合并（拼接）字符串</strong><br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">first=<span class="string">"Lebron"</span></div><div class="line">second=<span class="string">"James"</span></div><div class="line">full=first+<span class="string">" "</span>+second</div><div class="line">print(full)</div><div class="line">//输出</div><div class="line">Lebron James</div></pre></td></tr></table></figure></p>
+<p>Python使用+来合并字符串；</p>
+<p><strong>使用制表符或换行符</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">"Languages:<span class="subst">\n</span>Python<span class="subst">\n</span>C<span class="subst">\n</span>JavaScript"</span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">Languages：</div><div class="line">Python</div><div class="line">C</div><div class="line">JavaScript</div><div class="line"></div><div class="line">print(<span class="string">"Languages:<span class="subst">\n</span><span class="subst">\t</span>Python<span class="subst">\n</span><span class="subst">\t</span>C<span class="subst">\n</span><span class="subst">\t</span>JavaScript"</span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">	Languages：</div><div class="line">	Python</div><div class="line">	C</div><div class="line">	JavaScript</div></pre></td></tr></table></figure></p>
+<p><strong>删除空白</strong><br>Python能够找出字符串开头和末尾的空白。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">language=<span class="string">"Python "</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language.rstrip()</span></span>)</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language)</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line">有空格</div><div class="line">无空格</div><div class="line">有空格</div><div class="line"><span class="comment">//这种方法是暂时的，若要将空格删除保存</span></div><div class="line">language=language.rstrip()</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(language)</span></span></div><div class="line"><span class="comment">//此后，language保存为Python</span></div></pre></td></tr></table></figure></p>
+<p>Python还可以剔除字符串开头的空白，或者同时提出字符串两端的空白。使用lstrip()和strip()分别可以实现。</p>
+<p><strong>避免语法错误</strong><br>如果字符串中有单引号时，如果使用单引号来标识字符串，则会让Python不知道哪里是字符串的结束而出错。因此，如果字符串中有单引号，应用双引号来标识字符串。三引号最保险，但不常用。</p>
+<hr>
+<p><strong><font size="5">数字</font></strong><br><strong>整数运算</strong><br>其他与算数运算基本无异。<br>Python使用**来表示乘方<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">print(<span class="number">2</span>**<span class="number">3</span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="number">8</span></div></pre></td></tr></table></figure></p>
+<p><strong>浮点数运算</strong><br>浮点数运算也与平常无异。<br>不过，浮点数包含的小数位数可能是不确定的。需要进行处理多余小数位。</p>
+<p><strong>使用str()转换类型</strong><br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">age=23</div><div class="line">message=<span class="string">"Happy"</span>+age+<span class="string">"ed Birthday!"</span></div><div class="line">print(message)</div><div class="line">//error</div><div class="line">age=23</div><div class="line">message=<span class="string">"Happy"</span>+str(age)+<span class="string">"ed Birthday!"</span></div><div class="line">print(message)</div><div class="line">//输出</div><div class="line">Happy 23rd birthday</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong><font size="5">注释</font></strong><br>注释的写法：C/C++用//<br>Python中用#来注释</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">TEST</span></div></pre></td></tr></table></figure>
+<hr>
+<hr>
 
       
     </div>
@@ -478,7 +500,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/Online-judge/" rel="tag"># Online judge</a>
+            <a href="/Tags/programming-language-learning/" rel="tag"># programming language learning</a>
           
         </div>
       
@@ -491,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/20/PAT-B1009题解目录/" rel="next" title="PAT-B1009题解">
-                <i class="fa fa-chevron-left"></i> PAT-B1009题解
+              <a href="/2018/03/18/自顶向下-note2/" rel="next" title="自顶向下-note2">
+                <i class="fa fa-chevron-left"></i> 自顶向下-note2
               </a>
             
           </div>
@@ -500,10 +522,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/06/PAT-B1016题解/" rel="prev" title="PAT-B1016题解">
-                PAT-B1016题解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
