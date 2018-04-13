@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[Python Crash Course-note1]]></title>
+      <title><![CDATA[Python Crash Course-note2]]></title>
       <url>/2018/04/13/Python%20Crash%20Course-note2/</url>
       <content type="html"><![CDATA[<p>-列表</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>列表</strong><br>列表由一系列按特定顺序排列的元素组成。<br>在Python中，用方括号（[ ]）来表示列表，并用逗号来分隔其中的元素。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">bicycle=[<span class="string">'trek'</span>,<span class="string">'cannondale'</span>,<span class="string">'redline'</span>,<span class="string">'hikd'</span>]</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(bicycle)</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="comment">//将打印列表的内部表示，包括方括号</span></div><div class="line">[<span class="string">'trek'</span>,<span class="string">'cannondale'</span>,<span class="string">'redline'</span>,<span class="string">'hikd'</span>]</div></pre></td></tr></table></figure></p>
