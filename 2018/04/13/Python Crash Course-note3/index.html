@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="basic courses," />
+  <meta name="keywords" content="programming language learning," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="-电通量-静电场中的高斯定理">
-<meta name="keywords" content="basic courses">
+<meta name="description" content="-列表操作与元组">
+<meta name="keywords" content="programming language learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="静电场-2">
-<meta property="og:url" content="http://yoursite.com/2017/10/30/静电场-2/index.html">
+<meta property="og:title" content="Python Crash Course-note3">
+<meta property="og:url" content="http://yoursite.com/2018/04/13/Python Crash Course-note3/index.html">
 <meta property="og:site_name" content="Grocery">
-<meta property="og:description" content="-电通量-静电场中的高斯定理">
+<meta property="og:description" content="-列表操作与元组">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-30T04:06:34.212Z">
+<meta property="og:updated_time" content="2018-04-13T15:36:52.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="静电场-2">
-<meta name="twitter:description" content="-电通量-静电场中的高斯定理">
+<meta name="twitter:title" content="Python Crash Course-note3">
+<meta name="twitter:description" content="-列表操作与元组">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/30/静电场-2/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/13/Python Crash Course-note3/"/>
 
 
 
 
 
-  <title>静电场-2 | Grocery</title>
+  <title>Python Crash Course-note3 | Grocery</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/30/静电场-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/13/Python Crash Course-note3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="城南小青龙">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">静电场-2</h1>
+          <h1 class="post-title" itemprop="name headline">Python Crash Course-note3</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T12:10:45+08:00">
-                2017-10-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-13T23:34:45+08:00">
+                2018-04-13
               </time>
             
 
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-10-30T12:06:34+08:00">
-                2017-10-30
+              <time title="Post modified" itemprop="dateModified" datetime="2018-04-13T23:36:52+08:00">
+                2018-04-13
               </time>
             
           </span>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大学物理/" itemprop="url" rel="index">
-                    <span itemprop="name">大学物理</span>
+                  <a href="/categories/Python-programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">Python programming language</span>
                   </a>
                 </span>
 
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  462
+                  981
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  4
                 </span>
               
             </div>
@@ -429,17 +429,41 @@
       
 
       
-        <p>-电通量<br>-静电场中的高斯定理</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong>电场线</strong>：用于形象描述电场在空间的分布情况</p>
-<p>电场线有如下性质：<br>1.电场线起自正电荷（或来自无穷远），终止于负电荷（或伸向无限远），在无电荷的地方不会中断<br>2.任意两条电场线不相交，即静电场中每一点的场强只有一个方向<br>3.电场线不形成闭合回线<br>4.电场强处电场线密集，电场弱处电场线稀疏</p>
+        <p>-列表操作与元组</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><hr>
+<p><strong><font size="5">操作列表<font></font></font></strong><br><strong>1.遍历整个列表</strong><br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">magicians=[<span class="string">'alice'</span>,<span class="string">'david'</span>,<span class="string">'carolina'</span>]</div><div class="line"><span class="keyword">for</span> magician <span class="keyword">in</span> magicians:</div><div class="line">	<span class="built_in">print</span>(magician)</div><div class="line"><span class="comment">//输出</span></div><div class="line">alice</div><div class="line">david</div><div class="line">carolina</div></pre></td></tr></table></figure></p>
+<p>循环定义magician从magicians中取出元素，再进行打印。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//怎么退出循环</span></div><div class="line">magicians=[<span class="string">'alice'</span>,<span class="string">'david'</span>,<span class="string">'carolina'</span>]</div><div class="line"><span class="keyword">for</span> magician <span class="keyword">in</span> magicians:</div><div class="line">	print(magician)</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"good job"</span>)</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line">alice</div><div class="line">david</div><div class="line">carolina</div><div class="line">good job</div></pre></td></tr></table></figure>
+<p>python中通过缩进来判断程序块，同样，循环也是通过缩进来控制；</p>
 <hr>
-<p><strong>电通量</strong>：穿过电场中任意给定面的电场线条数称为通过该面的电场强度通量</p>
-<p>均匀电场中，穿过垂直于电场方向的任意平面S的电通量为<strong>φ=ES</strong>，若与场强成θ角，则<strong>φ=EScosθ</strong></p>
-<p>如果是曲面，则通过dS的电通量为：<strong>dφ=EdScosθ=E·dS</strong><br>通过整个曲面S的电通量为<strong>φ=∫s（dφ）=∫s（E·dS）</strong></p>
-<p><strong>如果是闭合曲面，则规定由内向外的方向为个面积元法矢en的正方向</strong></p>
+<p><strong><font size="5">创建数值列表</font></strong><br><strong>1.range()的使用</strong><br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">for <span class="keyword">value</span> <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">5</span>):</div><div class="line">	<span class="built_in">print</span>(<span class="keyword">value</span>)</div></pre></td></tr></table></figure></p>
+<p>range()打印1~4,并不打印5；</p>
+<p><strong>2.使用range()来创建数字列表</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用list()转换成列表</span></div><div class="line">numbers=<span class="type">list</span>(range(<span class="number">1</span>,<span class="number">6</span>))</div><div class="line">print(numbers)</div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div></pre></td></tr></table></figure></p>
+<p>补充：range()可以指定数字间隔<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">numbers=<span class="type">list</span>(range(<span class="number">2</span>,<span class="number">11</span>,<span class="number">2</span>))</div><div class="line">print(numbers)</div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">10</span>]</div></pre></td></tr></table></figure></p>
+<p>函数range()从2开始数，然后不断地加2，直到达到或超过终值11。</p>
+<p><strong>3.乘方运算</strong><br>python中两个星号（**）表示乘方运算。<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">squares=[]</div><div class="line"><span class="keyword">for</span> <span class="keyword">value</span> <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>):</div><div class="line">	squares.append(<span class="keyword">value</span>**<span class="number">2</span>)</div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>,<span class="number">36</span>,<span class="number">49</span>,<span class="number">64</span>,<span class="number">81</span>,<span class="number">100</span>]</div></pre></td></tr></table></figure></p>
+<p>如要使用立方只需用**3；</p>
+<p><strong>4.计算函数</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">digits=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">16</span>]</div><div class="line">print(min(digits))</div><div class="line">print(max(digits))</div><div class="line">print(sum(digits))</div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">16</span></div><div class="line"><span class="number">49</span></div></pre></td></tr></table></figure></p>
+<p><strong>5.列表解析</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">squares=[value**<span class="number">2</span> for value in range(<span class="number">1</span>,<span class="number">11</span>)]</div><div class="line">print(squares)</div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>,<span class="number">36</span>,<span class="number">49</span>,<span class="number">64</span>,<span class="number">81</span>,<span class="number">100</span>]</div></pre></td></tr></table></figure></p>
+<p>列表解析将for循环和创建新元素的代码合成为一行，自动附加新元素，填充列表；</p>
 <hr>
-<p><strong>高斯定理</strong>：静电场的高斯定理表述为：真空中任何静电场中，穿过任一闭合曲面的电通量等于该闭合曲面包围电荷代数和的ε0分之一，即<br><strong>φ=∫s（E·dS）=（1/ε0）∑qi</strong></p>
-<p>对高斯定理的理解应注意：<br>1.高斯定理表达式作坊的场强E是闭合面上dS处的场强，它是由闭合面内外全部电荷共同产生的，即闭合面外的电荷对空间各点的E有贡献，要影响闭合面上各面元的通量dφ<br>2.通过闭合曲面的总电通量只决定于闭合面内所包围的电荷，闭合曲面外部的电荷对闭合面的总电通量∫E·dS无贡献.</p>
+<p><strong><font size="5">使用列表的一部分</font></strong><br><strong>1.切片</strong><br>创建切片，指定要使用的第一个元素和最后一个元素的索引；在到达指定的第二个索引前面的元素后停止。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">players=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>]</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(players[<span class="number">0</span>:<span class="number">2</span>])</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</div></pre></td></tr></table></figure></p>
+<p>如果没有指定第一个索引，python从列表开头开始提取；<br>同样地，如果没有指定第二个索引，python将一直提取到列表末尾；</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果要提取列表最后三个元素</span></div><div class="line">players=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>,<span class="string">'g'</span>,<span class="string">'h'</span>]</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(player[-<span class="number">3</span>:])</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="string">'f'</span>,<span class="string">'g'</span>,<span class="string">'h'</span>]</div></pre></td></tr></table></figure>
+<p><strong>2.遍历切片</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用for循环来遍历切片</span></div><div class="line">players=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>,<span class="string">'g'</span>,<span class="string">'h'</span>]</div><div class="line"><span class="keyword">for</span> player <span class="keyword">in</span> players[:<span class="number">3</span>]:</div><div class="line">	print(player)</div><div class="line"><span class="comment">//输出</span></div><div class="line">a</div><div class="line">b</div><div class="line">c</div></pre></td></tr></table></figure></p>
+<p><strong>3.复制列表</strong><br>复制列表，可创建一个包含整个列表的切片，方法是同时省略起始索引和终止索引([:])；<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">food=[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>]</div><div class="line">food1=food[:]</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(food)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(food1)</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>]</div><div class="line">[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>]</div></pre></td></tr></table></figure></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//区别</span></div><div class="line">food=[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>]</div><div class="line">food1=food</div><div class="line">food1.append(<span class="string">'a'</span>)</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(food)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(food1)</span></span></div><div class="line">food.append(<span class="string">'b'</span>)</div><div class="line"><span class="function"><span class="title">print</span><span class="params">(food)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(food1)</span></span></div><div class="line"><span class="comment">//输出</span></div><div class="line">[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>，<span class="string">'a'</span>]</div><div class="line">[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>，<span class="string">'a'</span>]</div><div class="line">[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>，<span class="string">'a'</span>,<span class="string">'b'</span>]</div><div class="line">[<span class="string">'egg'</span>,<span class="string">'tomato'</span>,<span class="string">'potato'</span>，<span class="string">'a'</span>,<span class="string">'b'</span>]</div></pre></td></tr></table></figure>
+<p>如果不使用[:]对列表进行复制的话，实质上food与food1指向同一个列表，也就是说对其中任何一个操作，另一个也随之改变，因为两者是同一个列表。</p>
+<hr>
+<p><strong><font size="5">元组</font></strong><br><strong>元组</strong>就是不可变的列表。</p>
+<p><strong>定义元组</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">length=(<span class="number">200</span>,<span class="number">50</span>)</div><div class="line">print(length[<span class="number">0</span>])</div><div class="line">print(length[<span class="number">1</span>])</div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="number">200</span></div><div class="line"><span class="number">50</span></div></pre></td></tr></table></figure></p>
+<p>定义元组与列表的区别：<br>1.使用圆括号()而不是方括号[]来标识<br>2.元素不带引号</p>
+<p>如果尝试修改元组的元素大小，python会报错。</p>
+<p><strong>元组的遍历</strong><br>元组的遍历与普通列表遍历无异。使用for循环即可实现。</p>
+<p><strong>修改元组变量</strong><br>元组的变量是不能直接单个进行修改的。元组是固定不变的。要想修改元组的元素，只能等效的去修改元组变量。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">length=(<span class="number">200</span>,<span class="number">50</span>)</div><div class="line">print(length[<span class="number">0</span>])</div><div class="line">print(length[<span class="number">1</span>])</div><div class="line">length=(<span class="number">250</span>,<span class="number">50</span>)</div><div class="line">print(\nlength[<span class="number">0</span>])</div><div class="line">print(length[<span class="number">1</span>])</div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="number">200</span></div><div class="line"><span class="number">50</span></div><div class="line"><span class="number">250</span></div><div class="line"><span class="number">50</span></div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：这种修改元组的方式是声明新元组进行覆盖，python允许这样做，因此不会报错。</p>
+<hr>
+<p><strong>设置代码格式</strong><br><strong>提高代码可读性：</strong><br>1.缩进<br>PEP8建议每级缩进使用4个空格。<br>2.行长<br>PEP8建议注释行长不超过72字符。<br>一般建议每行不超过80字符。<br>3.空行<br>需要使用空行来组织程序文件，但也不能滥用；</p>
 <hr>
 
       
@@ -487,7 +511,7 @@
       
         <div class="post-tags">
           
-            <a href="/Tags/basic-courses/" rel="tag"># basic courses</a>
+            <a href="/Tags/programming-language-learning/" rel="tag"># programming language learning</a>
           
         </div>
       
@@ -500,8 +524,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/30/开始学习C++/" rel="next" title="开始学习C++">
-                <i class="fa fa-chevron-left"></i> 开始学习C++
+              <a href="/2018/04/13/Python Crash Course-note2/" rel="next" title="Python Crash Course-note2">
+                <i class="fa fa-chevron-left"></i> Python Crash Course-note2
               </a>
             
           </div>
@@ -509,10 +533,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/30/HDOJ-1000/" rel="prev" title="HDOJ-1000">
-                HDOJ-1000 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
