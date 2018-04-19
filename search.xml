@@ -3,6 +3,68 @@
   
     
     <entry>
+      <title><![CDATA[Python Crash Course-note10]]></title>
+      <url>/2018/04/19/Python%20Crash%20Course-note10/</url>
+      <content type="html"><![CDATA[<p>-测试</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p><strong><font size="5">测试代码</font></strong><br>python标准库中的模块unittest提供了代码测试工具。<br>单元测试用于核实函数的某个方面没有问题。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//name.py</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(first,last)</span>:</span></div><div class="line">		full_name=first+<span class="string">" "</span>+last</div><div class="line">		<span class="keyword">return</span> full_name.title()</div><div class="line"></div><div class="line">//Test.py</div><div class="line"><span class="keyword">import</span> unittest</div><div class="line"><span class="keyword">from</span> helloworld <span class="keyword">import</span> name</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestCase</span><span class="params">(unittest.TestCase)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_firt_last_name</span><span class="params">(self)</span>:</span></div><div class="line">        formatted_name=name(<span class="string">'janis'</span>,<span class="string">'joplin'</span>)</div><div class="line">        self.assertEqual(formatted_name,<span class="string">'Janis Joplin'</span>)//判断结果是否相同</div><div class="line"></div><div class="line">unittest.main()</div><div class="line"></div><div class="line">//OUTPUT</div><div class="line">.</div><div class="line">----------------------------------------------------------------------</div><div class="line">Ran <span class="number">1</span> test <span class="keyword">in</span> <span class="number">0.000</span>s</div><div class="line"></div><div class="line">OK</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：测试代码的方法名必须以test_打头；这样才能运行test.py时自动运行。<br>可以添加多个测试</p>
+<p><strong>测试类</strong><br>断言方法检查该满足的条件是否满足。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assertEqual(a,b)</td>
+<td style="text-align:center">核实a==b</td>
+</tr>
+<tr>
+<td>assertNotEqual(a,b)</td>
+<td style="text-align:center">核实a!=b</td>
+</tr>
+<tr>
+<td>assertTrue(x)</td>
+<td style="text-align:center">核实x为True</td>
+</tr>
+<tr>
+<td>assertFalse(x)</td>
+<td style="text-align:center">核实x为False</td>
+</tr>
+<tr>
+<td>assertIn(item,list)</td>
+<td style="text-align:center">核实item在list中</td>
+</tr>
+<tr>
+<td>assertNotIn(item,list)</td>
+<td style="text-align:center">核实item不在list中</td>
+</tr>
+</tbody>
+</table>
+<p>测试类其实与测试函数无异，主要测试的也是类中的方法。</p>
+<p><strong>方法setUp()</strong><br>python将现运行setUp()，在运行各个以test_打头的方法。</p>
+<p>因此，创建系统实例可以在setUp()中进行。</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> Python programming language </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> programming language learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Python Crash Course-note9]]></title>
       <url>/2018/04/18/Python%20Crash%20Course-note9/</url>
       <content type="html"><![CDATA[<p>-文件写入与读取<br>-异常提示<br>-逻辑重构</p>
